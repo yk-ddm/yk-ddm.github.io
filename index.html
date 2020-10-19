@@ -1,23 +1,49 @@
-<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>上课时间，温馨提示</title>
-		<link rel="stylesheet" href="main.css" />
-	</head>
-	<body>
-		<h3 class='title'>距离2020年10月20号3-4节上课, 还有</h3>
-		<div class="time-item">
-			<strong>
-				<span id="hour">00</span>时
-			</strong>
-			<strong>
-				<span id="minute">00</span>分
-			</strong>
-			<strong>
-				<span id="second">00</span>秒
-			</strong>
-		</div>
-		<script src="main.js"></script>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <title>小组作品展示集</title>
+    <link rel="stylesheet" href="css/css.css" type="text/css">
+</head>
+<body>
+    <canvas width="1366" height="635"></canvas>
+    <div id="frame">
+        <div class="readme">
+            企业实训总结
+            <div class="hide">
+                这里的案例都是这十一天的练习案例，左下角按钮可以转换为四个不同的排版方式，
+                每个有图像的案例小块均可点开为显示详细弹框，点击弹框外任意位置可隐藏弹框，
+                之后点击图案可以进入当前案例页面，
+                此界面具有滚轮效果，可调节观察距离，具有拖动效果，可视立体，
+                背景是通过canvas编写的星空图，小组登录首页也是星空图背景，
+                建议使用谷歌或火狐浏览器。(点击隐藏这里！)
+            </div>
+        </div>
+        <div id="list">
+            <ul>
+			</ul>
+        </div>
+        <div id="btn">
+            <ul>
+                <li class="click">表格布局</li>
+                <li>球形布局</li>
+                <li>螺旋线布局</li>
+                <li>网格布局</li>
+            </ul>
+        </div>
+        <div id="alert">
+            <div class="title"><span></span></div>
+            <a href="" target="_blank">
+                <img src="" alt="" class="pic">
+            </a>
+            <div class="annotation">写日期（选填）</div>
+            <div class="content">详情请点击图片~~</div>
+        </div>
+    </div>
+    <script src="js/data1.js"></script>
+    <script src="js/star.js"></script>
+    <script src="js/javascript.js"></script>
+	<script>
+		alert('欢迎来到杨侃平时作品展示页面');
+	</script>
+</body>
 </html>
