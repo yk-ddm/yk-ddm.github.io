@@ -1,0 +1,107 @@
+body {
+	background-color: #000;
+	overflow: hidden;
+}
+.info {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 500px;
+	height: 200px;
+	border: 1px solid #004040;
+	color: #fff;
+	text-align: center;
+	line-height: 100px;
+}
+.wrap {
+	display: none;
+	position: absolute;
+	top: 200px;
+	left: 508px;
+	width:355px;
+	height:300px;
+	border: 1px solid #004040;
+	text-align: center;
+}
+.wrap h3 {
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 32px;
+}
+.wrap input {
+	margin: 10px auto;
+}
+.wrap div>input {
+	width: 200px;
+	height: 30px;
+	border: 2px solid #004040;
+	border-radius: 10px;
+}
+#auth_code ,#text {
+	width:85px;
+	height: 30px;
+	margin-left: 35px;
+	background-color: #bebebe;
+	border-radius: 10px;
+	border: none;
+}
+.info input,.submit {
+	width: 150px;
+	height: 50px;
+	background-color: #ccc;
+	border:none;
+	border-radius: 15px;
+	color: #fff;
+	cursor:pointer;
+}
+#btn {
+	float: right;
+	margin-top: 10px;
+	margin-right: 20px;
+	color: red;
+	text-align: center;
+	cursor: pointer;
+}
+.remember {
+	padding-left: 80px;
+	padding-bottom: 20px;
+}
+.wrap .remember input {
+	float: left;
+	width: 20px;
+	height: 30px;
+	margin: 0;
+}
+.wrap .remember a {
+	float: left;
+	width: 100px;
+	height: 30px;
+	color: #fff;
+}
+.box {
+	width: 200px;
+	height: 35px;
+	margin-left: 86px;
+	margin-bottom: 30px;
+	background-color: #ccc;
+	border-radius: 10px;
+}
+.box a {
+	color: #fff;
+	line-height: 32px;
+}
+.project {
+	position: absolute;
+    bottom: 50px;
+	width: 250px;
+	border: 1px solid #004040;
+	color: #fff;
+	text-align: center;
+}
+.project div {
+	margin: 5px 0;
+}
+.project a {
+	color: #fff;
+}
