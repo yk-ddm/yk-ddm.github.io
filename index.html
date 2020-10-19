@@ -27,12 +27,11 @@
 			</strong>
 		</div>
 	<script type="text/javascript">
-		var day = my$('day');
 		var hour = my$('hour');
 		var minute = my$('minute');
 		var second = my$('second');
 
-		var endDate = new Date('2020-10-20 08:00:00');//元旦时间
+		var endDate = new Date('2020-10-20 08:00:00');//上课时间
 		setInterval(countdown, 1000);
 		countdown();
 
@@ -42,7 +41,6 @@
 			if (endDate - startDate < 0) {
 				return;
 			}
-			setInnerText(day, interval.day);
 			setInnerText(hour, timeFormat(interval.hour));
 			setInnerText(minute, timeFormat(interval.minute));
 			setInnerText(second, timeFormat(interval.second));
@@ -64,7 +62,6 @@
 			second = Math.floor(interval % 60);
 			
 			return {
-				day: day,
 				hour: hour,
 				minute: minute,
 				second: second
