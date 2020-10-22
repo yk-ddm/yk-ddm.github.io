@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>表格练一练</title>
+		<style>
+			.box {
+				width: 250px;
+			}
+		</style>
+	</head>
+	<body style="background-color: #ccc;">
+		<!--方式一，tr,td-->
+		<table>
+			<tr>
+				<td>*类型</td>
+				<td>
+					<input type="radio" checked>教材项
+					<input type="radio">杂费项
+				</td>
+			</tr>
+			<tr>
+				<td>*项目名称</td>
+				<td><input type="text" class="box"></td>
+			</tr>
+			<tr>
+				<td>*价格</td>
+				<td><input type="text" class="box" value='0.0'></td>
+			</tr>
+			<tr>
+				<td>*兑换所需积分</td>
+				<td><input type="text" class="box" value="0"></td>
+			</tr>
+			<tr>
+				<td>*一次最多可购买</td>
+				<td><input type="text" class="box" value="10"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="checkbox">开启积分兑换
+					<input type="checkbox">报名时默认购买
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="button" value="取消" style='width: 100px;height: 34px;background-color: #52A3F5;border: none;border-radius: 5px;color: #fff;'>
+					<input type="button" value="保存" style='width: 100px;height: 34px;background-color: #52A3F5;border: none;border-radius: 5px;color: #fff;'>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

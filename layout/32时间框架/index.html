@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>时间框架</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			.box {
+				width: 1000px;
+                height: 100px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<script type="text/javascript">
+			//定时间隔越小越不可靠
+			var box = document.querySelector(".box");
+
+            Move(box , "width" , 100 , 5000);
+
+            function Move(obj , attr , target , totalTime){
+
+                var init_t = new Date;
+                var init = parseFloat(getStyleValue(obj)[attr]);
+
+                function m(){
+                    var current_t = new Date;
+
+                    //匀速
+                    //var current = (target-init)*(current_t - init_t) / totalTime + init;
+                    //匀加速
+                    var current = (target-init)*(current_t-init_t)*(current_t-init_t) / (totalTime*totalTime) + init;
+
+                    if ( current_t - init_t >= totalTime ){
+                        current = target;
+                    }else{
+                        requestAnimationFrame(m);
+                    }
+					obj.style[attr] = current + 'px';
+                }
+                requestAnimationFrame(m);
+			}
+
+			function getStyleValue(obj){
+				return obj.currentStyle || getComputedStyle(obj);
+			}
+
+            /*var nowTime = new Date();
+            var t = setInterval(function () {
+                console.log( 1 );
+
+                if ( new Date() - nowTime  >=  1000 ){
+                    clearInterval(t);
+                }
+
+            },5);*/
+		</script>
+	</body>
+</html>

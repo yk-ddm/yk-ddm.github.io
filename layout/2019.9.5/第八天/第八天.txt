@@ -1,0 +1,1 @@
+浮动float（left,right,none;）以及清除浮动的知识。padding的简写；position定位（absolute，relative，fixed）；position:relative;position: absolute;position:fixed;以及网页开发调试工具；

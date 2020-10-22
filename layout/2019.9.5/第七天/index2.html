@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.showdiv {
+	width: 230px;
+	height: 230px;
+	margin: 20px;
+	border: 1px solid #124563;
+}
+#test1 {
+	padding-top: 20px;
+	padding-left: 20px;
+	box-sizing: content-box;
+}
+#test2 {
+	padding-top: 20px;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+.test3 {
+	box-sizing:content-box;
+	width:200px; 
+	margin: 20px;
+	padding:10px; border: 1px solid #000; 
+}
+.test4 {
+	box-sizing:border-box; 
+	width:200px;
+	margin-left: 20px;
+	padding:10px; border: 1px solid #000; 
+}
+</style>
+</head>
+<body>
+<div style="border:2px dashed #FF6600;padding:10px;margin:10px;background-color:#FFF;">
+<img src="images/demo3.png" width="260" />
+<h4 style="color:#339;">请写出上图的效果的样式</h4>
+</div>
+<div class="showdiv" id="test1"><img src="images/children.jpg" alt=""></div>
+<div class="showdiv" id="test2"><img src="images/children.jpg" alt=""></div>
+<div class="test3">
+	<img src="images/children.jpg" alt="">
+</div>
+<div class="test4">
+	<img src="images/children.jpg" alt="">
+</div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>隔色魔方</title>
+		<style>
+			body {
+				margin: 0;
+				perspective: 1000px;
+			}
+			ul {
+				list-style: none;
+			}
+			#box {
+				position: relative;
+				width: 120px;
+				height: 120px;
+				margin: 150px auto;
+				transform-style: preserve-3d;
+				transform: rotateX(-30deg);
+				animation: demo 2s infinite;
+			}
+			#box li {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 120px;
+				height: 120px;
+				background-color: skyblue;
+			}
+			#box li div {
+				float: left;
+				width: 40px;
+				height: 40px;
+			}
+			#box li:nth-child(2) {
+				background-color: #457896;
+				transform-origin: right;
+				transform: rotateY(-90deg);
+			}
+			#box li:nth-child(3) {
+				background-color: #457896;
+				transform-origin: left;
+				transform: rotateY(90deg);
+			}
+			#box li:nth-child(4) {
+				background-color: #457896;
+				transform-origin: top;
+				transform: rotateX(-90deg);
+			}
+			#box li:nth-child(5) {
+				background-color: #457896;
+				transform-origin: bottom;
+				transform: rotateX(90deg);
+			}
+			#box li:last-child {
+				background-color: #457896;
+				transform: translateZ(-120px);
+			}
+
+			@keyframes demo {
+				from {
+					transform: rotateX(-30deg);
+				}
+				to {
+					transform: rotateX(180deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</li>
+			</ul>
+		</div>
+		<script>
+			var box = document.getElementById('box');
+			var lists = box.getElementsByTagName('li');
+			var divs = box.getElementsByTagName('div');
+			/*for (var i = 0; i < lists.length; i++) {
+				lists[i].style.backgroundColor = randomColor(0, 255);
+			}*/
+
+			for (var i = 0; i < divs.length; i++) {
+				divs[i].style.backgroundColor = randomColor(0, 255);
+			}
+
+			function randomColor(min, max) {
+				var r = Math.random() * (max - min + 1) + min;
+				var g = Math.random() * (max - min + 1) + min;
+				var b = Math.random() * (max - min + 1) + min;
+				//var a = Math.random();
+
+				//return 'rgba('+r+', '+g+', '+b+', '+a+')';
+				return 'rgb('+r+', '+g+', '+b+')';
+			}
+			//console.log(randomColor(0, 255));
+		</script>
+	</body>
+</html>

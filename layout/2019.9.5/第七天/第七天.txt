@@ -1,0 +1,1 @@
+群组选择器（html标签,类选择器,id选择器 {、、、}）；style标签写在head标签里面；style属性写在style标签里面；opacity（透明度）的练习；code标签（双标签，行内元素）；border四个边上右下左；盒子模型（外边距margin；内边距padding，有颜色自身标签的颜色）样式覆盖，样式继承，display和visibility的区别在于display：none;不占位置；display：inline;diaplay:block;display:inline-block;

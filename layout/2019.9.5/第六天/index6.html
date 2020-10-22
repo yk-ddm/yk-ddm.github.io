@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+	#first-img,#second-img,#three-img,#four-img {
+		color: red;
+		font-weight: bold;
+		text-align: right;
+	}
+	#first-img {
+		width: 384px;
+		height: 92px;
+		background-image: url(images/dog.png);
+		background-size: 50px;
+		border: 10px dotted #993300;
+	}
+	#second-img {
+		width: 384px;
+		height: 92px;
+		background-image: url(images/dog.png);
+		background-size: 100%;
+		border: 10px dotted #993300;
+	}
+	#three-img {
+		width: 384px;
+		height: 92px;
+		background-image: url(images/dog.png);
+		background-size: cover;
+		border: 10px dotted #993300;
+	}
+	#four-img {
+		width: 384px;
+		height: 92px;
+		background-image: url(images/dog.png);
+		background-size: contain;
+		border: 10px dotted #993300;
+	}
+</style>
+</head>
+<body>
+<div style="border:2px dashed #FF6600;padding:10px;margin:10px;background-color:#FFF; width:800px;">
+<img src="images/demo6.png" width="400" />
+<h4 style="color:#339;">请写出上图的效果的样式</h4>
+</div>
+<div id="first-img">背景图片的大小设定 50px 大小</div>
+<hr/>
+<div id="second-img">背景图片的大小设定 100% </div>
+<hr/>
+<div id="three-img">背景图片的大小设定 cover</div>
+<hr/>
+<div id="four-img">背景图片的大小设定 contain</div>
+</body>
+</html>

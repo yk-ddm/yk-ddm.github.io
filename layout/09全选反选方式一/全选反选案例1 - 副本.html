@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>全选反选案例一--叮当猫</title>
+		<style>
+			body ,
+			ul {
+				margin: 0;
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+			}
+			.box {
+				width: 600px;
+				margin: 150px auto;
+			}
+			.box li {
+				width: 600px;
+				margin-bottom: 1px;
+				background: url("images/ck.png") no-repeat 10px 7px;
+				font-size: 14px;
+                font-weight: bold;
+				line-height: 35px;
+                text-indent: 50px;
+                cursor: pointer;
+			}
+			.box ul li:nth-child(3n){
+                background-color: #ddd;
+            }
+            .box ul li:nth-child(3n-1){
+                background-color: #bbb;
+            }
+            .box ul li:nth-child(3n-2){
+                background-color: #999;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li>
+					私奔
+				</li>
+				<li>北京北京</li>
+				<li>我爱你中国</li>
+				<li>花火</li>
+				<li>回来</li>
+				<li>爱要有你才完美</li>
+				<li>我是认真的</li>
+			</ul>
+			<input type="button" value="全选" id="btn1" />
+			<input type="button" value="反选" id="btn2" />
+		</div>
+		<script type="text/javascript">
+			var box = document.querySelector('.box');
+			var btn1 = document.querySelector('#btn1');
+			var btn2 = document.querySelector('#btn2');
+			
+			var lis = box.querySelectorAll('li');
+			var flag = false;
+			for (var i=0; i < lis.length; i++) {
+				lis[i].flag = false;
+				lis[i].onclick = function () {
+					if (!this.flag) {
+						this.style.backgroundImage = 'url(images/cked.jpg)';
+					} else {
+						this.style.backgroundImage = 'url(images/ck.png)';
+					}
+					this.flag = !this.flag;
+				}
+			}
+
+			btn1.onclick = function () {
+				for (var i=0; i < lis.length; i++) {
+					if (lis[i].flag) {
+						continue;
+					}
+					lis[i].style.backgroundImage = 'url(images/cked.jpg)';
+					lis[i].flag = !lis[i].flag;
+				}
+			}
+
+			btn2.onclick = function () {
+				for (var i=0; i < lis.length; i++) {
+					if (lis[i].flag) {
+						lis[i].style.backgroundImage = 'url(images/ck.png)';
+						lis[i].flag = !lis[i].flag;
+						continue;
+					}
+					lis[i].style.backgroundImage = 'url(images/cked.jpg)';
+					lis[i].flag = !lis[i].flag;
+				}
+			}
+		</script>
+	</body>
+</html>

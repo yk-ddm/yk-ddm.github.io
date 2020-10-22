@@ -1,0 +1,1 @@
+字体样式font，font-size,font-family字体名称；文本样式text-overflow(clip裁掉，ellipsis显示省略号)；text-align(内容水平对齐)；text-decoration文本下划线；color文本颜色；class选择器；

@@ -1,0 +1,32 @@
+<!doctype html>
+	<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>全选反选案例一--叮当猫</title>
+	</head>
+	<body>
+		<input type="checkbox" class="box" />麻辣
+		<input type="checkbox" class="box" />香辣
+		<input type="checkbox" class="box" />微辣
+		<input type="checkbox" class="box" />不辣<br><br>
+		<input type="button" value="全选" id="btn1" />
+		<input type="button" value="反选" id="btn2" />
+	<script type="text/javascript">
+		var inputWrap = document.getElementsByClassName("box"),
+			btn1 = document.getElementById("btn1"),
+			btn2 = document.getElementById("btn2");
+			//全选
+			btn1.onclick = function () {
+				for (var i=0;i<inputWrap.length;i++) {
+					inputWrap[i].checked = true;
+				}
+			}
+			//反选
+			btn2.onclick = function () {
+				for (var i=0;i<inputWrap.length;i++) {
+					inputWrap[i].checked = !inputWrap[i].checked;
+				}
+			}
+	</script>
+	</body>
+	</html>

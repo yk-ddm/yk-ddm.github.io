@@ -1,0 +1,1 @@
+伪类选择器（:hover ,:link）；display：none;display: inline-block;visibility: visible;visibility:hidden伪元素选择器（first-letter;first-line;after;before）；CSS3样式外部式；李志敏；JavaScript；alert（“哈哈哈”）；窗口输入输出，弹框输出alert（“弹出内容”）；接收用户的输入：prompt（“你是？”）；确认框：confirm("确定？");document.write("");console.log("");js中数据类型，数值型，字符串，布尔值，空值，var i=3;$,_,命名规范；驼峰式命名，匈牙利命名法，局部变量和全局变量。js的算术运算符。
