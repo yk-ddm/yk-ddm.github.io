@@ -1,0 +1,67 @@
+<!doctype html>
+	<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>倒计时--叮当猫</title>
+	<style>
+		body {
+			margin: 0;
+			font-size: 30px;
+			text-align: center;
+		}
+		h3 {
+			padding-top: 50px;
+		}
+	</style>
+	</head>
+	<body>
+		<h3 id='title'></h3>
+		<div>
+			<span></span>时
+			<span></span>分
+			<span></span>秒
+		</div>
+		<script type="text/javascript">
+			var spanEles = document.getElementsByTagName("span");
+			var titleEle = document.getElementById('title');
+
+			var dateVal = prompt("请输入日期时间，格式如2020-9-6 08:10:00");
+			titleEle.innerText = '距离' + dateVal + ', 还有';
+
+			var targetTime = new Date(dateVal); 
+			var timerId = null;
+			timerId = setInterval(countdown, 1000);	
+			countdown();
+
+			function countdown() {
+				var currentDate = new Date();
+				if(targetTime - currentDate <= 0) {
+					clearInterval(timerId);
+					var img = document.createElement('img');
+					img.src = 'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=450640723,3369161486&fm=26&gp=0.jpg';
+					document.body.appendChild(img);
+					setTimeout(function () {
+						img.src = "http://m.qpic.cn/psc?/738a1b55-0a17-4646-a824-04d4ad970292/ruAMsa53pVQWN7FLK88i5l8PtD1Hadow*hCPTUERkt0piw9gkHoeme68Rj76Cgt*a.9Vg6KFA52JCrQze7LbyyVz0v00XEJZPrXClLy.tYI!/b&bo=wgFJAQAAAAABB6s!&rf=viewer_4";
+					}, 3000);
+					return;
+				}
+				for(var i = 0, len = spanEles.length; i < len; i++) {
+					spanEles[i].style.fontWeight = "bold";
+					spanEles[i].innerText = (getInterval(currentDate, targetTime))[i] > 9 ? (getInterval(currentDate, targetTime))[i] : '0' + (getInterval(currentDate, targetTime))[i];
+				} 
+			}
+
+			function getInterval(currentDate, targetTime) {
+				var interval = targetTime - currentDate;
+				var arr = [];
+
+				interval /= 1000;
+
+				arr[0] = Math.floor(interval / 60 / 60 % 24);
+				arr[1] = Math.floor(interval / 60 % 60);
+				arr[2] = Math.floor(interval % 60);
+				return arr;
+			}
+		</script>
+	</body>
+</html>
