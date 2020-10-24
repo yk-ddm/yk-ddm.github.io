@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>程序员节日1024--叮当猫</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<!--canvas画布一种具有宽高的行内块元素，默认宽300高150-->
+		<canvas id="canvas"></canvas>
+		<script src="js/digit.js"></script>
+		<script>
+			function Clock(){//构造函数，放私有属性
+				//画笔cxt
+				this.cxt = canvas.getContext('2d');
+				canvas.width = 700;
+				canvas.height = 100;
+				this.cH = canvas.height;
+			}
+			
+			//原型，放公共方法
+			Clock.prototype = {
+				init: function(index,n){
+					var R = this.cH / 20 - 1;
+					for(var i=0;i<digit[n].length;i++){
+						for(var j=0;j<digit[n][i].length;j++){
+							if(digit[n][i][j] == 1){
+								this.cxt.fillStyle = '#fff';
+								this.cxt.beginPath();
+								this.cxt.arc(75*index+(2*j+1)*(R+1),(2*i+1)*(R+1),R,0,2*Math.PI,false);//绘制圆，false-顺时针
+								this.cxt.closePath();
+								this.cxt.fill();
+							}
+						}
+					}
+					//var x = y = (2n+1)(R+1);//n--0~n,2(n)(R+1) + R + 1
+				},
+				getTime: function(){
+					data = [1, 0, 2, 4];
+					//清空画布，重置canvas属性width或height即可
+					canvas.height = 100;
+					for(var i=0;i<data.length;i++){
+						clock.init(i,data[i]);	
+					}
+				}
+			}
+			
+			var clock = new Clock();
+			
+			clock.getTime();
+
+		</script>
+	</body>
+</html>
