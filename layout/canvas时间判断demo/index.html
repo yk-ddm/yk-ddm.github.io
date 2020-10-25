@@ -2,21 +2,16 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>canvas粒子时钟--叮当猫</title>
-		<style>
-			body {
-				margin: 0;
-				background-color: #ccc;
-			}
-			#canvas {
-				display: block;
-				margin: 80px auto 0;
-			}
-		</style>
+		<title>canvas时间判断--叮当猫</title>
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<!--canvas画布一种具有宽高的行内块元素，默认宽300高150-->
 		<canvas id="canvas"></canvas>
+		<div id="dialg">
+			<div class="nav">标题栏：</div>
+			<span>邹志强, 上课了, 收起手机准备上课！</span>
+		</div>
 		<script src="js/hideRightClickActions.js"></script>
 		<script src="js/digit.js"></script>
 		<script>
@@ -59,17 +54,25 @@
 					var data = [];
 					data.push(result[1],result[2],10,result[3],result[4],10,result[5],result[6]);
 					//清空画布，重置canvas属性width或height即可
-					canvas.height = 100;
+					canvas.height = 150;
 					for(var i=0;i<data.length;i++){
 						clock.init(i,data[i]);	
 					}
-					//console.log(data);
+					if (result[0] == inputTime) {
+						clearInterval(oTimer);
+						document.getElementById('dialg').style.display = 'block';
+						setTimeout(function () {
+							document.getElementById('dialg').style.display = 'none';
+						}, 3000);
+					}
 				}
 			}
 			var clock = new Clock(),
 				oTimer = null;
 			//先清除定时器
 			clearInterval(oTimer);
+
+			var inputTime = prompt("请输入目标时间：格式形如14:00:00");
 			oTimer = setInterval(function(){
 				clock.getTime();				
 			},50);
