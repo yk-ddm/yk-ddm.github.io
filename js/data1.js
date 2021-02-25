@@ -1,12 +1,5 @@
 data = [
     {
-        href : "layout/index1.html",
-        title : "作品demo首页,author:杨侃",
-        pic : "images/实训作品首页.png",
-        annotation: "2019.9.26 demo 练习",
-        content : "demo作品首页"
-    },
-    {
         href : "layout/2019.9.5/第一天/html501-01.html",
         title : "我的第一个网页",
         pic : "images/第一天练习1.png",
@@ -28,28 +21,28 @@ data = [
         content : "练一练第一天-1"
     },
     {
-        href : "layout/2019.9.5/2019.9.5/第一天/html501-04.html",
+        href : "layout/2019.9.5/第一天/html501-04.html",
         title : "超链接应用",
         pic : "images/a-超链接应用.png",
         annotation: "a-超链接应用",
         content : "hao567"
     },
 	{
-        href : "layout/2019.9.5/2019.9.5/第一天/html501-05.html",
+        href : "layout/2019.9.5/第一天/html501-05.html",
         title : "超链接跳转",
         pic : "images/超链接跳转.png",
         annotation: "超链接跳转",
         content : "超链接跳转"
     },
     {
-        href : "layout/2019.9.5/2019.9.5/第一天/html501-06.html",
+        href : "layout/2019.9.5/第一天/html501-06.html",
         title : "锚点的应用",
         pic : "images/锚点的应用.png",
         annotation: "锚点的应用",
         content : "锚点的应用"
     },
     {
-        href : "layout/2019.9.5/2019.9.5/第一天/作业01.html",
+        href : "layout/2019.9.5/第一天/作业01.html",
         title : "作业01",
         pic : "images/作业01.png",
         annotation: "作业01",
@@ -65,28 +58,21 @@ data = [
     {
         href : "layout/29倒计时/demo_test.html",
         title : "倒计时效果",
-        pic : "",
-        annotation: "",
+        pic : "images/倒计时效果.png",
+        annotation: "定时器、日期对象Date的应用",
         content : "倒计时"
-    },
-    {
-        href : "layout/29倒计时/demo—test.html",
-        title : "上课了，温馨提示",
-        pic : "",
-        annotation: "",
-        content : "上课了，温馨提示"
     },
     {
         href : "layout/高级操作/666.html",
         title : "出自邹志强的作品1修改",
-        pic : "",
+        pic : "images/love.png",
         annotation: "操作666",
         content : "一波撒花！"
     },
     {
         href : "layout/高级操作/神操作/default.html",
         title : "出自邹志强的作品2修改",
-        pic : "",
+        pic : "images/love1.png",
         annotation: "操作666",
         content : "一波撒花,surprise！"
     },
@@ -107,8 +93,8 @@ data = [
     {
         href : "layout/07画星星/index.html",
         title : "07画星星",
-        pic : "",
-        annotation: "",
+        pic : "images/star.png",
+        annotation: "canvas 绘制路径的使用",
         content : "07画星星"
     },
     {
@@ -163,8 +149,8 @@ data = [
     {
         href : "layout/32时间框架/index.html",
         title : "时间框架",
-        pic : "",
-        annotation: "",
+        pic : "images/时间运动框架.png",
+        annotation: "requestAnimationFrame 帧动画",
         content : "时间框架"
     },
 	{

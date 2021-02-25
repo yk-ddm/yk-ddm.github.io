@@ -16,7 +16,7 @@
 	</head>
 	<body>
 		<h3 id='title'></h3>
-		<div>
+		<div id="dateTime">
 			<span></span>时
 			<span></span>分
 			<span></span>秒
@@ -24,14 +24,21 @@
 		<script type="text/javascript">
 			var spanEles = document.getElementsByTagName("span");
 			var titleEle = document.getElementById('title');
+			var dateTime = document.getElementById('dateTime');
 
 			var dateVal = prompt("请输入日期时间，格式如2020-9-6 08:10:00");
-			titleEle.innerText = '距离' + dateVal + ', 还有';
+			if (dateVal != null)
+			{
+				titleEle.innerText = '距离' + dateVal + ', 还有';
 
-			var targetTime = new Date(dateVal); 
-			var timerId = null;
-			timerId = setInterval(countdown, 1000);	
-			countdown();
+				var targetTime = new Date(dateVal); 
+				var timerId = null;
+				timerId = setInterval(countdown, 1000);	
+				countdown();	
+			}else {
+				titleEle.innerText = '日期格式不符合要求，出错了！';
+				dateTime.style.display = "none";
+			}
 
 			function countdown() {
 				var currentDate = new Date();

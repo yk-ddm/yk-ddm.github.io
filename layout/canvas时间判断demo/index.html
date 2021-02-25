@@ -26,10 +26,14 @@
 			Clock.prototype = {
 				init: function(index,n){
 					var R = this.cH / 20 - 1;
+					
 					for(var i=0;i<digit[n].length;i++){
 						for(var j=0;j<digit[n][i].length;j++){
 							if(digit[n][i][j] == 1){
-								this.cxt.fillStyle = '#fff';
+								setTimeout(function () {
+									arr = ['#45faaf', '#sfa245', 'red', 'yellow', 'skyblue'];
+									this.cxt.fillStyle = arr[parseInt(Math.random() * arr.length)];	
+								}, 2000);
 								this.cxt.beginPath();
 								this.cxt.arc(75*index+(2*j+1)*(R+1),(2*i+1)*(R+1),R,0,2*Math.PI,false);//绘制圆，false-顺时针
 								this.cxt.closePath();
@@ -55,6 +59,7 @@
 					data.push(result[1],result[2],10,result[3],result[4],10,result[5],result[6]);
 					//清空画布，重置canvas属性width或height即可
 					canvas.height = 150;
+
 					for(var i=0;i<data.length;i++){
 						clock.init(i,data[i]);	
 					}
