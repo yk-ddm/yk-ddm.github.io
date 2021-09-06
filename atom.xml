@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>yk-ddm</title>
+  
+  
+  <link href="https://github.com/yk-ddm/yk-ddm.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/yk-ddm/yk-ddm.github.io/"/>
+  <updated>2021-09-06T07:47:40.652Z</updated>
+  <id>https://github.com/yk-ddm/yk-ddm.github.io/</id>
+  
+  <author>
+    <name>yk</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>first newpaper</title>
+    <link href="https://github.com/yk-ddm/yk-ddm.github.io/articles/692f571e7340.html"/>
+    <id>https://github.com/yk-ddm/yk-ddm.github.io/articles/692f571e7340.html</id>
+    <published>2021-09-06T06:42:51.000Z</published>
+    <updated>2021-09-06T07:47:40.652Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="blog-test"><a href="#blog-test" class="headerlink" title="blog test"></a>blog test</h1><h2 id="blog-test-one"><a href="#blog-test-one" class="headerlink" title="blog test one"></a>blog test one</h2><h3 id="blog-test-Two"><a href="#blog-test-Two" class="headerlink" title="blog test Two"></a>blog test Two</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;blog-test&quot;&gt;&lt;a href=&quot;#blog-test&quot; class=&quot;headerlink&quot; title=&quot;blog test&quot;&gt;&lt;/a&gt;blog test&lt;/h1&gt;&lt;h2 id=&quot;blog-test-one&quot;&gt;&lt;a href=&quot;#blog-test-on</summary>
+      
+    
+    
+    
+    <category term="articles" scheme="https://github.com/yk-ddm/yk-ddm.github.io/categories/articles/"/>
+    
+    
+  </entry>
+  
+</feed>
