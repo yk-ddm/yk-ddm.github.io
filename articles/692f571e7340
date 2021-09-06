@@ -4,15 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>yk-ddm</title>
+  <title>first newpaper | yk-ddm</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="personal blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="yk-ddm">
-<meta property="og:url" content="https://github.com/yk-ddm/yk-ddm.github.io/index.html">
+  <meta name="description" content="blog testblog test oneblog test Two">
+<meta property="og:type" content="article">
+<meta property="og:title" content="first newpaper">
+<meta property="og:url" content="https://github.com/yk-ddm/yk-ddm.github.io/articles/692f571e7340">
 <meta property="og:site_name" content="yk-ddm">
-<meta property="og:description" content="personal blog">
+<meta property="og:description" content="blog testblog test oneblog test Two">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-06T06:42:51.000Z">
+<meta property="article:modified_time" content="2021-09-06T07:47:40.652Z">
 <meta property="article:author" content="yk">
 <meta name="twitter:card" content="summary">
   
@@ -67,9 +69,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a target="_blank" rel="noopener" href="https://yk-ddm.github.io/articles/692f571e7340" class="article-date">
   <time class="dt-published" datetime="2021-09-06T06:42:51.000Z" itemprop="datePublished">2021-09-06</time>
@@ -86,8 +86,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" target="_blank" rel="noopener" href="https://yk-ddm.github.io/articles/692f571e7340">first newpaper</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      first newpaper
     </h1>
   
 
@@ -106,11 +106,9 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
   
+</article>
 
 
 </section>
