@@ -6,7 +6,7 @@
   <link href="https://github.com/yk-ddm/yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/yk-ddm/yk-ddm.github.io/"/>
-  <updated>2021-09-06T13:07:46.203Z</updated>
+  <updated>2021-09-06T13:33:29.139Z</updated>
   <id>https://github.com/yk-ddm/yk-ddm.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>draft-test01</title>
+    <link href="https://github.com/yk-ddm/yk-ddm.github.io/:category/:title.html"/>
+    <id>https://github.com/yk-ddm/yk-ddm.github.io/:category/:title.html</id>
+    <published>2021-09-06T13:33:29.000Z</published>
+    <updated>2021-09-06T13:33:29.139Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;hello-world&quot;&gt;&lt;a href=&quot;#hello-world&quot; class=&quot;headerlink&quot; title=&quot;hello world&quot;&gt;&lt;/a&gt;hello world&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="test" scheme="https://github.com/yk-ddm/yk-ddm.github.io/tags/test/"/>
+    
+  </entry>
   
   <entry>
     <title>first newpaper</title>

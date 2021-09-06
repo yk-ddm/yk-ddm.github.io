@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://github.com/yk-ddm/yk-ddm.github.io/:category/:title.html</loc>
+    
+    <lastmod>2021-09-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://github.com/yk-ddm/yk-ddm.github.io/articles/692f571e7340.html</loc>
     
     <lastmod>2021-09-06</lastmod>
@@ -23,6 +30,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://github.com/yk-ddm/yk-ddm.github.io/tags/test/</loc>
+    <lastmod>2021-09-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <url>
     <loc>https://github.com/yk-ddm/yk-ddm.github.io/tags/HTML/</loc>
