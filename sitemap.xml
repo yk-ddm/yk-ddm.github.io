@@ -17,6 +17,27 @@
   </url>
 
   
+  <url>
+    <loc>https://github.com/yk-ddm/yk-ddm.github.io/tags/HTML/</loc>
+    <lastmod>2021-09-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/yk-ddm/yk-ddm.github.io/tags/CSS/</loc>
+    <lastmod>2021-09-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/yk-ddm/yk-ddm.github.io/tags/JavaScript/</loc>
+    <lastmod>2021-09-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>

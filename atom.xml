@@ -6,7 +6,7 @@
   <link href="https://github.com/yk-ddm/yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/yk-ddm/yk-ddm.github.io/"/>
-  <updated>2021-09-06T07:47:40.652Z</updated>
+  <updated>2021-09-06T12:35:15.495Z</updated>
   <id>https://github.com/yk-ddm/yk-ddm.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/yk-ddm/yk-ddm.github.io/articles/692f571e7340.html"/>
     <id>https://github.com/yk-ddm/yk-ddm.github.io/articles/692f571e7340.html</id>
     <published>2021-09-06T06:42:51.000Z</published>
-    <updated>2021-09-06T07:47:40.652Z</updated>
+    <updated>2021-09-06T12:35:15.495Z</updated>
     
     <content type="html"><![CDATA[<h1 id="blog-test"><a href="#blog-test" class="headerlink" title="blog test"></a>blog test</h1><h2 id="blog-test-one"><a href="#blog-test-one" class="headerlink" title="blog test one"></a>blog test one</h2><h3 id="blog-test-Two"><a href="#blog-test-Two" class="headerlink" title="blog test Two"></a>blog test Two</h3>]]></content>
     
@@ -35,6 +35,12 @@
     
     <category term="articles" scheme="https://github.com/yk-ddm/yk-ddm.github.io/categories/articles/"/>
     
+    
+    <category term="HTML" scheme="https://github.com/yk-ddm/yk-ddm.github.io/tags/HTML/"/>
+    
+    <category term="CSS" scheme="https://github.com/yk-ddm/yk-ddm.github.io/tags/CSS/"/>
+    
+    <category term="JavaScript" scheme="https://github.com/yk-ddm/yk-ddm.github.io/tags/JavaScript/"/>
     
   </entry>
   
