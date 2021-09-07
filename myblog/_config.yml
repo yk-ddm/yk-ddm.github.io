@@ -4,7 +4,7 @@
 
 # Site
 title: yk-ddm
-subtitle:
+subtitle: 
 description: '少想，多做！'
 keywords: 前端、HTML、CSS & JavaScript
 author: yk-ddm
@@ -99,6 +99,10 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: butterfly
+
+search:
+  path: search.xml
+  field: all
 
 ## RSS订阅
 plugin:

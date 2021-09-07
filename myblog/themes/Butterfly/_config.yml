@@ -1,5 +1,5 @@
 # Main menu navigation (導航目錄)
-# see https://butterfly.js.org/posts/4aa8abbe/#導航菜單
+# see https://butterfly.js.org/posts/4aa8abbe/# 导航菜单
 # --------------------------------------
 
 menu:
@@ -13,12 +13,13 @@ menu:
   # Link: /link/ || fas fa-link
   # About: /about/ || fas fa-heart
 
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
-  Yourdiy: /yourdiy
-  About: /about
+  home: / || fa fa-home
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+  schedule: /schedule/ || fa fa-calendar
+  Link: /link/ || fas fa-link
+  about: /about/ || fa fa-user
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -427,7 +428,7 @@ microsoft_clarity:
 # Advertisement
 # --------------------------------------
 
-# Google Adsense (谷歌廣告)
+# Google Adsense (谷歌广告)
 google_adsense:
   enable: false
   auto_ads: true
@@ -435,7 +436,7 @@ google_adsense:
   client:
   enable_page_level_ads: true
 
-# Insert ads manually (手動插入廣告)
+# Insert ads manually (手动插入广告)
 # ad:
 #   index:
 #   aside:
@@ -484,8 +485,8 @@ index_top_img_height:
 category_ui: # 留空或 index
 tag_ui: # 留空或 index
 
-# Website Background (設置網站背景)
-# can set it to color or image (可設置圖片 或者 顔色)
+# Website Background (设置网站背景)
+# can set it to color or image (可设置图片 或者 颜色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 background:
 
@@ -587,28 +588,28 @@ hr_icon:
   icon: # the unicode value of Font Awesome icon, such as '\3423'
   icon-top:
 
-# the subtitle on homepage (主頁subtitle)
+# the subtitle on homepage (主页subtitle)
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect (打字效果)
   effect: true
-  # loop (循環打字)
+  # loop (循环打字)
   loop: true
-  # source調用第三方服務
-  # source: false 關閉調用
-  # source: 1  調用搏天 api 的隨機語錄（簡體）
-  # source: 2  調用一言網的一句話（簡體）
-  # source: 3  調用一句網（簡體）
-  # source: 4  調用今日詩詞（簡體）
-  # subtitle 會先顯示 source , 再顯示 sub 的內容
+  # source调用第三方服务
+  # source: false 关闭调用
+  # source: 1  调用搏天api的随机语录（简体）
+  # source: 2  调用一言网的一句话（简体）
+  # source: 3  调用一句网（简体）
+  # source: 4  调用今日诗词（简体）
+  # subtitle 会先显示 source , 再显示 sub 的內容
   source: false
-  # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
-  sub:
+  # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
+  sub: 
 
-# Loading Animation (加載動畫)
+# Loading Animation (加载动画)
 preloader: false
 
-# aside (側邊欄)
+# aside (侧边栏)
 # --------------------------------------
 
 aside:
@@ -622,9 +623,9 @@ aside:
     description:
     button:
       enable: true
-      icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/yk-ddm
+      icon: fa fa-send-o  # fab fa-github 、fab fa-qq、...
+      text: 个人博客
+      link: https://blog.nowcoder.net/helloworldyk
   card_announcement:
     enable: true
     content: This is my Blog
@@ -848,6 +849,10 @@ CDN:
   sharejs_css: https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css
 
   # search
+  search:
+    path: search.xml
+    field: all
+
   local_search: /js/search/local-search.js
   algolia_js: /js/search/algolia.js
   algolia_search: https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js
