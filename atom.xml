@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>yk-ddm</title>
   
-  
+  <subtitle>zzq yk-ddm test front-end</subtitle>
   <link href="https://github.com/yk-ddm/yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/yk-ddm/yk-ddm.github.io/"/>
