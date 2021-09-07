@@ -1,5 +1,5 @@
 ---
-title: first newpaper
+title: 《JavaScript 学习笔记 之 日常练习案例》
 date: 2021-09-06 14:42:51
 tags:
 - HTML
