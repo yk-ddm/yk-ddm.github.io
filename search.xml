@@ -36,11 +36,11 @@
     
     
     <entry>
-      <title>Link</title>
-      <link href="https://yk-ddm.github.io/Link/index.html"/>
-      <url>https://yk-ddm.github.io/Link/index.html</url>
+      <title>categories</title>
+      <link href="https://yk-ddm.github.io/categories/index.html"/>
+      <url>https://yk-ddm.github.io/categories/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="categories"><a href="#categories" class="headerlink" title="categories"></a>categories</h1>]]></content>
       
     </entry>
     
@@ -58,11 +58,11 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="https://yk-ddm.github.io/categories/index.html"/>
-      <url>https://yk-ddm.github.io/categories/index.html</url>
+      <title>Link</title>
+      <link href="https://yk-ddm.github.io/Link/index.html"/>
+      <url>https://yk-ddm.github.io/Link/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="categories"><a href="#categories" class="headerlink" title="categories"></a>categories</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h1>]]></content>
       
     </entry>
     
