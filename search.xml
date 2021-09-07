@@ -47,9 +47,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="https://yk-ddm.github.io/tags/index.html"/>
-      <url>https://yk-ddm.github.io/tags/index.html</url>
+      <title>Link</title>
+      <link href="https://yk-ddm.github.io/Link/index.html"/>
+      <url>https://yk-ddm.github.io/Link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -61,6 +61,28 @@
       <title>schedule</title>
       <link href="https://yk-ddm.github.io/schedule/index.html"/>
       <url>https://yk-ddm.github.io/schedule/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="https://yk-ddm.github.io/categories/index.html"/>
+      <url>https://yk-ddm.github.io/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="https://yk-ddm.github.io/tags/index.html"/>
+      <url>https://yk-ddm.github.io/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
