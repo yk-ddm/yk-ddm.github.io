@@ -76,13 +76,13 @@ katex:
   per_page: false
   hide_scrollbar: true
 
-# Image (圖片設置)
+# Image (图片设置))
 # --------------------------------------
 
-# Favicon（網站圖標）
+# Favicon（网站图标）
 favicon: /img/favicon.png
 
-# Avatar (頭像)
+# Avatar (头像)
 avatar:
   img: /img/avatar.jpg
   effect: false
@@ -91,7 +91,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img:
+index_img: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210826123239.png
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
@@ -131,7 +131,7 @@ cover:
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: /img/friend_404.gif
+  flink: 
   post_page: /img/404.jpg
 
 # A simple 404 page
@@ -203,7 +203,7 @@ post_edit:
   enable: false
   # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
   # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
-  url:
+  url: :category/:title.html
 
 # Related Articles
 related_post:
