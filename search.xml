@@ -33,4 +33,39 @@
     
   
   
+    
+    
+    <entry>
+      <title>about</title>
+      <link href="https://yk-ddm.github.io/about/index.html"/>
+      <url>https://yk-ddm.github.io/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>page_test01</title>
+      <link href="https://yk-ddm.github.io/page-test01/index.html"/>
+      <url>https://yk-ddm.github.io/page-test01/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>yourdiy</title>
+      <link href="https://yk-ddm.github.io/yourdiy/index.html"/>
+      <url>https://yk-ddm.github.io/yourdiy/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+  
 </search>
