@@ -624,7 +624,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/yk-ddm
   card_announcement:
     enable: true
     content: This is my Blog
@@ -657,13 +657,13 @@ aside:
     sort_order: # Don't modify the setting unless you know how it works
 
 # busuanzi count for PV / UV in site
-# 訪問人數
+# 访问人数
 busuanzi:
   site_uv: true
   site_pv: true
   page_pv: true
 
-# Time difference between publish date and now (網頁運行時間)
+# Time difference between publish date and now (网页运行时间)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: false
@@ -683,7 +683,7 @@ newest_comments:
 # Change font size
 change_font_size: false
 
-# Conversion between Traditional and Simplified Chinese (簡繁轉換)
+# Conversion between Traditional and Simplified Chinese (简繁转换)
 translate:
   enable: false
   # The text of a button
@@ -695,9 +695,9 @@ translate:
   # The text of the button when the language is Simplified Chinese
   msgToTraditionalChinese: '繁'
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: '簡'
+  msgToSimplifiedChinese: '简'
 
-# Read Mode (閲讀模式)
+# Read Mode (阅读模式)
 readmode: true
 
 # dark mode
@@ -705,15 +705,15 @@ darkmode:
   enable: true
   # Toggle Button to switch dark/light mode
   button: true
-  # Switch dark/light mode automatically (自動切換 dark mode和 light mode)
+  # Switch dark/light mode automatically (自动切换 dark mode和 light mode)
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
   autoChangeMode: false
 
-# Lightbox (圖片大圖查看模式)
+# Lightbox (图片大图查看模式)
 # --------------------------------------
-# You can only choose one, or neither (只能選擇一個 或者 兩個都不選)
+# You can only choose one, or neither (只能选择一个 或者 两个都不选)
 
 # medium-zoom
 # https://github.com/francoischalifour/medium-zoom
@@ -764,10 +764,10 @@ aplayerInject:
   enable: false
   per_page: true
 
-# Snackbar (Toast Notification 彈窗)
+# Snackbar (Toast Notification 弹窗)
 # https://github.com/polonel/SnackBar
-# position 彈窗位置
-# 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
+# position 弹窗位置
+# 可选 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
   enable: false
   position: bottom-left
@@ -775,16 +775,16 @@ snackbar:
   bg_dark: '#121212' # The background color of Toast Notification in dark mode
 
 # https://instant.page/
-# prefetch (預加載)
+# prefetch (预加载)
 instantpage: false
 
 # https://github.com/vinta/pangu.js
-# Insert a space between Chinese character and English character (中英文之間添加空格)
+# Insert a space between Chinese character and English character (中英文之间添加空格)
 pangu:
   enable: false
   field: site # site/post
 
-# Lazyload (圖片懶加載)
+# Lazyload (图片懒加载)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
   enable: false
@@ -821,7 +821,7 @@ inject:
 
 # CDN
 # Don't modify the following settings unless you know how they work
-# 非必要請不要修改
+# 非必要请不要修改
 CDN:
   # main
   main_css: /css/index.css
