@@ -3,22 +3,12 @@
 # --------------------------------------
 
 menu:
-  # Home: / || fas fa-home
-  # Archives: /archives/ || fas fa-archive
-  # Tags: /tags/ || fas fa-tags
-  # Categories: /categories/ || fas fa-folder-open
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
-  # Link: /link/ || fas fa-link
-  # About: /about/ || fas fa-heart
-
   home: / || fa fa-home
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   schedule: /schedule/ || fa fa-calendar
-  Link: /link/ || fa fa-link :友链
+  Link: /link/ || fa fa-link
   about: /about/ || fa fa-user
 
 # Code Blocks (代码相关)
@@ -48,6 +38,9 @@ social:
   fab fa-github: https://github.com/yk-ddm || Github
   fab fa-qq: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210907183834.jpeg || QQ群
   iconfont icon-csdn1: https://blog.csdn.net/yk_ddm || CSDN
+
+links:
+  Title: https://blog.csdn.net/yk_ddm
 
 # search (搜索)
 # --------------------------------------
@@ -93,6 +86,12 @@ favicon: /img/favicon.png
 avatar:
   img: /img/avatar.jpg
   effect: false
+  # Replace the default image and set the url here.
+  url: https://avatar.csdnimg.cn/9/A/7/1_lwqbrell_1572140047.jpg
+  # If true, the avatar will be dispalyed in circle.
+  # rounded: false
+  # If true, the avatar will be rotated with the cursor.
+  # rotated: false 
 
 # Disable all banner image
 disable_top_img: false
@@ -207,10 +206,10 @@ reward:
 # Post edit
 # Easily browse and edit blog source code online.
 post_edit:
-  enable: true
+  enable: false
   # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
   # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
-  url: :category/:title.html
+  url: /
 
 # Related Articles
 related_post:
@@ -360,7 +359,7 @@ twikoo:
 
 # Chat Button [recommend]
 # It will create a button in the bottom right corner of website, and hide the origin button
-chat_btn: true
+chat_btn: false
 
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
 chat_hide_show: false
@@ -368,7 +367,7 @@ chat_hide_show: false
 # chatra
 # https://chatra.io/
 chatra:
-  enable: false
+  enable: true
   id:
 
 # tidio
@@ -727,8 +726,20 @@ darkmode:
 medium_zoom: false
 
 # fancybox
+# FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
+# For more information: https://fancyapps.com/fancybox
 # http://fancyapps.com/fancybox/3/
 fancybox: true
+
+codeblock:
+  # Manual define the border radius in codeblock
+  # Leave it empty for the default 1
+  border_radius:
+  # Add copy button on codeblock
+  copy_button:
+    enable: true
+    # Show text copy result
+    show_result: true
 
 # Tag Plugins settings (标签外挂)
 # --------------------------------------
