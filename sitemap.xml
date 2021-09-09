@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://github.com/yk-ddm/yk-ddm.github.io/favorite/index.html</loc>
+    
+    <lastmod>2021-09-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://github.com/yk-ddm/yk-ddm.github.io/categories/index.html</loc>
+    
+    <lastmod>2021-09-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://github.com/yk-ddm/yk-ddm.github.io/posts/21cfbf15.html</loc>
     
     <lastmod>2021-09-09</lastmod>
@@ -31,13 +45,6 @@
   
   <url>
     <loc>https://github.com/yk-ddm/yk-ddm.github.io/about/index.html</loc>
-    
-    <lastmod>2021-09-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://github.com/yk-ddm/yk-ddm.github.io/categories/index.html</loc>
     
     <lastmod>2021-09-07</lastmod>
     
