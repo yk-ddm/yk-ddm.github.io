@@ -10,6 +10,7 @@ menu:
   schedule: /schedule/ || fa fa-calendar
   Link: /link/ || fa fa-link
   about: /about/ || fa fa-user
+  favorite: /favorite/ || fa-star
 
 # Code Blocks (代码相关)
 # --------------------------------------
@@ -97,7 +98,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210826123239.png
+index_img: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210909212542.jpg
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
