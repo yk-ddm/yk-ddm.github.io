@@ -6,7 +6,7 @@
   <link href="https://github.com/yk-ddm/yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/yk-ddm/yk-ddm.github.io/"/>
-  <updated>2021-09-09T12:36:54.786Z</updated>
+  <updated>2021-09-09T12:48:23.340Z</updated>
   <id>https://github.com/yk-ddm/yk-ddm.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>《JavaScript 学习笔记 之 日常练习案例》</title>
-    <link href="https://github.com/yk-ddm/yk-ddm.github.io/posts/21cfbf15/"/>
-    <id>https://github.com/yk-ddm/yk-ddm.github.io/posts/21cfbf15/</id>
+    <link href="https://github.com/yk-ddm/yk-ddm.github.io/posts/21cfbf15.html"/>
+    <id>https://github.com/yk-ddm/yk-ddm.github.io/posts/21cfbf15.html</id>
     <published>2021-09-06T06:42:51.000Z</published>
-    <updated>2021-09-09T12:36:54.786Z</updated>
+    <updated>2021-09-09T12:48:23.340Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript-学习笔记"><a href="#JavaScript-学习笔记" class="headerlink" title="JavaScript 学习笔记"></a>JavaScript 学习笔记</h1><hr /><h2 id="日常练习案例"><a href="#日常练习案例" class="headerlink" title="日常练习案例"></a>日常练习案例</h2><hr /><h3 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h3><pre><code class="js">// &#39;abcEFG&#39;  重新排序 ---&gt; 规则是 把大写字母放前面，小写字母放后面// realization/**    explain：    operationStr 操作字符串    应用了： String.split()  切割字符串返回数组、    Array.join() 将数组中的元素以某种操作符连接起来、    正则表达式的使用 */function operationStr(str)&#123;    return str.split(/[a-z]/g).join(&#39;&#39;) + str.split(/[A-Z]/g).join(&#39;&#39;)&#125;// Testvar str = &#39;abcEFG&#39;,  // expect output: &#39;EFGabc&#39;    result = operationStr(str)console.log(result)  // output: &#39;EFGabc&#39;</code></pre><ul><li><code>查看测试结果</code><br><img src="https://uploadfiles.nowcoder.com/files/20210816/838378582_1629111449561/f5833805ece3444d9df5cbc1587b78e7.png" alt="在这里插入图片描述"></li></ul><h3 id="Boolean-类型学习练习"><a href="#Boolean-类型学习练习" class="headerlink" title="Boolean 类型学习练习"></a>Boolean 类型学习练习</h3><pre><code class="js">/**    explain：    test 自定义变量名称        Boolean类型        new Boolean()  实例化，默认 返回 false    document 文档        document.write()  向页面打印信息，会覆盖页面原有的内容    document.write(&quot;&lt;br /&gt;&quot;)   向页面输出一个换行*/var testtest = new Boolean()document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(null)document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(&#39;&#39;)   // &#39;&#39; 或 &quot;&quot;document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(undefined)document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(NaN)document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(0)document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(false)  document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(true)  document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: true</code></pre><ul><li>查看测试结果</li></ul><p><img src="https://uploadfiles.nowcoder.com/images/20210817/838378582_1629200064609/468DD5DDE04AEED9D181C17F0FEED120" alt="图片说明" title="图片标题"> </p>]]></content>
     
