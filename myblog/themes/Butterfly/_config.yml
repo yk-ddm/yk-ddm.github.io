@@ -9,8 +9,7 @@ menu:
   archives: /archives/ || fa fa-archive
   schedule: /schedule/ || fa fa-calendar
   Link: /link/ || fa fa-link
-  about: /about/ || fa fa-user
-  favorite: /favorite/ || fa-star
+  favorite: /favorite/ || fa fa-star
 
 # Code Blocks (代码相关)
 # --------------------------------------
