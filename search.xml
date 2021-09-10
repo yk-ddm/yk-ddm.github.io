@@ -36,22 +36,22 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="https://yk-ddm.github.io/categories/index.html"/>
-      <url>https://yk-ddm.github.io/categories/index.html</url>
+      <title>favorite</title>
+      <link href="https://yk-ddm.github.io/favorite/index.html"/>
+      <url>https://yk-ddm.github.io/favorite/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="categories"><a href="#categories" class="headerlink" title="categories"></a>categories</h1>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>favorite</title>
-      <link href="https://yk-ddm.github.io/favorite/index.html"/>
-      <url>https://yk-ddm.github.io/favorite/index.html</url>
+      <title>分类</title>
+      <link href="https://yk-ddm.github.io/categories/index.html"/>
+      <url>https://yk-ddm.github.io/categories/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="categories"><a href="#categories" class="headerlink" title="categories"></a>categories</h1>]]></content>
       
     </entry>
     
