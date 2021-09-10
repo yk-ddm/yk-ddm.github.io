@@ -36,17 +36,6 @@
     
     
     <entry>
-      <title>favorite</title>
-      <link href="https://yk-ddm.github.io/favorite/index.html"/>
-      <url>https://yk-ddm.github.io/favorite/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分类</title>
       <link href="https://yk-ddm.github.io/categories/index.html"/>
       <url>https://yk-ddm.github.io/categories/index.html</url>
@@ -58,11 +47,11 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="https://yk-ddm.github.io/tags/index.html"/>
-      <url>https://yk-ddm.github.io/tags/index.html</url>
+      <title>favorite</title>
+      <link href="https://yk-ddm.github.io/favorite/index.html"/>
+      <url>https://yk-ddm.github.io/favorite/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="tags"><a href="#tags" class="headerlink" title="tags"></a>tags</h1>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -85,6 +74,17 @@
       <url>https://yk-ddm.github.io/schedule/index.html</url>
       
         <content type="html"><![CDATA[<h1 id="schedule"><a href="#schedule" class="headerlink" title="schedule"></a>schedule</h1>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="https://yk-ddm.github.io/tags/index.html"/>
+      <url>https://yk-ddm.github.io/tags/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="tags"><a href="#tags" class="headerlink" title="tags"></a>tags</h1>]]></content>
       
     </entry>
     
