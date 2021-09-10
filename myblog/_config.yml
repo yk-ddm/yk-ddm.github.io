@@ -9,13 +9,12 @@ description: '少想，多做！'
 keywords: 前端、HTML、CSS & JavaScript
 author: yk-ddm
 language: zh-CN
-timezone: ''
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://github.com/yk-ddm/yk-ddm.github.io
-root: https://yk-ddm.github.io/
-# permalink: :category/:hash.html
+url: https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/
+root: https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/
 permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:
@@ -41,7 +40,7 @@ external_link:
   field: site # Apply to the whole site
   exclude: ''
 filename_case: 0
-render_drafts: false
+render_drafts: true
 post_asset_folder: false
 relative_link: false
 future: true
@@ -101,6 +100,12 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
+# 为了防止插入重复的资源，需要把asset_inject设为false
+aplayer:
+  meting: true
+  asset_inject: false
+
+# 
 search:
   path: search.xml
   field: all
@@ -118,5 +123,5 @@ feed:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:yk-ddm/yk-ddm.github.io.git
+  repo: [git@github.com:yk-ddm/yk-ddm.github.io.git, git@e.coding.net:yk-ddm/yk-ddm/yk-ddm.github.io.git]
   branch: master

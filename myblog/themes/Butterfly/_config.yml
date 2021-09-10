@@ -3,8 +3,8 @@
 # --------------------------------------
 
 menu:
-  home: / || fa fa-home
-  tags: /tags/ || fa fa-tags
+  home: /首页 || fa fa-home
+  tags: /tags/标签 || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   schedule: /schedule/ || fa fa-calendar
@@ -199,7 +199,7 @@ reward:
     - img: /img/wechat-pay.png
     #   link:
       text: 微信打赏码
-    - img: /img/alipay-pay.jpg
+    - img: /img/alipay-pay.png
     #   link:
       text: 支付宝打赏码
 
@@ -772,14 +772,14 @@ note:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   exclude:
     # - xxxx
     # - xxxx
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
+  enable: true
   per_page: true
 
 # Snackbar (Toast Notification 弹窗)
@@ -836,6 +836,7 @@ inject:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
+    - <div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
 
 # CDN
 # Don't modify the following settings unless you know how they work
