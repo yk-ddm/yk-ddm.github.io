@@ -3,13 +3,12 @@
 # --------------------------------------
 
 menu:
-  home: /首页 || fa fa-home
-  tags: /tags/标签 || fa fa-tags
-  categories: /categories/ || fa fa-th
-  archives: /archives/ || fa fa-archive
-  schedule: /schedule/ || fa fa-calendar
-  Link: /link/ || fa fa-link
-  favorite: /favorite/ || fa fa-star
+  首页: / || fa fa-home
+  标签: /tags/ || fa fa-tags
+  分类: /categories/ || fa fa-th
+  归档: /archives/ || fa fa-archive
+  友链: /link/ || fa fa-link
+  网址收藏: /favorite/ || fa fa-star
 
 # Code Blocks (代码相关)
 # --------------------------------------
@@ -496,12 +495,12 @@ tag_ui: # 留空或 index
 background:
 
 # Footer Background
-footer_bg: false
+footer_bg: true
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
 
-# Enter transitions (開啓網頁進入效果)
+# Enter transitions (开启网页进入效果)
 enter_transitions: true
 
 # Background effects (背景特效)
@@ -517,10 +516,10 @@ canvas_ribbon:
   click_to_change: false
   mobile: false
 
-# Fluttering Ribbon (動態彩帶)
+# Fluttering Ribbon (动态彩带)
 canvas_fluttering_ribbon:
-  enable: false
-  mobile: false
+  enable: true
+  mobile: true
 
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
@@ -537,21 +536,21 @@ canvas_nest:
 activate_power_mode:
   enable: false
   colorful: true # open particle animation (冒光特效)
-  shake: true #  open shake (抖動特效)
+  shake: true #  open shake (抖动特效)
   mobile: false
 
-# Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
+# Mouse click effects: fireworks (鼠标点击效果：烟火特效)
 fireworks:
-  enable: false
+  enable: true
   zIndex: 9999 # -1 or 9999
   mobile: false
 
-# Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)
+# Mouse click effects: Heart symbol (鼠标点击效果：爱心)
 click_heart:
   enable: false
   mobile: false
 
-# Mouse click effects: words (鼠標點擊效果: 文字)
+# Mouse click effects: words (鼠标点击效果：文字)
 ClickShowText:
   enable: false
   text:
@@ -562,11 +561,11 @@ ClickShowText:
   random: false
   mobile: false
 
-# Default display mode (網站默認的顯示模式)
+# Default display mode (网站默认的显示模式)
 # light (default) / dark
 display_mode: light
 
-# Beautify (美化頁面顯示)
+# Beautify (美化页面显示)
 beautify:
   enable: false
   field: post # site/post
@@ -835,8 +834,8 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    # - <script src="xxxx"></script>
-    - <div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
+    - <div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-mutex="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
+    - <script>window.onload = function () { const oAplayerIcon = document.getElementsByClassName("aplayer-icon")[8]; console.log(oAplayerIcon) }</script>
 
 # CDN
 # Don't modify the following settings unless you know how they work

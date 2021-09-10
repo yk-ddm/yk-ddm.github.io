@@ -13,8 +13,10 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/
-root: https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/
+# url: https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/
+# root: https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/
+url: https://yk-ddm.github.io/yk-ddm.github.io
+root: https://yk-ddm.github.io/
 permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:
@@ -104,20 +106,6 @@ theme: butterfly
 aplayer:
   meting: true
   asset_inject: false
-
-# 
-search:
-  path: search.xml
-  field: all
-
-## RSS订阅
-plugin:
-- hexo-generator-feed
-## Feed Atom
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
