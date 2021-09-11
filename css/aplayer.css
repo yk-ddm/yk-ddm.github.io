@@ -3,3 +3,7 @@
     /* height: 66px; */
     /* width: 66px; */
 }
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+    width: 0px!important;
+}
