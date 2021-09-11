@@ -35,4 +35,6 @@
     content: "\e64b";
   }
   
-  
+  .icon-email:before {
+    content: "\e6a0";
+ }
