@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/search/index.html</loc>
+    
+    <lastmod>2021-09-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/posts/21cfbf15.html</loc>
     
     <lastmod>2021-09-10</lastmod>
