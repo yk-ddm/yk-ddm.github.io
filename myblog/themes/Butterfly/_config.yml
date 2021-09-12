@@ -682,7 +682,7 @@ change_font_size: false
 
 # Conversion between Traditional and Simplified Chinese (简繁转换)
 translate:
-  enable: false
+  enable: true
   # The text of a button
   default: 繁
   # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
@@ -785,7 +785,7 @@ snackbar:
 
 # https://instant.page/
 # prefetch (预加载)
-instantpage: false
+instantpage: true
 
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之间添加空格)
@@ -824,6 +824,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    - <link rel="stylesheet" href="/css/index.css">
     - <link rel="stylesheet" href="/css/iconfont.css">
     - <link rel="stylesheet" href="css/aplayer.css">
   bottom:
