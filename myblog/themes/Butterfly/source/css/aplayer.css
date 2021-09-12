@@ -1,0 +1,9 @@
+.aplayer.aplayer-narrow .aplayer-pic {
+    display: none;
+    /* height: 66px; */
+    /* width: 66px; */
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow div.aplayer-body {
+    width: 0px!important;
+}

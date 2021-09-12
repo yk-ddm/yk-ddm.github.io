@@ -15,6 +15,7 @@ timezone: Asia/Shanghai
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 # url: https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/
 # root: https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/
+# 或者 使用如下方式
 url: https://yk-ddm.github.io/yk-ddm.github.io
 root: https://yk-ddm.github.io/
 permalink: posts/:abbrlink.html
