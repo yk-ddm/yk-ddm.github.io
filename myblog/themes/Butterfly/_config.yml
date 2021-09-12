@@ -31,10 +31,10 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  fab fa-github: https://github.com/yk-ddm || Github
+  iconfont icon-gitee2: https://gitee.com/yk-ddm || Gitee
   iconfont icon-email: https://mail.qq.com/cgi-bin/frame_html?sid=tY5EEfwrruvXbghp&r=2fccba369961e9076eb5b6747c00612c || Email
   fab fa-qq: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210907183834.jpeg || QQ群
-  iconfont icon-csdn1: https://blog.csdn.net/yk_ddm || CSDN
+  iconfont icon-csdn: https://blog.csdn.net/yk_ddm || CSDN
 
 links:
   Title: https://blog.csdn.net/yk_ddm
