@@ -1,4 +1,4 @@
-# Main menu navigation (導航目錄)
+# Main menu navigation (导航目录)
 # see https://butterfly.js.org/posts/4aa8abbe/# 导航菜单
 # --------------------------------------
 
@@ -133,9 +133,9 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
-  subtitle: 'Page Not Found'
-  background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
+  enable: true
+  subtitle: '页面没有找到'
+  background: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210913083932.jpg
 
 post_meta:
   page: # Home Page
@@ -824,7 +824,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <link rel="stylesheet" href="/css/index.css">
+    - <link rel="stylesheet" href="/css/page_index.css">
     - <link rel="stylesheet" href="/css/iconfont.css">
     - <link rel="stylesheet" href="css/aplayer.css">
   bottom:
