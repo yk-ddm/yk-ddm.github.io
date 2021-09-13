@@ -6,7 +6,7 @@
   <link href="https://yk-ddm.github.io/yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://yk-ddm.github.io/yk-ddm.github.io/"/>
-  <updated>2021-09-13T07:24:02.248Z</updated>
+  <updated>2021-09-13T07:27:31.168Z</updated>
   <id>https://yk-ddm.github.io/yk-ddm.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://yk-ddm.github.io/yk-ddm.github.io/posts/2312.html"/>
     <id>https://yk-ddm.github.io/yk-ddm.github.io/posts/2312.html</id>
     <published>2021-09-13T02:19:22.000Z</published>
-    <updated>2021-09-13T07:24:02.248Z</updated>
+    <updated>2021-09-13T07:27:31.168Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="《CSS（层叠样式表）-学习笔记之-cursor》"><a href="#《CSS（层叠样式表）-学习笔记之-cursor》" class="headerlink" title="《CSS（层叠样式表） 学习笔记之 cursor》"></a>《CSS（层叠样式表） 学习笔记之 cursor》</h1><h2 id="cursor-简介"><a href="#cursor-简介" class="headerlink" title="cursor 简介"></a>cursor 简介</h2><blockquote><p>cursor 是 CSS 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式</p></blockquote><pre><code class="css">cursor: help;cursor: wait;cursor: crosshair;cursor: not-allowed;cursor: zoom-in;cursor: grab;</code></pre><blockquote><p>cursor: help;  效果如下：</p></blockquote><img width=400 height=300 src="https://img-blog.csdnimg.cn/8157d993627349cf8f6dbf3cfec66a76.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_1,color_FFFFFF,t_70,g_se,x_16#pic_center" /><blockquote><p>cursor: wait;  效果如下：</p></blockquote><img width=400 height=300 src="https://img.yasuotu.com/uploads/2021/09/13/613ef606484dc_613ef60693c58.jpg?time=1631516171" /><blockquote><p>cursor: crosshair;  效果如下：</p></blockquote><img width=400 height=300 src="https://img.yasuotu.com/uploads/2021/09/13/613ef8dcd469c_613ef8ddad38e.jpg?time=1631516898" /><blockquote><p>cursor: not-allowed;  效果如下：</p></blockquote><img width=400 height=300 src="https://img-blog.csdnimg.cn/4c76617b9a124d148ece43bdeba3d86f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" /><blockquote><p>cursor: zoom-in;  效果如下：</p></blockquote><img width=400 height=300 src="https://img-blog.csdnimg.cn/3a7ed3679aa444d4802bae92d12b74d0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" /><blockquote><p>cursor: grab;  效果如下：</p></blockquote><img width=400 height=300 src="https://img-blog.csdnimg.cn/7fe0c4ade1da43fdb37d1ad307780c6f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" /><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="《CSS（层叠样式表）-学习笔记之-cursor》"><a href="#《CSS（层叠样式表）-学习笔记之-cursor》" class="headerlink" title="《CSS（层叠样式表） 学习笔记之 cursor》"></a>《CSS（层叠样式表） 学习笔记之 cursor》</h1><h2 id="cursor-简介"><a href="#cursor-简介" class="headerlink" title="cursor 简介"></a>cursor 简介</h2><blockquote><p>cursor 是 CSS 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式</p></blockquote><pre><code class="css">cursor: help;cursor: wait;cursor: crosshair;cursor: not-allowed;cursor: zoom-in;cursor: grab;</code></pre><blockquote><p>cursor: help;  效果如下：</p></blockquote><img alt="cursor: help;" width=400 height=300 src="https://img-blog.csdnimg.cn/8157d993627349cf8f6dbf3cfec66a76.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_1,color_FFFFFF,t_70,g_se,x_16#pic_center" /><blockquote><p>cursor: wait;  效果如下：</p></blockquote><img alt="cursor: wait;" width=400 height=300 src="https://img.yasuotu.com/uploads/2021/09/13/613ef606484dc_613ef60693c58.jpg?time=1631516171" /><blockquote><p>cursor: crosshair;  效果如下：</p></blockquote><img alt="cursor: crosshair;" width=400 height=300 src="https://img.yasuotu.com/uploads/2021/09/13/613ef8dcd469c_613ef8ddad38e.jpg?time=1631516898" /><blockquote><p>cursor: not-allowed;  效果如下：</p></blockquote><img alt="cursor: not-allowed;" width=400 height=300 src="https://img-blog.csdnimg.cn/4c76617b9a124d148ece43bdeba3d86f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" /><blockquote><p>cursor: zoom-in;  效果如下：</p></blockquote><img alt="cursor: zoom-in;" width=400 height=300 src="https://img-blog.csdnimg.cn/3a7ed3679aa444d4802bae92d12b74d0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" /><blockquote><p>cursor: grab;  效果如下：</p></blockquote><img alt="cursor: grab;" width=400 height=300 src="https://img-blog.csdnimg.cn/7fe0c4ade1da43fdb37d1ad307780c6f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" /><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
     
     
     <summary type="html">《CSS（层叠样式表） 学习笔记之 cursor》</summary>
@@ -33,9 +33,9 @@
     <category term="CSS" scheme="https://yk-ddm.github.io/yk-ddm.github.io/categories/CSS/"/>
     
     
-    <category term="CSS" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/CSS/"/>
-    
     <category term="Web 开发技术" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/Web-%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="CSS" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/CSS/"/>
     
     <category term="cursor" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/cursor/"/>
     
@@ -58,9 +58,9 @@
     <category term="JavaScript" scheme="https://yk-ddm.github.io/yk-ddm.github.io/categories/JavaScript/"/>
     
     
-    <category term="HTML" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/HTML/"/>
-    
     <category term="CSS" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/CSS/"/>
+    
+    <category term="HTML" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/HTML/"/>
     
     <category term="JavaScript" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/JavaScript/"/>
     
