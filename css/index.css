@@ -1398,7 +1398,7 @@ hr:before {
   left: 5%;
   z-index: 1;
   color: var(--hr-before-color);
-  content: 'https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210913192028.ico';
+  content: '\f0c4';
   font-size: 20px;
   line-height: 1;
   -webkit-transition: all 1s ease-in-out;
