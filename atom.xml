@@ -6,7 +6,7 @@
   <link href="https://yk-ddm.github.io/yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://yk-ddm.github.io/yk-ddm.github.io/"/>
-  <updated>2021-09-14T08:28:56.919Z</updated>
+  <updated>2021-09-14T08:34:50.068Z</updated>
   <id>https://yk-ddm.github.io/yk-ddm.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yk-ddm.github.io/yk-ddm.github.io/posts/10535.html"/>
     <id>https://yk-ddm.github.io/yk-ddm.github.io/posts/10535.html</id>
     <published>2021-09-14T08:06:57.000Z</published>
-    <updated>2021-09-14T08:28:56.919Z</updated>
+    <updated>2021-09-14T08:34:50.068Z</updated>
     
     <content type="html"><![CDATA[<h1 id="《Node-js-学习笔记之服务器静态资源托管服务》"><a href="#《Node-js-学习笔记之服务器静态资源托管服务》" class="headerlink" title="《Node.js 学习笔记之服务器静态资源托管服务》"></a>《Node.js 学习笔记之服务器静态资源托管服务》</h1><h2 id="引入-http-服务"><a href="#引入-http-服务" class="headerlink" title="引入 http 服务"></a>引入 http 服务</h2><blockquote><p>const http = require(‘http’)</p></blockquote><h2 id="开启服务器并指定端口"><a href="#开启服务器并指定端口" class="headerlink" title="开启服务器并指定端口"></a>开启服务器并指定端口</h2><pre><code class="Node.js">const server = http.createServer((req,res) =&gt; &#123;    // code &#125;).listen(3000,() =&gt; &#123;    console.log(&#39;服务开启成功, 请访问 http://localhost:3000/&#39;)&#125;)</code></pre><h2 id="express-中间件的使用"><a href="#express-中间件的使用" class="headerlink" title="express 中间件的使用"></a>express 中间件的使用</h2><blockquote><p>它是处理过程中的一个环节; 是一个函数</p></blockquote><blockquote><p>可以执行任何代码</p></blockquote><blockquote><p>可以修改请求和响应对象</p></blockquote><blockquote><p>可以终结请求-响应循环</p></blockquote><blockquote><p>可以调用堆栈中的下一个中间件</p></blockquote><h3 id="引入-express"><a href="#引入-express" class="headerlink" title="引入 express"></a>引入 express</h3><blockquote><p>const express = require(‘express’)</p></blockquote><h3 id="返回对象"><a href="#返回对象" class="headerlink" title="返回对象"></a>返回对象</h3><blockquote><p>const app = express()</p></blockquote><h3 id="托管静态资源"><a href="#托管静态资源" class="headerlink" title="托管静态资源"></a>托管静态资源</h3><blockquote><p>app.use(express.static(‘test’))</p></blockquote>]]></content>
     
