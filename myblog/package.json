@@ -12,6 +12,7 @@
     "version": "5.4.0"
   },
   "dependencies": {
+    "gulp-html-minifier-terser": "^6.0.1",
     "hexo": "^5.0.0",
     "hexo-abbrlink": "^2.2.1",
     "hexo-browsersync": "^0.3.0",
@@ -30,5 +31,12 @@
     "hexo-server": "^2.0.0",
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-theme-landscape": "^0.0.3"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-terser": "^2.0.1",
+    "gulp-uglify": "^3.0.2"
   }
 }
