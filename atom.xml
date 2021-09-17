@@ -3,11 +3,11 @@
   <title>yk-ddm</title>
   
   
-  <link href="https://yk-ddm.github.io/yk-ddm.github.io/atom.xml" rel="self"/>
+  <link href="http://example.com/atom.xml" rel="self"/>
   
-  <link href="https://yk-ddm.github.io/yk-ddm.github.io/"/>
+  <link href="http://example.com/"/>
   <updated>2021-09-14T11:30:52.708Z</updated>
-  <id>https://yk-ddm.github.io/yk-ddm.github.io/</id>
+  <id>http://example.com/</id>
   
   <author>
     <name>yk-ddm</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>《Node.js 学习笔记之服务器静态资源托管服务》</title>
-    <link href="https://yk-ddm.github.io/yk-ddm.github.io/posts/10535.html"/>
-    <id>https://yk-ddm.github.io/yk-ddm.github.io/posts/10535.html</id>
+    <link href="http://example.com/posts/10535.html"/>
+    <id>http://example.com/posts/10535.html</id>
     <published>2021-09-14T08:06:57.000Z</published>
     <updated>2021-09-14T11:30:52.708Z</updated>
     
@@ -33,21 +33,21 @@
     
     
     
-    <category term="Node.js" scheme="https://yk-ddm.github.io/yk-ddm.github.io/categories/Node-js/"/>
+    <category term="Node.js" scheme="http://example.com/categories/Node-js/"/>
     
     
-    <category term="Node.js" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/Node-js/"/>
+    <category term="Node.js" scheme="http://example.com/tags/Node-js/"/>
     
-    <category term="js" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/js/"/>
+    <category term="js" scheme="http://example.com/tags/js/"/>
     
-    <category term="express" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/express/"/>
+    <category term="express" scheme="http://example.com/tags/express/"/>
     
   </entry>
   
   <entry>
     <title>《CSS（层叠样式表） 学习笔记之 cursor》</title>
-    <link href="https://yk-ddm.github.io/yk-ddm.github.io/posts/2312.html"/>
-    <id>https://yk-ddm.github.io/yk-ddm.github.io/posts/2312.html</id>
+    <link href="http://example.com/posts/2312.html"/>
+    <id>http://example.com/posts/2312.html</id>
     <published>2021-09-13T02:19:22.000Z</published>
     <updated>2021-09-13T10:41:35.027Z</updated>
     
@@ -58,21 +58,21 @@
     
     
     
-    <category term="CSS" scheme="https://yk-ddm.github.io/yk-ddm.github.io/categories/CSS/"/>
+    <category term="CSS" scheme="http://example.com/categories/CSS/"/>
     
     
-    <category term="CSS" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/CSS/"/>
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
     
-    <category term="Web 开发技术" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/Web-%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/"/>
+    <category term="Web 开发技术" scheme="http://example.com/tags/Web-%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="cursor" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/cursor/"/>
+    <category term="cursor" scheme="http://example.com/tags/cursor/"/>
     
   </entry>
   
   <entry>
     <title>《JavaScript 学习笔记 之 日常练习案例》</title>
-    <link href="https://yk-ddm.github.io/yk-ddm.github.io/posts/20068.html"/>
-    <id>https://yk-ddm.github.io/yk-ddm.github.io/posts/20068.html</id>
+    <link href="http://example.com/posts/20068.html"/>
+    <id>http://example.com/posts/20068.html</id>
     <published>2021-09-06T06:42:51.000Z</published>
     <updated>2021-09-14T00:19:53.451Z</updated>
     
@@ -83,14 +83,14 @@
     
     
     
-    <category term="JavaScript" scheme="https://yk-ddm.github.io/yk-ddm.github.io/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
     
     
-    <category term="HTML" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/HTML/"/>
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
     
-    <category term="CSS" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/CSS/"/>
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
     
-    <category term="JavaScript" scheme="https://yk-ddm.github.io/yk-ddm.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="http://example.com/tags/JavaScript/"/>
     
   </entry>
   
