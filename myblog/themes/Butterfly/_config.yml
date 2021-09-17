@@ -7,7 +7,7 @@ menu:
   标签: /tags/ || fa fa-tags
   分类: /categories/ || fa fa-th
   归档: /archives/ || fa fa-archive
-  友链: /link/ || fa fa-link
+  友链: /Link/ || fa fa-link
   网址收藏: /favorite/ || fa fa-star
 
 # Code Blocks (代码相关)
@@ -36,9 +36,13 @@ social:
   fab fa-qq: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210907183834.jpeg || QQ群
   iconfont icon-csdn: https://blog.csdn.net/yk_ddm || CSDN
 
+links_icon: link
+links_title: 友链
+links_layout: block
+
 links:
-  # Title: https://blog.csdn.net/yk_ddm
-  Title: MYW
+  CSDN: https://blog.csdn.net/yk_ddm
+  test: https://blog.csdn.net/yk_ddm
 
 # Algolia search
 algolia_search:
@@ -95,7 +99,7 @@ index_img: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/202109092
 default_top_img:
 
 # The banner image of archive page
-archive_img: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210912204400.webp
+archive_img: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210915111354.jpeg
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子标签页面的 top_img)
@@ -292,9 +296,9 @@ livere:
 # gitalk
 # https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
-  client_id: b5c42e9f2f1d22ce9e6b
-  client_secret: faf86557c12dda723f34e6c4eccb5cad51ef86eb
+  enable: false
+  client_id: 
+  client_secret: 
   repo: yk-ddm.github.io
   owner: yk-ddm
   admin:

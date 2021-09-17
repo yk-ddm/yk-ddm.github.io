@@ -42,7 +42,7 @@ cursor: grab;
 
 > cursor: crosshair;  效果如下：
 
-<img alt="cursor: crosshair;" width=400 height=300 src="https://img.yasuotu.com/uploads/2021/09/13/613ef8dcd469c_613ef8ddad38e.jpg?time=1631516898" />
+<img alt="cursor: crosshair;" width=400 height=300 src="https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210917151016.png" />
 
 > cursor: not-allowed;  效果如下：
 

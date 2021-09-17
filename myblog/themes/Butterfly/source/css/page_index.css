@@ -2,6 +2,10 @@ body {
     cursor: url(https://cdn.jsdelivr.net/gh/yk-ddm/sync_github_gitee@1.0/images/default.cur), default;
 }
 
+#nav.show {
+    padding-left: 70px;
+}
+
 
 /* 滚动条 */
 
