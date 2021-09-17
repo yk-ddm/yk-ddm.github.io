@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>《JavaScript 学习笔记 之 日常练习案例》</title>
-    <url>/posts/20068.html</url>
+    <url>https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/posts/20068.html</url>
     <content><![CDATA[<h1 id="JavaScript-学习笔记"><a href="#JavaScript-学习笔记" class="headerlink" title="JavaScript 学习笔记"></a>JavaScript 学习笔记</h1><hr />
 
 <h2 id="日常练习案例"><a href="#日常练习案例" class="headerlink" title="日常练习案例"></a>日常练习案例</h2><hr />
@@ -93,7 +93,7 @@ document.write(&quot;&lt;br /&gt;&quot;)  // output: true
   </entry>
   <entry>
     <title>《CSS（层叠样式表） 学习笔记之 cursor》</title>
-    <url>/posts/2312.html</url>
+    <url>https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/posts/2312.html</url>
     <content><![CDATA[<h1 id="《CSS（层叠样式表）-学习笔记之-cursor》"><a href="#《CSS（层叠样式表）-学习笔记之-cursor》" class="headerlink" title="《CSS（层叠样式表） 学习笔记之 cursor》"></a>《CSS（层叠样式表） 学习笔记之 cursor》</h1><h2 id="cursor-简介"><a href="#cursor-简介" class="headerlink" title="cursor 简介"></a>cursor 简介</h2><blockquote>
 <p>cursor 是 CSS 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式</p>
 </blockquote>
@@ -193,7 +193,7 @@ cursor: grab;
   </entry>
   <entry>
     <title>《Node.js 学习笔记之服务器静态资源托管服务》</title>
-    <url>/posts/10535.html</url>
+    <url>https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/posts/10535.html</url>
     <content><![CDATA[<h1 id="《Node-js-学习笔记之服务器静态资源托管服务》"><a href="#《Node-js-学习笔记之服务器静态资源托管服务》" class="headerlink" title="《Node.js 学习笔记之服务器静态资源托管服务》"></a>《Node.js 学习笔记之服务器静态资源托管服务》</h1><h2 id="引入-http-服务"><a href="#引入-http-服务" class="headerlink" title="引入 http 服务"></a>引入 http 服务</h2><blockquote>
 <p>const http = require(‘http’)</p>
 </blockquote>
