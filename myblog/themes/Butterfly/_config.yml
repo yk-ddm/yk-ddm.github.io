@@ -292,22 +292,25 @@ livere:
 # gitalk
 # https://github.com/gitalk/gitalk
 gitalk:
-  client_id:
-  client_secret:
-  repo:
-  owner:
+  enable: true
+  client_id: b5c42e9f2f1d22ce9e6b
+  client_secret: faf86557c12dda723f34e6c4eccb5cad51ef86eb
+  repo: yk-ddm.github.io
+  owner: yk-ddm
   admin:
+    - yk-ddm
   option:
 
 # valine
 # https://valine.js.org
 valine:
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
+  enable: true
+  appId: MCTpVI2IyRmS202Gx9MibhOr-gzGzoHsz
+  appKey: XHnqOzRdu1jJjXVqigCh6ymr
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: # valine background
-  visitor: false
+  visitor: true
   option:
 
 # waline - A simple comment system with backend support fork from Valine
@@ -799,7 +802,7 @@ pangu:
 lazyload:
   enable: true
   field: site # site/post
-  placeholder:
+  placeholder: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210915080544.gif
   blur: false
 
 # PWA

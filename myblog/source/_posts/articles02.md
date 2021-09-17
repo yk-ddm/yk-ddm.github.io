@@ -38,7 +38,7 @@ cursor: grab;
 
 > cursor: wait;  效果如下：
 
-<img alt="cursor: wait;" width=400 height=300 src="https://img.yasuotu.com/uploads/2021/09/13/613ef606484dc_613ef60693c58.jpg?time=1631516171" />
+<img alt="cursor: wait;" width=400 height=300 src="https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210917145508.png" />
 
 > cursor: crosshair;  效果如下：
 

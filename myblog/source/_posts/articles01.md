@@ -10,6 +10,7 @@ description: 《JavaScript 学习笔记 之 日常练习案例》
 cover: 'https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210909204543.png'
 abbrlink: 20068
 date: 2021-09-06 14:42:51
+comments: true
 ---
 
 # JavaScript 学习笔记

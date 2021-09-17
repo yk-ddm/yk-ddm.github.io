@@ -114,3 +114,9 @@ deploy:
   type: git
   repo: [git@github.com:yk-ddm/yk-ddm.github.io.git, git@e.coding.net:yk-ddm/yk-ddm/yk-ddm.github.io.git]
   branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
