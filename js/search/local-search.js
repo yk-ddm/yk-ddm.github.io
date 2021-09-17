@@ -70,8 +70,8 @@ window.addEventListener('load', () => {
             }
             let dataTitle = data.title.trim().toLowerCase()
             const dataContent = data.content.trim().replace(/<[^>]+>/g, '').toLowerCase()
-            // const dataUrl = data.url.startsWith('/') ? data.url : GLOBAL_CONFIG.root + data.url
-            const dataUrl = data.url.startsWith('/') ? data.url : data.url
+            const dataUrl = data.url.startsWith('/') ? data.url : GLOBAL_CONFIG.root + data.url
+            console.log(dataUrl, "test")
             let indexTitle = -1
             let indexContent = -1
             let firstOccur = -1
