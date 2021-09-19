@@ -8,4 +8,10 @@ top_img: https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210912204
 
 > [CSDN](https://blog.csdn.net/yk_ddm)
 
+> [谷歌学术](http://scholar.hedasudi.com/)
+
+> [centos 阿里云镜像地址](https://mirrors.aliyun.com/centos/)
+
+> [获取QQ昵称和头像](https://quickso.cn/api/qqxt/)
+
 > ...

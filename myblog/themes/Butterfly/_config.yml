@@ -81,7 +81,7 @@ favicon: /img/favicon.png
 # Avatar (头像)
 avatar:
   img: /img/avatar.jpg
-  effect: true # 头像会一直转圈
+  effect: false # 头像会一直转圈
   # Replace the default image and set the url here.
   url: https://avatar.csdnimg.cn/9/A/7/1_lwqbrell_1572140047.jpg
   # If true, the avatar will be dispalyed in circle.
@@ -129,7 +129,7 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+    - https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210919134347.png
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -265,14 +265,14 @@ comments:
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
   Choose: Livere
   use:
-  # - Valine
-    - Disqus
+    - Valine
+  # - Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
   lazyload: true
   count: true # Display comment count in post's top_img
-  card_post_count: true # Display comment count in Home Page
+  card_post_count: false # Display comment count in Home Page
 
 # disqus
 # https://disqus.com/
@@ -311,7 +311,8 @@ valine:
   enable: true
   appId: MCTpVI2IyRmS202Gx9MibhOr-gzGzoHsz
   appKey: XHnqOzRdu1jJjXVqigCh6ymr
-  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  # avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  avatar: 'mp'
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: # valine background
   visitor: true
@@ -537,7 +538,7 @@ canvas_nest:
 activate_power_mode:
   enable: true
   colorful: true # open particle animation (冒光特效)
-  shake: true #  open shake (抖动特效)
+  shake: false #  open shake (抖动特效)
   mobile: true
 
 # Mouse click effects: fireworks (鼠标点击效果：烟火特效)
@@ -609,7 +610,7 @@ subtitle:
   # subtitle 会先显示 source , 再显示 sub 的內容
   source: false
   # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
-  sub: 
+  sub: hello world!
 
 # Loading Animation (加载动画)
 preloader: true
@@ -676,7 +677,7 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: true
+  enable: false
   sort_order: # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
@@ -686,7 +687,7 @@ newest_comments:
 # --------------------------------------
 
 # Change font size
-change_font_size: false
+change_font_size: true
 
 # Conversion between Traditional and Simplified Chinese (简繁转换)
 translate:
@@ -722,7 +723,7 @@ darkmode:
 
 # medium-zoom
 # https://github.com/francoischalifour/medium-zoom
-medium_zoom: false
+medium_zoom: true
 
 # fancybox
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
@@ -798,7 +799,7 @@ instantpage: true
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之间添加空格)
 pangu:
-  enable: false
+  enable: true
   field: site # site/post
 
 # Lazyload (图片懒加载)
@@ -838,6 +839,7 @@ inject:
   bottom:
     - <div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-mutex="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
     - <script src="https://cdn.jsdelivr.net/gh/yk-ddm/sync_github_gitee@1.1/js/mouse_snow.min.js"></script>
+    - <script src="/js/page_index.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
