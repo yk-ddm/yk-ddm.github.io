@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>《JavaScript 学习笔记 之 日常练习案例》</title>
-    <url>https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/posts/20068.html</url>
+    <url>/posts/20068.html</url>
     <content><![CDATA[<h1 id="JavaScript-学习笔记"><a href="#JavaScript-学习笔记" class="headerlink" title="JavaScript 学习笔记"></a>JavaScript 学习笔记</h1><hr />
 
 <h2 id="日常练习案例"><a href="#日常练习案例" class="headerlink" title="日常练习案例"></a>日常练习案例</h2><hr />
@@ -92,57 +92,8 @@ document.write(&quot;&lt;br /&gt;&quot;)  // output: true
       </tags>
   </entry>
   <entry>
-    <title>《Node.js 学习笔记之服务器静态资源托管服务》</title>
-    <url>https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/posts/10535.html</url>
-    <content><![CDATA[<h1 id="《Node-js-学习笔记之服务器静态资源托管服务》"><a href="#《Node-js-学习笔记之服务器静态资源托管服务》" class="headerlink" title="《Node.js 学习笔记之服务器静态资源托管服务》"></a>《Node.js 学习笔记之服务器静态资源托管服务》</h1><h2 id="引入-http-服务"><a href="#引入-http-服务" class="headerlink" title="引入 http 服务"></a>引入 http 服务</h2><blockquote>
-<p>const http = require(‘http’)</p>
-</blockquote>
-<h2 id="开启服务器并指定端口"><a href="#开启服务器并指定端口" class="headerlink" title="开启服务器并指定端口"></a>开启服务器并指定端口</h2><pre><code class="Node.js">const server = http.createServer((req,res) =&gt; &#123;
-    // code 
-&#125;).listen(3000,() =&gt; &#123;
-    console.log(&#39;服务开启成功, 请访问 http://localhost:3000/&#39;)
-&#125;)
-</code></pre>
-<h2 id="express-中间件的使用"><a href="#express-中间件的使用" class="headerlink" title="express 中间件的使用"></a>express 中间件的使用</h2><blockquote>
-<p>它是处理过程中的一个环节; 是一个函数</p>
-</blockquote>
-<blockquote>
-<p>可以执行任何代码</p>
-</blockquote>
-<blockquote>
-<p>可以修改请求和响应对象</p>
-</blockquote>
-<blockquote>
-<p>可以终结请求-响应循环</p>
-</blockquote>
-<blockquote>
-<p>可以调用堆栈中的下一个中间件</p>
-</blockquote>
-<h3 id="引入-express"><a href="#引入-express" class="headerlink" title="引入 express"></a>引入 express</h3><blockquote>
-<p>const express = require(‘express’)</p>
-</blockquote>
-<h3 id="返回对象"><a href="#返回对象" class="headerlink" title="返回对象"></a>返回对象</h3><blockquote>
-<p>const app = express()</p>
-</blockquote>
-<h3 id="托管静态资源"><a href="#托管静态资源" class="headerlink" title="托管静态资源"></a>托管静态资源</h3><blockquote>
-<p>app.use(express.static(‘test’))</p>
-</blockquote>
-<blockquote>
-<p>app.listen(3000, () =&gt; {<br>    console.log(‘Node 服务开启成功！’)<br>})</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Node.js</category>
-      </categories>
-      <tags>
-        <tag>Node.js</tag>
-        <tag>js</tag>
-        <tag>express</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《CSS（层叠样式表） 学习笔记之 cursor》</title>
-    <url>https://serverless-page-bucket-akb27i5o-1306805575.cos-website.ap-hongkong.myqcloud.com/posts/2312.html</url>
+    <url>/posts/2312.html</url>
     <content><![CDATA[<h1 id="《CSS（层叠样式表）-学习笔记之-cursor》"><a href="#《CSS（层叠样式表）-学习笔记之-cursor》" class="headerlink" title="《CSS（层叠样式表） 学习笔记之 cursor》"></a>《CSS（层叠样式表） 学习笔记之 cursor》</h1><h2 id="cursor-简介"><a href="#cursor-简介" class="headerlink" title="cursor 简介"></a>cursor 简介</h2><blockquote>
 <p>cursor 是 CSS 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式</p>
 </blockquote>
@@ -238,6 +189,55 @@ cursor: grab;
         <tag>CSS</tag>
         <tag>Web 开发技术</tag>
         <tag>cursor</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Node.js 学习笔记之服务器静态资源托管服务》</title>
+    <url>/posts/10535.html</url>
+    <content><![CDATA[<h1 id="《Node-js-学习笔记之服务器静态资源托管服务》"><a href="#《Node-js-学习笔记之服务器静态资源托管服务》" class="headerlink" title="《Node.js 学习笔记之服务器静态资源托管服务》"></a>《Node.js 学习笔记之服务器静态资源托管服务》</h1><h2 id="引入-http-服务"><a href="#引入-http-服务" class="headerlink" title="引入 http 服务"></a>引入 http 服务</h2><blockquote>
+<p>const http = require(‘http’)</p>
+</blockquote>
+<h2 id="开启服务器并指定端口"><a href="#开启服务器并指定端口" class="headerlink" title="开启服务器并指定端口"></a>开启服务器并指定端口</h2><pre><code class="Node.js">const server = http.createServer((req,res) =&gt; &#123;
+    // code 
+&#125;).listen(3000,() =&gt; &#123;
+    console.log(&#39;服务开启成功, 请访问 http://localhost:3000/&#39;)
+&#125;)
+</code></pre>
+<h2 id="express-中间件的使用"><a href="#express-中间件的使用" class="headerlink" title="express 中间件的使用"></a>express 中间件的使用</h2><blockquote>
+<p>它是处理过程中的一个环节; 是一个函数</p>
+</blockquote>
+<blockquote>
+<p>可以执行任何代码</p>
+</blockquote>
+<blockquote>
+<p>可以修改请求和响应对象</p>
+</blockquote>
+<blockquote>
+<p>可以终结请求-响应循环</p>
+</blockquote>
+<blockquote>
+<p>可以调用堆栈中的下一个中间件</p>
+</blockquote>
+<h3 id="引入-express"><a href="#引入-express" class="headerlink" title="引入 express"></a>引入 express</h3><blockquote>
+<p>const express = require(‘express’)</p>
+</blockquote>
+<h3 id="返回对象"><a href="#返回对象" class="headerlink" title="返回对象"></a>返回对象</h3><blockquote>
+<p>const app = express()</p>
+</blockquote>
+<h3 id="托管静态资源"><a href="#托管静态资源" class="headerlink" title="托管静态资源"></a>托管静态资源</h3><blockquote>
+<p>app.use(express.static(‘test’))</p>
+</blockquote>
+<blockquote>
+<p>app.listen(3000, () =&gt; {<br>    console.log(‘Node 服务开启成功！’)<br>})</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>Node.js</tag>
+        <tag>js</tag>
+        <tag>express</tag>
       </tags>
   </entry>
 </search>
