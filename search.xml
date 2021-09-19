@@ -92,6 +92,55 @@ document.write(&quot;&lt;br /&gt;&quot;)  // output: true
       </tags>
   </entry>
   <entry>
+    <title>《Node.js 学习笔记之服务器静态资源托管服务》</title>
+    <url>/posts/10535.html</url>
+    <content><![CDATA[<h1 id="《Node-js-学习笔记之服务器静态资源托管服务》"><a href="#《Node-js-学习笔记之服务器静态资源托管服务》" class="headerlink" title="《Node.js 学习笔记之服务器静态资源托管服务》"></a>《Node.js 学习笔记之服务器静态资源托管服务》</h1><h2 id="引入-http-服务"><a href="#引入-http-服务" class="headerlink" title="引入 http 服务"></a>引入 http 服务</h2><blockquote>
+<p>const http = require(‘http’)</p>
+</blockquote>
+<h2 id="开启服务器并指定端口"><a href="#开启服务器并指定端口" class="headerlink" title="开启服务器并指定端口"></a>开启服务器并指定端口</h2><pre><code class="Node.js">const server = http.createServer((req,res) =&gt; &#123;
+    // code 
+&#125;).listen(3000,() =&gt; &#123;
+    console.log(&#39;服务开启成功, 请访问 http://localhost:3000/&#39;)
+&#125;)
+</code></pre>
+<h2 id="express-中间件的使用"><a href="#express-中间件的使用" class="headerlink" title="express 中间件的使用"></a>express 中间件的使用</h2><blockquote>
+<p>它是处理过程中的一个环节; 是一个函数</p>
+</blockquote>
+<blockquote>
+<p>可以执行任何代码</p>
+</blockquote>
+<blockquote>
+<p>可以修改请求和响应对象</p>
+</blockquote>
+<blockquote>
+<p>可以终结请求-响应循环</p>
+</blockquote>
+<blockquote>
+<p>可以调用堆栈中的下一个中间件</p>
+</blockquote>
+<h3 id="引入-express"><a href="#引入-express" class="headerlink" title="引入 express"></a>引入 express</h3><blockquote>
+<p>const express = require(‘express’)</p>
+</blockquote>
+<h3 id="返回对象"><a href="#返回对象" class="headerlink" title="返回对象"></a>返回对象</h3><blockquote>
+<p>const app = express()</p>
+</blockquote>
+<h3 id="托管静态资源"><a href="#托管静态资源" class="headerlink" title="托管静态资源"></a>托管静态资源</h3><blockquote>
+<p>app.use(express.static(‘test’))</p>
+</blockquote>
+<blockquote>
+<p>app.listen(3000, () =&gt; {<br>    console.log(‘Node 服务开启成功！’)<br>})</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>Node.js</tag>
+        <tag>js</tag>
+        <tag>express</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《CSS（层叠样式表） 学习笔记之 cursor》</title>
     <url>/posts/2312.html</url>
     <content><![CDATA[<h1 id="《CSS（层叠样式表）-学习笔记之-cursor》"><a href="#《CSS（层叠样式表）-学习笔记之-cursor》" class="headerlink" title="《CSS（层叠样式表） 学习笔记之 cursor》"></a>《CSS（层叠样式表） 学习笔记之 cursor》</h1><h2 id="cursor-简介"><a href="#cursor-简介" class="headerlink" title="cursor 简介"></a>cursor 简介</h2><blockquote>
@@ -192,52 +241,144 @@ cursor: grab;
       </tags>
   </entry>
   <entry>
-    <title>《Node.js 学习笔记之服务器静态资源托管服务》</title>
-    <url>/posts/10535.html</url>
-    <content><![CDATA[<h1 id="《Node-js-学习笔记之服务器静态资源托管服务》"><a href="#《Node-js-学习笔记之服务器静态资源托管服务》" class="headerlink" title="《Node.js 学习笔记之服务器静态资源托管服务》"></a>《Node.js 学习笔记之服务器静态资源托管服务》</h1><h2 id="引入-http-服务"><a href="#引入-http-服务" class="headerlink" title="引入 http 服务"></a>引入 http 服务</h2><blockquote>
-<p>const http = require(‘http’)</p>
+    <title>《微信小程序学习笔记》</title>
+    <url>/posts/20305.html</url>
+    <content><![CDATA[<h1 id="微信小程序-—-学习笔记"><a href="#微信小程序-—-学习笔记" class="headerlink" title="微信小程序 —- 学习笔记"></a>微信小程序 —- 学习笔记</h1><hr />
+
+<h2 id="微信小程序简介"><a href="#微信小程序简介" class="headerlink" title="微信小程序简介"></a>微信小程序简介</h2><blockquote>
+<p>一种不需要下载安装即可使用的应用</p>
 </blockquote>
-<h2 id="开启服务器并指定端口"><a href="#开启服务器并指定端口" class="headerlink" title="开启服务器并指定端口"></a>开启服务器并指定端口</h2><pre><code class="Node.js">const server = http.createServer((req,res) =&gt; &#123;
-    // code 
-&#125;).listen(3000,() =&gt; &#123;
-    console.log(&#39;服务开启成功, 请访问 http://localhost:3000/&#39;)
+<blockquote>
+<p>实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用</p>
+</blockquote>
+<blockquote>
+<p>状态模式-单向数据流;</p>
+</blockquote>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=1701719263">微信小程序 官网</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">微信小程序开发文档</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1&token=&lang=zh_CN">账号注册地址</a></p>
+</blockquote>
+<hr />
+
+<h2 id="使用笔记"><a href="#使用笔记" class="headerlink" title="使用笔记"></a>使用笔记</h2><blockquote>
+<p>查询 微信小程序账号 AppID </p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b867cd87bbdf49e9b11a4a65d09b86f5.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxamp/basicprofile/index?token=1701719263&lang=zh_CN">查看 地址</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b79937bf069f4c10aa008a36bb72612e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="https://img-blog.csdnimg.cn/2113796ec7294ae9acd20d0a0f09f694.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h3 id="实例demo"><a href="#实例demo" class="headerlink" title="实例demo"></a>实例demo</h3><blockquote>
+<p>Hello World !</p>
+</blockquote>
+<blockquote>
+<p>代码展示，如下：</p>
+</blockquote>
+<pre><code class="js">//index.js
+//获取应用实例
+const app = getApp()
+
+Page(&#123;
+  data: &#123;
+    str: &#39;Hello World !&#39;
+  &#125;,
+  onLoad: function () &#123;
+  &#125;
 &#125;)
 </code></pre>
-<h2 id="express-中间件的使用"><a href="#express-中间件的使用" class="headerlink" title="express 中间件的使用"></a>express 中间件的使用</h2><blockquote>
-<p>它是处理过程中的一个环节; 是一个函数</p>
+<blockquote>
+<p>页面结构代码，如下：</p>
+</blockquote>
+<pre><code class="wxml">&lt;!--index.wxml--&gt;
+&lt;view class=&quot;container&quot;&gt;
+    &lt;!-- 数据绑定  &#123;&#123;&#125;&#125;   绑定内容 -->
+    &#123;&#123; str &#125;&#125;
+&lt;/view&gt;
+</code></pre>
+<blockquote>
+<p>效果展示，如下：</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/1f5eecda6c7047e7a5192f2d062da195.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>input 的 <code>bindinput</code> 事件触发对象 event 详情</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/9bb78a8b15834be39cef9f353adcec1f.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>在微信小程序中实现数据双向绑定</p>
 </blockquote>
 <blockquote>
-<p>可以执行任何代码</p>
+<p>页面结构代码，如下：</p>
 </blockquote>
+<pre><code class="wxml">&lt;!--index.wxml--&gt;
+&lt;view class=&quot;container&quot;&gt;
+    &lt;view class=&quot;form-item&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;&#123;&#123; myForm.username &#125;&#125;&quot; bindinput=&quot;changeUsername&quot; data-name=&quot;username&quot; placeholder=&quot;请输入您的姓名&quot; focus=&quot;&#123;&#123; true &#125;&#125;&quot;/&gt;
+    &lt;/view&gt;
+    模拟数据双向绑定 --- &#123;&#123; myForm.username &#125;&#125;
+&lt;/view&gt;
+</code></pre>
 <blockquote>
-<p>可以修改请求和响应对象</p>
+<p>逻辑代码，js 如下：</p>
 </blockquote>
+<pre><code class="js">//index.js
+//获取应用实例
+const app = getApp()
+
+Page(&#123;
+    data: &#123;
+        myForm: &#123;
+            username: &#39;yk-ddm&#39;
+        &#125;
+    &#125;,
+    onLoad: function() &#123;&#125;,
+    changeUsername: function(e) &#123;
+      var that = this,
+          currentTarget = e.currentTarget,
+          dataset = currentTarget.dataset,
+          key = dataset.name,
+          value = e.detail.value,
+          myForm = &quot;myForm.&quot; + key
+      
+      that.setData(&#123;
+        [myForm]: value
+      &#125;)
+    &#125;
+&#125;)
+</code></pre>
 <blockquote>
-<p>可以终结请求-响应循环</p>
+<p>代码截图展示，如下：</p>
 </blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b8c7d954d72e4478abdd6684e4070b47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><blockquote>
+<p><code>Cannot delete property &#39;WeixinJSBridge&#39; of #&lt;Window&gt;</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/fb26a9d382d24a0e8ca2c78d3d63a300.png" alt="在这里插入图片描述"></p>
 <blockquote>
-<p>可以调用堆栈中的下一个中间件</p>
+<p>解决方法：尝试更换调试基础库</p>
 </blockquote>
-<h3 id="引入-express"><a href="#引入-express" class="headerlink" title="引入 express"></a>引入 express</h3><blockquote>
-<p>const express = require(‘express’)</p>
-</blockquote>
-<h3 id="返回对象"><a href="#返回对象" class="headerlink" title="返回对象"></a>返回对象</h3><blockquote>
-<p>const app = express()</p>
-</blockquote>
-<h3 id="托管静态资源"><a href="#托管静态资源" class="headerlink" title="托管静态资源"></a>托管静态资源</h3><blockquote>
-<p>app.use(express.static(‘test’))</p>
-</blockquote>
-<blockquote>
-<p>app.listen(3000, () =&gt; {<br>    console.log(‘Node 服务开启成功！’)<br>})</p>
-</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/a38f07bd91e84a27bc24c9d274c43d47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
-        <category>Node.js</category>
+        <category>微信小程序</category>
       </categories>
       <tags>
-        <tag>Node.js</tag>
-        <tag>js</tag>
-        <tag>express</tag>
+        <tag>微信小程序</tag>
+        <tag>小程序</tag>
+        <tag>wxml</tag>
+        <tag>wxss</tag>
+        <tag>javascript</tag>
       </tags>
   </entry>
 </search>
