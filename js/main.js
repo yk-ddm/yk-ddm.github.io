@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
-   * 首頁top_img底下的箭頭
+   * 首页top_img底下的箭头
    */
   const scrollDownInIndex = () => {
     const $scrollDownEle = document.getElementById('scroll-down')
@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
-   * 代碼
-   * 只適用於Hexo默認的代碼渲染
+   * 代码
+   * 只适用于Hexo默认的代码渲染
    */
   const addHighlightTool = function () {
     const highLight = GLOBAL_CONFIG.highlight
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
-   * justified-gallery 圖庫排版
+   * justified-gallery 图库排版
    * 需要 jQuery
    */
   let detectJgJsLoad = false
@@ -283,13 +283,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
-   * 滾動處理
+   * 滚动处理
    */
   const scrollFn = function () {
     const $rightside = document.getElementById('rightside')
     const innerHeight = window.innerHeight + 56
 
-    // 當滾動條小于 56 的時候
+    // 当滚动条小于56的时候
     if (document.body.scrollHeight <= innerHeight) {
       $rightside.style.cssText = 'opacity: 1; transform: translateX(-38px)'
       return
@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function () {
       else mobileToc.close()
     })
 
-    // toc元素點擊
+    // toc元素点击
     $cardToc.addEventListener('click', (e) => {
       e.preventDefault()
       const $target = e.target.classList.contains('toc-link')
@@ -512,7 +512,7 @@ document.addEventListener('DOMContentLoaded', function () {
       typeof FB === 'object' && window.loadFBComment()
       window.DISQUS && document.getElementById('disqus_thread').children.length && setTimeout(() => window.disqusReset(), 200)
     },
-    showOrHideBtn: () => { // rightside 點擊設置 按鈕 展開
+    showOrHideBtn: () => { // rightside 点击设置按钮展开
       document.getElementById('rightside-config-hide').classList.toggle('show')
     },
     scrollToTop: () => { // Back to top
@@ -576,8 +576,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /**
    * menu
-   * 側邊欄sub-menu 展開/收縮
-   * 解決menus在觸摸屏下，滑動屏幕menus_item_child不消失的問題（手機hover的bug)
+   * 侧边栏sub-menu展开/收缩
+   * 解决menus在触摸屏下，滑动屏幕menus_item_child不消失的问题（手机hover的bug）
    */
   const clickFnOfSubMenu = () => {
     document.querySelectorAll('#sidebar-menus .site-page.group').forEach(function (item) {
@@ -588,7 +588,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
-   * 複製時加上版權信息
+   * 复制时加上版权信息
    */
   const addCopyright = () => {
     const copyright = GLOBAL_CONFIG.copyright
@@ -613,7 +613,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
-   * 網頁運行時間
+   * 网页运行时间
    */
   const addRuntime = () => {
     const $runtimeCount = document.getElementById('runtimeshow')
@@ -624,7 +624,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
-   * 最後一次更新時間
+   * 最后一次更新时间
    */
   const addLastPushDate = () => {
     const $lastPushDateItem = document.getElementById('last-push-date')
