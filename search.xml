@@ -243,7 +243,240 @@ cursor: grab;
   <entry>
     <title>《博客框架学习笔记之hexo》</title>
     <url>/posts/52458.html</url>
-    <content><![CDATA[<h1 id="content"><a href="#content" class="headerlink" title="content"></a>content</h1>]]></content>
+    <content><![CDATA[<h1 id="博客框架"><a href="#博客框架" class="headerlink" title="博客框架"></a>博客框架</h1><ul>
+<li>常见的<strong>博客框架</strong> ： <code>hexo</code> 、<code>WordPress</code>、<code>VuePress</code>、<code>Hugo</code>、<code>Solo</code>、<code>Halo</code> 、<code>Typecho</code>、…</li>
+</ul>
+<hr />
+
+<h2 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h2><ul>
+<li>常见的 <strong>博客主题</strong> ：<code>jekyll</code> 、<code>Fluid</code> 、<code>Butterfly</code>、<code>Matery</code>、<code>Akina</code>、<code>Muse</code>、<code>Mist</code>、<code>Pisces</code>、<code>Gemini</code>、 <code>Mirages</code>、…</li>
+</ul>
+<blockquote>
+<p>主题：<code>NexT</code> 、<code>Yilia</code>、<code>Melody</code>、<code>mellow</code>、、、、、、、</p>
+</blockquote>
+<blockquote>
+<p><a href="https://hexo.io/themes/">hexo 主题查找</a> </p>
+</blockquote>
+<hr />
+
+<h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><ul>
+<li><code>简介</code></li>
+</ul>
+<blockquote>
+<p><code>Hexo</code> 是一个基于Node.js的快速、简洁且高效的静态博客框架。Hexo 支持 <code>Markdown</code> 解析文章，在几秒内，即可利用靓丽的主题生成静态网页</p>
+</blockquote>
+<blockquote>
+<p><code>hexo 默认主题：</code> —&gt; <code>landscape</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/aeb500f40d4c4daebfbdf14dfd6c3348.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_44,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<ul>
+<li><code>hexo 版本</code><br><img src="https://img-blog.csdnimg.cn/a9c285b20c494f4fa4c5ff9c8fa4b1c8.png" alt="在这里插入图片描述"></li>
+</ul>
+<blockquote>
+<p><a href="https://hexo.io/">Hexo官网</a><br><a href="https://hexo.io/zh-cn/">Hexo中文网</a></p>
+</blockquote>
+<hr />
+
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><ul>
+<li><code>安装 hexo 的基础依赖</code>  —&gt; <code> git 和 nodejs 的安装</code><br><img src="https://img-blog.csdnimg.cn/487cf9937d0b49f9a3a87f3dfb869c78.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+</ul>
+<ul>
+<li>step1: <code>创建文件夹 personal_blog_yk-ddm</code>, 进入此文件夹<br><img src="https://img-blog.csdnimg.cn/a2a795321a654490801d5bde9533fed7.png" alt="在这里插入图片描述"></li>
+<li>step2: <code>执行 npm 包管理命令 </code> —&gt;  <code>安装 hexo-cli ( hexo 命令行界面)</code>：<code>cnpm install hexo-cli</code><br><img src="https://img-blog.csdnimg.cn/0358132b3445401394f6a81d56b5d8de.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/67d43fecf84546c1b3d122c8c5bc8b26.png" alt="在这里插入图片描述"></li>
+<li>step3: 查看 <code>hexo</code> 版本 ： <code>hexo -v</code><br><img src="https://img-blog.csdnimg.cn/9fd94c4e273b4f289486035851cd1d40.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+<li>step4: <code>初始化 hexo </code> : <code>hexo init myblog</code><br><img src="https://img-blog.csdnimg.cn/beea870a36f74443b5d9fcb323b2c41d.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/7c2826f3faff4e35b79680b1aeac2fc1.png" alt="在这里插入图片描述"></li>
+<li>step5: <code>进入 myblog 文件夹中，开启服务</code>  —&gt;  <code>hexo server</code><br><img src="https://img-blog.csdnimg.cn/6c121254a49742aea1f269a19706e91b.png" alt="在这里插入图片描述"><blockquote>
+<p><code>关闭服务</code> —&gt; Ctrl + C</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/a96b1013fe504772a90cead62669ce40.png" alt="在这里插入图片描述"></p>
+<hr />
+
+<h4 id="将-hexo-部署到-GitHub"><a href="#将-hexo-部署到-GitHub" class="headerlink" title="将 hexo 部署到 GitHub"></a>将 hexo 部署到 GitHub</h4><ul>
+<li><code>修改配置文件 _config.yml </code><br><img src="https://img-blog.csdnimg.cn/9f8df84c4c2841119a55235521f3eaa3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+<li><code>安装deploy-git</code> : <code>npm install hexo-deployer-git --save</code><br><img src="https://img-blog.csdnimg.cn/4c628eeb738c42b8ae60aaac0b47c590.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><blockquote>
+<p>执行 <code>hexo clean</code>    —-&gt;  清空<br>执行 <code>hexo generate</code>  —–&gt;   生成静态文章<br>执行 <code>hexo deploy</code>  ——&gt;  部署发布至 github</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/e2a5bcab599f4624ae5243ef11a61c13.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<ul>
+<li><code>查看效果</code><br><img src="https://img-blog.csdnimg.cn/1dacf0a6d12c494c82415a7cef464603.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/c9a7f888bebc473d9176615413c4cc69.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+</ul>
+<hr />
+
+<h4 id="为-hexo-个人博客添加站内搜索"><a href="#为-hexo-个人博客添加站内搜索" class="headerlink" title="为 hexo 个人博客添加站内搜索"></a>为 hexo 个人博客添加站内搜索</h4><blockquote>
+<p>先安装插件 cnpm install hexo-generator-search –save</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/7ed778c50cff48e0a80e14dcc0b681c0.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>执行 cnpm install hexo-generator-searchdb –save</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/eaad2257cfc54dfebde4bbcd404e543f.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>修改项目的配置文件 _config.yml</p>
+</blockquote>
+<pre><code class="config.yml"># 添加如下内容：
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/e92ce7504a2c4e21a89f1552799f0531.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>编辑主题文件夹的 _config.yml 配置文件，设置 Local search 的 enable 为 ture</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/45edb65a93454edabcb5607b1741d58b.png" alt="在这里插入图片描述"></p>
+<hr />
+
+<h4 id="为-个人博客添加-GitHub-Corners"><a href="#为-个人博客添加-GitHub-Corners" class="headerlink" title="为  个人博客添加 GitHub Corners"></a>为  个人博客添加 GitHub Corners</h4><blockquote>
+<p> <a href="https://tholman.com/github-corners/">GitHub Corners 地址</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/74ce3b3c391d439286547916d8e2b86c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>编辑代码如下</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/7d35e01c63b44ed192f9e080a25e6534.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/0fe5a0861a804788a382f0f90fd6041f.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>效果展示</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/89931688a1bf4425b55b60dade7be793.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_13,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h4 id="Butterfly-添加全局吸底Aplayer-音乐播放器"><a href="#Butterfly-添加全局吸底Aplayer-音乐播放器" class="headerlink" title="Butterfly 添加全局吸底Aplayer ( 音乐播放器 )"></a>Butterfly 添加全局吸底Aplayer ( 音乐播放器 )</h4><blockquote>
+<p><a href="https://butterfly.js.org/posts/507c070f/">Butterfly添加全局吸底Aplayer教程</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://aplayer.js.org/#/zh-Hans/">前往 aplayer 官网</a></p>
+</blockquote>
+<hr />
+
+<h4 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h4><blockquote>
+<p><code>cnpm install hexo-abbrlink --save</code> : 博客链接永久化</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/a0eb1e6796dd4893ab64fbd032a1c250.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>npm install hexo-generator-search –save  —-&gt;  搜索插件安装</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/c2ef2424c8884fb18a1daf9c477150c1.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>npm i hexo-generator-feed —–&gt; 订阅插件 RSS 安装</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/278f30df6f9e4fa99cc65438afc812ef.png" alt="在这里插入图片描述"></p>
+<hr />
+
+<h4 id="使用-iconfont-图标"><a href="#使用-iconfont-图标" class="headerlink" title="使用 iconfont 图标"></a>使用 iconfont 图标</h4><blockquote>
+<p>step1: 从 <a href="https://www.iconfont.cn/">阿里图标 官网</a>  下载 <code>iconfont.css 文件</code></p>
+</blockquote>
+<blockquote>
+<p>step2: 将 <code>iconfont.css</code> 文件复制到 hexo 主题theme/source/css/ 中</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/0344747ac9414f8b8bf90ad77a5f25f0.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>在主题的配置文件中进行如下配置，引入刚刚存入的 <code>css</code> 文件</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/4a083167e62246099add6c9a3b8b2211.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>设置完毕，即可使用 <code>iconfont icon-csdn1: https://blog.csdn.net/yk_ddm || CSDN</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/40b08c4897954c32bead6e63a866abe4.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>测试查看效果</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/0c1d02d7c69a4e4d94b30f692b703149.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h4 id="设置-avatar-头像"><a href="#设置-avatar-头像" class="headerlink" title="设置 avatar 头像"></a>设置 avatar 头像</h4><ul>
+<li><code>在 主题的 _config.yml 中配置</code><br><img src="https://img-blog.csdnimg.cn/9b004254c88d4841aa1b99b2edb1f2ef.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+</ul>
+<hr />
+
+<h4 id="草稿-draft-的使用"><a href="#草稿-draft-的使用" class="headerlink" title="草稿 draft 的使用"></a>草稿 draft 的使用</h4><ul>
+<li><code>hexo new draft draft-test01</code><br><img src="https://img-blog.csdnimg.cn/001b6c88355b49859c5f58c1e2dc9fb4.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+<li><code>将 草稿文章发布到 post 中</code> ：<code>hexo publish draft newspapername</code> , 系统会自动删除 _drafts 中对应的草稿文章<br><img src="https://img-blog.csdnimg.cn/38ec04c0a4ff485bb6827738a508bdfc.png" alt="在这里插入图片描述"></li>
+</ul>
+<hr />
+
+<h4 id="常见操作"><a href="#常见操作" class="headerlink" title="常见操作"></a>常见操作</h4><blockquote>
+<p>语言修改; 配置文件 _config.yml;  默认语言是 en<br>主题支持三种语言: default(en)、zh-CN (简体中文)、zh-TW (繁体中文)</p>
+</blockquote>
+<blockquote>
+<p>Front-matter 即 文章开头部分（—–）</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/c92cf9dfd8484dcc950109293a93d97b.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><code>Butterfly</code> 主题的使用</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/d5cf86daffc240d38d096eb253973dc0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>书写文章：<code>hexo new newspapername</code>， 注意事项 —&gt;  文章名称不要包含空格，否则会出现文件名称不对应的情况（例如：我使用 hexo new post 《博客框架 学习笔记 之 hexo》最后得到的Markdown文件名称却为 hexo》）</p>
+</blockquote>
+<blockquote>
+<p>hexo new [layout] <newspapername>  —-&gt;  layout 布局方式，默认 post 布局</p>
+</blockquote>
+<blockquote>
+<p>layout 布局方式：<code>post</code> 、<code>page</code> 、<code>draft</code> </p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/5badd2e0c54941ee8a12028e52e0cc45.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><code>_config.yml</code> : 作为 <code>hexo框架</code> 的配置文件</p>
+</blockquote>
+<blockquote>
+<p>配置文章的 永久链接 格式，方法如下：第一步，在 <code>_config.yml 配置文件中修改 permalink 的值</code>；第二步，在自定义文章开头书写 category 文章类别</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/9b8b6813d2af42eb984f45ce41465703.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/70f46065e864418d9ea2603346c23733.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<ul>
+<li><code>查看效果</code><br><img src="https://img-blog.csdnimg.cn/24fdd362b5c34469940635be1dedc58e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+<li><code>layout 中 page 的使用</code><br><img src="https://img-blog.csdnimg.cn/bb215459b9274747926491555dde9132.png" alt="在这里插入图片描述"></li>
+</ul>
+<hr />
+
+<h4 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h4><p><code>&#123; err: TypeError: line.matchAll is not a function</code><br><img src="https://img-blog.csdnimg.cn/d8a433976d8248cdacce7a3d302588fe.png" alt="在这里插入图片描述"></p>
+<ul>
+<li><p><code>分析原因：是 node 版本问题, node 12.0.0 以上就没有此问题 </code><br><img src="https://img-blog.csdnimg.cn/bd4c23fc96fe48b5baafaf3a1ecc6a81.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>解决：</code> 尝试 将 <code>_config.yml文件</code> 修改一下<br><img src="https://img-blog.csdnimg.cn/ec4f953175f841338cee80c875269d12.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/d6ef2131cc13424b89cd6af38eb3cc49.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>浏览器运行查看</code><br><img src="https://img-blog.csdnimg.cn/2a315e02b1ec49c5844fbf2aea032691.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>problem Two</code>:<br><img src="https://img-blog.csdnimg.cn/a590b6f427b64fe2ae8fdc9e349e95cd.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>分析原因：</code> 是没有正确安装 <code>hexo-deployer-git</code><br><img src="https://img-blog.csdnimg.cn/b1a45516b26043da955e16ce778c0f41.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>problem Three</code><br><img src="https://img-blog.csdnimg.cn/36b720809ba34f3d9be547b1a160e64f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>分析原因：</code> 权限问题，我之后采用 <code>ssh</code> 方式之后，解决问题<br><img src="https://img-blog.csdnimg.cn/6c4d40e6f2c44ac9ae8d777f397ef3ff.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2add0decd06745cd90ca88b7887711e8.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>problem fourth</code> : <code>TypeError: Cannot read property &#39;enable&#39; of undefined</code><br><img src="https://img-blog.csdnimg.cn/61d60ea73d9a4ab6b231acbac722fc8e.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>分析原因：</code> …</p>
+</li>
+<li><p><code>problem</code><br><img src="https://img-blog.csdnimg.cn/2f1de9628ca3423b90cf20ae82dfea90.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>分析原因：</code> 需要 <code>下载包 hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</code></p>
+</li>
+</ul>
+<blockquote>
+<p>执行 cnpm install –save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</p>
+</blockquote>
+<blockquote>
+<p><code>theme: butterfly</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/09a9714a3ecb46bf8ce65e12a2d72f77.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/737976fbe6d84074ba627b06eae84f26.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>node.js</tag>
+        <tag>Butterfly</tag>
+        <tag>blog</tag>
+        <tag>iconfont</tag>
+      </tags>
   </entry>
   <entry>
     <title>《微信小程序学习笔记》</title>
