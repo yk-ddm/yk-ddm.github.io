@@ -360,10 +360,10 @@ twikoo:
 
 # Chat Button [recommend]
 # It will create a button in the bottom right corner of website, and hide the origin button
-chat_btn: false
+chat_btn: true
 
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
-chat_hide_show: false
+chat_hide_show: true
 
 # chatra
 # https://chatra.io/
@@ -608,9 +608,9 @@ subtitle:
   # source: 3  调用一句网（简体）
   # source: 4  调用今日诗词（简体）
   # subtitle 会先显示 source , 再显示 sub 的內容
-  source: false
+  source: 3
   # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
-  sub: hello world!
+  sub: 
 
 # Loading Animation (加载动画)
 preloader: true
@@ -839,7 +839,6 @@ inject:
   bottom:
     - <div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-mutex="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
     - <script src="https://cdn.jsdelivr.net/gh/yk-ddm/sync_github_gitee@1.1/js/mouse_snow.min.js"></script>
-    - <script src="/js/page_index.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
