@@ -124,6 +124,29 @@
   </entry>
   
   <entry>
+    <title>《一次推送本地项目同步至多个平台的远程仓库》</title>
+    <link href="https://yk-ddm.github.io/posts/42997.html"/>
+    <id>https://yk-ddm.github.io/posts/42997.html</id>
+    <published>2021-08-25T09:47:35.000Z</published>
+    <updated>2021-09-22T12:36:06.093Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="开发者学习笔记"><a href="#开发者学习笔记" class="headerlink" title="开发者学习笔记"></a>开发者学习笔记</h1><hr /><h2 id="项目数据同步"><a href="#项目数据同步" class="headerlink" title="项目数据同步"></a>项目数据同步</h2><blockquote><p>平常我们写项目，写好后就分别提交到源代码管理仓库 <code>github</code> 和 <code>gitee</code><br>问题来了，一旦项目多了，我的需求来了，想要一次提交 ，实现 <code>github</code> 和 <code>gitee</code> 数据同步</p></blockquote><pre><code>step1: 创建 一个 文件夹 sync_github_giteestep2: 初始化一个空的git本地仓库, 即 git 文件夹（如果看不到，可能隐藏了）step3: 进入 git 文件夹，修改 config 内容step4: cd ..step5: 执行 git add .  将当前目录下的文件从工作区存入暂存区step6: 设置 提交的 message ---&gt;  git commit -m &quot;message&quot;step7: 提交 --&gt; git push  -u  origin master</code></pre><p><img src="https://img-blog.csdnimg.cn/7b36b361ff4d4e0993d0a69e50d84dae.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_39,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><pre><code class="config">[core]    repositoryformatversion = 0    filemode = false    bare = false    logallrefupdates = true    symlinks = false    ignorecase = true[remote &quot;origin&quot;]    url = https://gitee.com/yk-ddm/仓库名.git    url = https://github.com/yk-ddm/仓库名.git    fetch = +refs/heads/*:refs/remotes/origin/*[branch &quot;master&quot;]    remote = origin    merge = refs/heads/master</code></pre><p><img src="https://img-blog.csdnimg.cn/6d18a1677acf4172a884019b8b6a02a7.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_25,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><hr /><h3 id="学习遇到的问题"><a href="#学习遇到的问题" class="headerlink" title="学习遇到的问题"></a>学习遇到的问题</h3><pre><code>OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443push 提交的时候应该走ssh隧道的，但是因为设置了http代理，所以就走了http的代理</code></pre><p><img src="https://img-blog.csdnimg.cn/08cc44b161bb44c798fc018eec4476a1.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_51,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><ul><li>解决方法：<code>先暂时关闭代理，提交之后，开启即可加速 github 访问速度</code></li></ul>]]></content>
+    
+    
+    <summary type="html">《一次推送本地项目同步至多个平台的远程仓库》</summary>
+    
+    
+    
+    <category term="Git" scheme="https://yk-ddm.github.io/categories/Git/"/>
+    
+    
+    <category term="gitee" scheme="https://yk-ddm.github.io/tags/gitee/"/>
+    
+    <category term="github" scheme="https://yk-ddm.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《博客框架学习笔记之hexo》</title>
     <link href="https://yk-ddm.github.io/posts/52458.html"/>
     <id>https://yk-ddm.github.io/posts/52458.html</id>
