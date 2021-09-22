@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yk-ddm.github.io/tags/index.html</loc>
+    
+    <lastmod>2021-09-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yk-ddm.github.io/posts/52458.html</loc>
     
     <lastmod>2021-09-22</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://yk-ddm.github.io/categories/index.html</loc>
     
     <lastmod>2021-09-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yk-ddm.github.io/tags/index.html</loc>
-    
-    <lastmod>2021-09-12</lastmod>
     
   </url>
   
@@ -130,41 +130,6 @@
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/tags/hexo/</loc>
-    <lastmod>2021-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yk-ddm.github.io/tags/node-js/</loc>
-    <lastmod>2021-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yk-ddm.github.io/tags/Butterfly/</loc>
-    <lastmod>2021-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yk-ddm.github.io/tags/blog/</loc>
-    <lastmod>2021-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yk-ddm.github.io/tags/iconfont/</loc>
-    <lastmod>2021-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yk-ddm.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2021-09-22</lastmod>
     <changefreq>daily</changefreq>
@@ -199,6 +164,41 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://yk-ddm.github.io/tags/hexo/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/node-js/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/Butterfly/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/blog/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/iconfont/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -223,14 +223,14 @@
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://yk-ddm.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2021-09-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <loc>https://yk-ddm.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-09-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

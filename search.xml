@@ -241,6 +241,147 @@ cursor: grab;
       </tags>
   </entry>
   <entry>
+    <title>《微信小程序学习笔记》</title>
+    <url>/posts/20305.html</url>
+    <content><![CDATA[<h1 id="微信小程序-—-学习笔记"><a href="#微信小程序-—-学习笔记" class="headerlink" title="微信小程序 —- 学习笔记"></a>微信小程序 —- 学习笔记</h1><hr />
+
+<h2 id="微信小程序简介"><a href="#微信小程序简介" class="headerlink" title="微信小程序简介"></a>微信小程序简介</h2><blockquote>
+<p>一种不需要下载安装即可使用的应用</p>
+</blockquote>
+<blockquote>
+<p>实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用</p>
+</blockquote>
+<blockquote>
+<p>状态模式-单向数据流;</p>
+</blockquote>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=1701719263">微信小程序 官网</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">微信小程序开发文档</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1&token=&lang=zh_CN">账号注册地址</a></p>
+</blockquote>
+<hr />
+
+<h2 id="使用笔记"><a href="#使用笔记" class="headerlink" title="使用笔记"></a>使用笔记</h2><blockquote>
+<p>查询 微信小程序账号 AppID </p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b867cd87bbdf49e9b11a4a65d09b86f5.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxamp/basicprofile/index?token=1701719263&lang=zh_CN">查看 地址</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b79937bf069f4c10aa008a36bb72612e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="https://img-blog.csdnimg.cn/2113796ec7294ae9acd20d0a0f09f694.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h3 id="实例demo"><a href="#实例demo" class="headerlink" title="实例demo"></a>实例demo</h3><blockquote>
+<p>Hello World !</p>
+</blockquote>
+<blockquote>
+<p>代码展示，如下：</p>
+</blockquote>
+<pre><code class="js">//index.js
+//获取应用实例
+const app = getApp()
+
+Page(&#123;
+  data: &#123;
+    str: &#39;Hello World !&#39;
+  &#125;,
+  onLoad: function () &#123;
+  &#125;
+&#125;)
+</code></pre>
+<blockquote>
+<p>页面结构代码，如下：</p>
+</blockquote>
+<pre><code class="wxml">&lt;!--index.wxml--&gt;
+&lt;view class=&quot;container&quot;&gt;
+    &lt;!-- 数据绑定  &#123;&#123;&#125;&#125;   绑定内容 -->
+    &#123;&#123; str &#125;&#125;
+&lt;/view&gt;
+</code></pre>
+<blockquote>
+<p>效果展示，如下：</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/1f5eecda6c7047e7a5192f2d062da195.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>input 的 <code>bindinput</code> 事件触发对象 event 详情</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/9bb78a8b15834be39cef9f353adcec1f.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>在微信小程序中实现数据双向绑定</p>
+</blockquote>
+<blockquote>
+<p>页面结构代码，如下：</p>
+</blockquote>
+<pre><code class="wxml">&lt;!--index.wxml--&gt;
+&lt;view class=&quot;container&quot;&gt;
+    &lt;view class=&quot;form-item&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;&#123;&#123; myForm.username &#125;&#125;&quot; bindinput=&quot;changeUsername&quot; data-name=&quot;username&quot; placeholder=&quot;请输入您的姓名&quot; focus=&quot;&#123;&#123; true &#125;&#125;&quot;/&gt;
+    &lt;/view&gt;
+    模拟数据双向绑定 --- &#123;&#123; myForm.username &#125;&#125;
+&lt;/view&gt;
+</code></pre>
+<blockquote>
+<p>逻辑代码，js 如下：</p>
+</blockquote>
+<pre><code class="js">//index.js
+//获取应用实例
+const app = getApp()
+
+Page(&#123;
+    data: &#123;
+        myForm: &#123;
+            username: &#39;yk-ddm&#39;
+        &#125;
+    &#125;,
+    onLoad: function() &#123;&#125;,
+    changeUsername: function(e) &#123;
+      var that = this,
+          currentTarget = e.currentTarget,
+          dataset = currentTarget.dataset,
+          key = dataset.name,
+          value = e.detail.value,
+          myForm = &quot;myForm.&quot; + key
+      
+      that.setData(&#123;
+        [myForm]: value
+      &#125;)
+    &#125;
+&#125;)
+</code></pre>
+<blockquote>
+<p>代码截图展示，如下：</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b8c7d954d72e4478abdd6684e4070b47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><blockquote>
+<p><code>Cannot delete property &#39;WeixinJSBridge&#39; of #&lt;Window&gt;</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/fb26a9d382d24a0e8ca2c78d3d63a300.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>解决方法：尝试更换调试基础库</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/a38f07bd91e84a27bc24c9d274c43d47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
+        <tag>小程序</tag>
+        <tag>wxml</tag>
+        <tag>wxss</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《博客框架学习笔记之hexo》</title>
     <url>/posts/52458.html</url>
     <content><![CDATA[<h1 id="博客框架"><a href="#博客框架" class="headerlink" title="博客框架"></a>博客框架</h1><ul>
@@ -476,147 +617,6 @@ search:
         <tag>Butterfly</tag>
         <tag>blog</tag>
         <tag>iconfont</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《微信小程序学习笔记》</title>
-    <url>/posts/20305.html</url>
-    <content><![CDATA[<h1 id="微信小程序-—-学习笔记"><a href="#微信小程序-—-学习笔记" class="headerlink" title="微信小程序 —- 学习笔记"></a>微信小程序 —- 学习笔记</h1><hr />
-
-<h2 id="微信小程序简介"><a href="#微信小程序简介" class="headerlink" title="微信小程序简介"></a>微信小程序简介</h2><blockquote>
-<p>一种不需要下载安装即可使用的应用</p>
-</blockquote>
-<blockquote>
-<p>实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用</p>
-</blockquote>
-<blockquote>
-<p>状态模式-单向数据流;</p>
-</blockquote>
-<blockquote>
-<p><a href="https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=1701719263">微信小程序 官网</a></p>
-</blockquote>
-<blockquote>
-<p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">微信小程序开发文档</a></p>
-</blockquote>
-<blockquote>
-<p><a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1&token=&lang=zh_CN">账号注册地址</a></p>
-</blockquote>
-<hr />
-
-<h2 id="使用笔记"><a href="#使用笔记" class="headerlink" title="使用笔记"></a>使用笔记</h2><blockquote>
-<p>查询 微信小程序账号 AppID </p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/b867cd87bbdf49e9b11a4a65d09b86f5.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p><a href="https://mp.weixin.qq.com/wxamp/basicprofile/index?token=1701719263&lang=zh_CN">查看 地址</a></p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/b79937bf069f4c10aa008a36bb72612e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<hr />
-
-<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="https://img-blog.csdnimg.cn/2113796ec7294ae9acd20d0a0f09f694.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<hr />
-
-<h3 id="实例demo"><a href="#实例demo" class="headerlink" title="实例demo"></a>实例demo</h3><blockquote>
-<p>Hello World !</p>
-</blockquote>
-<blockquote>
-<p>代码展示，如下：</p>
-</blockquote>
-<pre><code class="js">//index.js
-//获取应用实例
-const app = getApp()
-
-Page(&#123;
-  data: &#123;
-    str: &#39;Hello World !&#39;
-  &#125;,
-  onLoad: function () &#123;
-  &#125;
-&#125;)
-</code></pre>
-<blockquote>
-<p>页面结构代码，如下：</p>
-</blockquote>
-<pre><code class="wxml">&lt;!--index.wxml--&gt;
-&lt;view class=&quot;container&quot;&gt;
-    &lt;!-- 数据绑定  &#123;&#123;&#125;&#125;   绑定内容 -->
-    &#123;&#123; str &#125;&#125;
-&lt;/view&gt;
-</code></pre>
-<blockquote>
-<p>效果展示，如下：</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/1f5eecda6c7047e7a5192f2d062da195.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>input 的 <code>bindinput</code> 事件触发对象 event 详情</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/9bb78a8b15834be39cef9f353adcec1f.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>在微信小程序中实现数据双向绑定</p>
-</blockquote>
-<blockquote>
-<p>页面结构代码，如下：</p>
-</blockquote>
-<pre><code class="wxml">&lt;!--index.wxml--&gt;
-&lt;view class=&quot;container&quot;&gt;
-    &lt;view class=&quot;form-item&quot;&gt;
-        &lt;input type=&quot;text&quot; value=&quot;&#123;&#123; myForm.username &#125;&#125;&quot; bindinput=&quot;changeUsername&quot; data-name=&quot;username&quot; placeholder=&quot;请输入您的姓名&quot; focus=&quot;&#123;&#123; true &#125;&#125;&quot;/&gt;
-    &lt;/view&gt;
-    模拟数据双向绑定 --- &#123;&#123; myForm.username &#125;&#125;
-&lt;/view&gt;
-</code></pre>
-<blockquote>
-<p>逻辑代码，js 如下：</p>
-</blockquote>
-<pre><code class="js">//index.js
-//获取应用实例
-const app = getApp()
-
-Page(&#123;
-    data: &#123;
-        myForm: &#123;
-            username: &#39;yk-ddm&#39;
-        &#125;
-    &#125;,
-    onLoad: function() &#123;&#125;,
-    changeUsername: function(e) &#123;
-      var that = this,
-          currentTarget = e.currentTarget,
-          dataset = currentTarget.dataset,
-          key = dataset.name,
-          value = e.detail.value,
-          myForm = &quot;myForm.&quot; + key
-      
-      that.setData(&#123;
-        [myForm]: value
-      &#125;)
-    &#125;
-&#125;)
-</code></pre>
-<blockquote>
-<p>代码截图展示，如下：</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/b8c7d954d72e4478abdd6684e4070b47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<hr />
-
-<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><blockquote>
-<p><code>Cannot delete property &#39;WeixinJSBridge&#39; of #&lt;Window&gt;</code></p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/fb26a9d382d24a0e8ca2c78d3d63a300.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>解决方法：尝试更换调试基础库</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/a38f07bd91e84a27bc24c9d274c43d47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
-        <tag>小程序</tag>
-        <tag>wxml</tag>
-        <tag>wxss</tag>
-        <tag>javascript</tag>
       </tags>
   </entry>
 </search>
