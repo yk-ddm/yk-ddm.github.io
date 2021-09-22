@@ -5,7 +5,7 @@ tags:
   - CSS
   - JavaScript
 categories: JavaScript
-keywords: 'html,css,javascript,学习笔记,demo案例'
+keywords: 'HTML,CSS,JavaScript,学习笔记,demo案例'
 description: 《JavaScript 学习笔记 之 日常练习案例》
 cover: 'https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210909204543.png'
 abbrlink: 20068

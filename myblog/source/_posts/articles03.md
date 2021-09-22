@@ -2,10 +2,10 @@
 title: 《Node.js 学习笔记之服务器静态资源托管服务》
 tags:
   - Node.js
-  - js
+  - JavaScript
   - express
 categories: Node.js
-keywords: 'Node.js, JS, Express'
+keywords: 'Node.js, JavaScript, Express'
 abbrlink: 10535
 date: 2021-09-14 16:06:57
 cover: https://img-blog.csdnimg.cn/a7288ccf564d472fbdfda46969967492.png
