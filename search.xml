@@ -235,8 +235,8 @@ cursor: grab;
         <category>Node.js</category>
       </categories>
       <tags>
+        <tag>JavaScript</tag>
         <tag>Node.js</tag>
-        <tag>js</tag>
         <tag>express</tag>
       </tags>
   </entry>
@@ -612,11 +612,11 @@ Page(&#123;
         <category>微信小程序</category>
       </categories>
       <tags>
+        <tag>JavaScript</tag>
         <tag>微信小程序</tag>
         <tag>小程序</tag>
         <tag>wxml</tag>
         <tag>wxss</tag>
-        <tag>javascript</tag>
       </tags>
   </entry>
 </search>
