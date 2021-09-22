@@ -192,58 +192,6 @@ cursor: grab;
       </tags>
   </entry>
   <entry>
-    <title>《一次推送本地项目同步至多个平台的远程仓库》</title>
-    <url>/posts/42997.html</url>
-    <content><![CDATA[<h1 id="开发者学习笔记"><a href="#开发者学习笔记" class="headerlink" title="开发者学习笔记"></a>开发者学习笔记</h1><hr />
-
-<h2 id="项目数据同步"><a href="#项目数据同步" class="headerlink" title="项目数据同步"></a>项目数据同步</h2><blockquote>
-<p>平常我们写项目，写好后就分别提交到源代码管理仓库 <code>github</code> 和 <code>gitee</code><br>问题来了，一旦项目多了，我的需求来了，想要一次提交 ，实现 <code>github</code> 和 <code>gitee</code> 数据同步</p>
-</blockquote>
-<pre><code>step1: 创建 一个 文件夹 sync_github_gitee
-step2: 初始化一个空的git本地仓库, 即 git 文件夹（如果看不到，可能隐藏了）
-step3: 进入 git 文件夹，修改 config 内容
-step4: cd ..
-step5: 执行 git add .  将当前目录下的文件从工作区存入暂存区
-step6: 设置 提交的 message ---&gt;  git commit -m &quot;message&quot;
-step7: 提交 --&gt; git push  -u  origin master
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/7b36b361ff4d4e0993d0a69e50d84dae.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_39,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<pre><code class="config">[core]
-    repositoryformatversion = 0
-    filemode = false
-    bare = false
-    logallrefupdates = true
-    symlinks = false
-    ignorecase = true
-[remote &quot;origin&quot;]
-    url = https://gitee.com/yk-ddm/仓库名.git
-    url = https://github.com/yk-ddm/仓库名.git
-    fetch = +refs/heads/*:refs/remotes/origin/*
-[branch &quot;master&quot;]
-    remote = origin
-    merge = refs/heads/master
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/6d18a1677acf4172a884019b8b6a02a7.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_25,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<hr />
-
-<h3 id="学习遇到的问题"><a href="#学习遇到的问题" class="headerlink" title="学习遇到的问题"></a>学习遇到的问题</h3><pre><code>OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
-
-push 提交的时候应该走ssh隧道的，但是因为设置了http代理，所以就走了http的代理
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/08cc44b161bb44c798fc018eec4476a1.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_51,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<ul>
-<li>解决方法：<code>先暂时关闭代理，提交之后，开启即可加速 github 访问速度</code></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>gitee</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《Node.js 学习笔记之服务器静态资源托管服务》</title>
     <url>/posts/10535.html</url>
     <content><![CDATA[<h1 id="《Node-js-学习笔记之服务器静态资源托管服务》"><a href="#《Node-js-学习笔记之服务器静态资源托管服务》" class="headerlink" title="《Node.js 学习笔记之服务器静态资源托管服务》"></a>《Node.js 学习笔记之服务器静态资源托管服务》</h1><h2 id="引入-http-服务"><a href="#引入-http-服务" class="headerlink" title="引入 http 服务"></a>引入 http 服务</h2><blockquote>
@@ -293,144 +241,60 @@ push 提交的时候应该走ssh隧道的，但是因为设置了http代理，�
       </tags>
   </entry>
   <entry>
-    <title>《微信小程序学习笔记》</title>
-    <url>/posts/20305.html</url>
-    <content><![CDATA[<h1 id="微信小程序-—-学习笔记"><a href="#微信小程序-—-学习笔记" class="headerlink" title="微信小程序 —- 学习笔记"></a>微信小程序 —- 学习笔记</h1><hr />
+    <title>《githubActions自动构建》</title>
+    <url>/posts/34548.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>《一次推送本地项目同步至多个平台的远程仓库》</title>
+    <url>/posts/42997.html</url>
+    <content><![CDATA[<h1 id="开发者学习笔记"><a href="#开发者学习笔记" class="headerlink" title="开发者学习笔记"></a>开发者学习笔记</h1><hr />
 
-<h2 id="微信小程序简介"><a href="#微信小程序简介" class="headerlink" title="微信小程序简介"></a>微信小程序简介</h2><blockquote>
-<p>一种不需要下载安装即可使用的应用</p>
+<h2 id="项目数据同步"><a href="#项目数据同步" class="headerlink" title="项目数据同步"></a>项目数据同步</h2><blockquote>
+<p>平常我们写项目，写好后就分别提交到源代码管理仓库 <code>github</code> 和 <code>gitee</code><br>问题来了，一旦项目多了，我的需求来了，想要一次提交 ，实现 <code>github</code> 和 <code>gitee</code> 数据同步</p>
 </blockquote>
-<blockquote>
-<p>实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用</p>
-</blockquote>
-<blockquote>
-<p>状态模式-单向数据流;</p>
-</blockquote>
-<blockquote>
-<p><a href="https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=1701719263">微信小程序 官网</a></p>
-</blockquote>
-<blockquote>
-<p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">微信小程序开发文档</a></p>
-</blockquote>
-<blockquote>
-<p><a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1&token=&lang=zh_CN">账号注册地址</a></p>
-</blockquote>
+<pre><code>step1: 创建 一个 文件夹 sync_github_gitee
+step2: 初始化一个空的git本地仓库, 即 git 文件夹（如果看不到，可能隐藏了）
+step3: 进入 git 文件夹，修改 config 内容
+step4: cd ..
+step5: 执行 git add .  将当前目录下的文件从工作区存入暂存区
+step6: 设置 提交的 message ---&gt;  git commit -m &quot;message&quot;
+step7: 提交 --&gt; git push  -u  origin master
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/7b36b361ff4d4e0993d0a69e50d84dae.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_39,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<pre><code class="config">[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+[remote &quot;origin&quot;]
+    url = https://gitee.com/yk-ddm/仓库名.git
+    url = https://github.com/yk-ddm/仓库名.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;master&quot;]
+    remote = origin
+    merge = refs/heads/master
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/6d18a1677acf4172a884019b8b6a02a7.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_25,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <hr />
 
-<h2 id="使用笔记"><a href="#使用笔记" class="headerlink" title="使用笔记"></a>使用笔记</h2><blockquote>
-<p>查询 微信小程序账号 AppID </p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/b867cd87bbdf49e9b11a4a65d09b86f5.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p><a href="https://mp.weixin.qq.com/wxamp/basicprofile/index?token=1701719263&lang=zh_CN">查看 地址</a></p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/b79937bf069f4c10aa008a36bb72612e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<hr />
+<h3 id="学习遇到的问题"><a href="#学习遇到的问题" class="headerlink" title="学习遇到的问题"></a>学习遇到的问题</h3><pre><code>OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
 
-<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="https://img-blog.csdnimg.cn/2113796ec7294ae9acd20d0a0f09f694.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<hr />
-
-<h3 id="实例demo"><a href="#实例demo" class="headerlink" title="实例demo"></a>实例demo</h3><blockquote>
-<p>Hello World !</p>
-</blockquote>
-<blockquote>
-<p>代码展示，如下：</p>
-</blockquote>
-<pre><code class="js">//index.js
-//获取应用实例
-const app = getApp()
-
-Page(&#123;
-  data: &#123;
-    str: &#39;Hello World !&#39;
-  &#125;,
-  onLoad: function () &#123;
-  &#125;
-&#125;)
+push 提交的时候应该走ssh隧道的，但是因为设置了http代理，所以就走了http的代理
 </code></pre>
-<blockquote>
-<p>页面结构代码，如下：</p>
-</blockquote>
-<pre><code class="wxml">&lt;!--index.wxml--&gt;
-&lt;view class=&quot;container&quot;&gt;
-    &lt;!-- 数据绑定  &#123;&#123;&#125;&#125;   绑定内容 -->
-    &#123;&#123; str &#125;&#125;
-&lt;/view&gt;
-</code></pre>
-<blockquote>
-<p>效果展示，如下：</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/1f5eecda6c7047e7a5192f2d062da195.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>input 的 <code>bindinput</code> 事件触发对象 event 详情</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/9bb78a8b15834be39cef9f353adcec1f.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>在微信小程序中实现数据双向绑定</p>
-</blockquote>
-<blockquote>
-<p>页面结构代码，如下：</p>
-</blockquote>
-<pre><code class="wxml">&lt;!--index.wxml--&gt;
-&lt;view class=&quot;container&quot;&gt;
-    &lt;view class=&quot;form-item&quot;&gt;
-        &lt;input type=&quot;text&quot; value=&quot;&#123;&#123; myForm.username &#125;&#125;&quot; bindinput=&quot;changeUsername&quot; data-name=&quot;username&quot; placeholder=&quot;请输入您的姓名&quot; focus=&quot;&#123;&#123; true &#125;&#125;&quot;/&gt;
-    &lt;/view&gt;
-    模拟数据双向绑定 --- &#123;&#123; myForm.username &#125;&#125;
-&lt;/view&gt;
-</code></pre>
-<blockquote>
-<p>逻辑代码，js 如下：</p>
-</blockquote>
-<pre><code class="js">//index.js
-//获取应用实例
-const app = getApp()
-
-Page(&#123;
-    data: &#123;
-        myForm: &#123;
-            username: &#39;yk-ddm&#39;
-        &#125;
-    &#125;,
-    onLoad: function() &#123;&#125;,
-    changeUsername: function(e) &#123;
-      var that = this,
-          currentTarget = e.currentTarget,
-          dataset = currentTarget.dataset,
-          key = dataset.name,
-          value = e.detail.value,
-          myForm = &quot;myForm.&quot; + key
-      
-      that.setData(&#123;
-        [myForm]: value
-      &#125;)
-    &#125;
-&#125;)
-</code></pre>
-<blockquote>
-<p>代码截图展示，如下：</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/b8c7d954d72e4478abdd6684e4070b47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<hr />
-
-<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><blockquote>
-<p><code>Cannot delete property &#39;WeixinJSBridge&#39; of #&lt;Window&gt;</code></p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/fb26a9d382d24a0e8ca2c78d3d63a300.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>解决方法：尝试更换调试基础库</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/a38f07bd91e84a27bc24c9d274c43d47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/08cc44b161bb44c798fc018eec4476a1.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_51,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<ul>
+<li>解决方法：<code>先暂时关闭代理，提交之后，开启即可加速 github 访问速度</code></li>
+</ul>
 ]]></content>
       <categories>
-        <category>微信小程序</category>
+        <category>Git</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
-        <tag>微信小程序</tag>
-        <tag>小程序</tag>
-        <tag>wxml</tag>
-        <tag>wxss</tag>
+        <tag>gitee</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -604,7 +468,7 @@ search:
 </blockquote>
 <p><img src="https://img-blog.csdnimg.cn/d5cf86daffc240d38d096eb253973dc0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <blockquote>
-<p>书写文章：<code>hexo new newspapername</code>， 注意事项 —&gt;  文章名称不要包含空格，否则会出现文件名称不对应的情况（例如：我使用 hexo new post 《博客框架 学习笔记 之 hexo》最后得到的Markdown文件名称却为 hexo》）</p>
+<p>书写文章：<code>hexo new newspapername</code>， 注意事项 —&gt;  文章名称不要包含空格，否则会出现文件名称不对应的情况, 此命令以最后一个空格之后的内容作为Markdown文件的名称（例如：我使用 hexo new post 《博客框架 学习笔记 之 hexo》最后得到的Markdown文件名称却为 hexo》）</p>
 </blockquote>
 <blockquote>
 <p>hexo new [layout] <newspapername>  —-&gt;  layout 布局方式，默认 post 布局</p>
@@ -691,6 +555,147 @@ block content
         <tag>Butterfly</tag>
         <tag>blog</tag>
         <tag>iconfont</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《微信小程序学习笔记》</title>
+    <url>/posts/20305.html</url>
+    <content><![CDATA[<h1 id="微信小程序-—-学习笔记"><a href="#微信小程序-—-学习笔记" class="headerlink" title="微信小程序 —- 学习笔记"></a>微信小程序 —- 学习笔记</h1><hr />
+
+<h2 id="微信小程序简介"><a href="#微信小程序简介" class="headerlink" title="微信小程序简介"></a>微信小程序简介</h2><blockquote>
+<p>一种不需要下载安装即可使用的应用</p>
+</blockquote>
+<blockquote>
+<p>实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用</p>
+</blockquote>
+<blockquote>
+<p>状态模式-单向数据流;</p>
+</blockquote>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=1701719263">微信小程序 官网</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">微信小程序开发文档</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1&token=&lang=zh_CN">账号注册地址</a></p>
+</blockquote>
+<hr />
+
+<h2 id="使用笔记"><a href="#使用笔记" class="headerlink" title="使用笔记"></a>使用笔记</h2><blockquote>
+<p>查询 微信小程序账号 AppID </p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b867cd87bbdf49e9b11a4a65d09b86f5.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxamp/basicprofile/index?token=1701719263&lang=zh_CN">查看 地址</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b79937bf069f4c10aa008a36bb72612e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="https://img-blog.csdnimg.cn/2113796ec7294ae9acd20d0a0f09f694.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h3 id="实例demo"><a href="#实例demo" class="headerlink" title="实例demo"></a>实例demo</h3><blockquote>
+<p>Hello World !</p>
+</blockquote>
+<blockquote>
+<p>代码展示，如下：</p>
+</blockquote>
+<pre><code class="js">//index.js
+//获取应用实例
+const app = getApp()
+
+Page(&#123;
+  data: &#123;
+    str: &#39;Hello World !&#39;
+  &#125;,
+  onLoad: function () &#123;
+  &#125;
+&#125;)
+</code></pre>
+<blockquote>
+<p>页面结构代码，如下：</p>
+</blockquote>
+<pre><code class="wxml">&lt;!--index.wxml--&gt;
+&lt;view class=&quot;container&quot;&gt;
+    &lt;!-- 数据绑定  &#123;&#123;&#125;&#125;   绑定内容 -->
+    &#123;&#123; str &#125;&#125;
+&lt;/view&gt;
+</code></pre>
+<blockquote>
+<p>效果展示，如下：</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/1f5eecda6c7047e7a5192f2d062da195.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>input 的 <code>bindinput</code> 事件触发对象 event 详情</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/9bb78a8b15834be39cef9f353adcec1f.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>在微信小程序中实现数据双向绑定</p>
+</blockquote>
+<blockquote>
+<p>页面结构代码，如下：</p>
+</blockquote>
+<pre><code class="wxml">&lt;!--index.wxml--&gt;
+&lt;view class=&quot;container&quot;&gt;
+    &lt;view class=&quot;form-item&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;&#123;&#123; myForm.username &#125;&#125;&quot; bindinput=&quot;changeUsername&quot; data-name=&quot;username&quot; placeholder=&quot;请输入您的姓名&quot; focus=&quot;&#123;&#123; true &#125;&#125;&quot;/&gt;
+    &lt;/view&gt;
+    模拟数据双向绑定 --- &#123;&#123; myForm.username &#125;&#125;
+&lt;/view&gt;
+</code></pre>
+<blockquote>
+<p>逻辑代码，js 如下：</p>
+</blockquote>
+<pre><code class="js">//index.js
+//获取应用实例
+const app = getApp()
+
+Page(&#123;
+    data: &#123;
+        myForm: &#123;
+            username: &#39;yk-ddm&#39;
+        &#125;
+    &#125;,
+    onLoad: function() &#123;&#125;,
+    changeUsername: function(e) &#123;
+      var that = this,
+          currentTarget = e.currentTarget,
+          dataset = currentTarget.dataset,
+          key = dataset.name,
+          value = e.detail.value,
+          myForm = &quot;myForm.&quot; + key
+      
+      that.setData(&#123;
+        [myForm]: value
+      &#125;)
+    &#125;
+&#125;)
+</code></pre>
+<blockquote>
+<p>代码截图展示，如下：</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b8c7d954d72e4478abdd6684e4070b47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><blockquote>
+<p><code>Cannot delete property &#39;WeixinJSBridge&#39; of #&lt;Window&gt;</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/fb26a9d382d24a0e8ca2c78d3d63a300.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>解决方法：尝试更换调试基础库</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/a38f07bd91e84a27bc24c9d274c43d47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>微信小程序</tag>
+        <tag>小程序</tag>
+        <tag>wxml</tag>
+        <tag>wxss</tag>
       </tags>
   </entry>
 </search>
