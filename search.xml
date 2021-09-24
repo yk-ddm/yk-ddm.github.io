@@ -1,263 +1,1001 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>时间格式化工具</title>
-      <link href="/posts/22041.html"/>
-      <url>/posts/22041.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="时间格式化工具学习笔记"><a href="#时间格式化工具学习笔记" class="headerlink" title="时间格式化工具学习笔记"></a>时间格式化工具学习笔记</h1><blockquote><p>常用的时间格式化工具：moment、date-fns</p></blockquote><blockquote><p>一个现代的 JavaScript 日期工具类库; 全面、简单，在浏览器和 Node.js 中操作 JavaScript 日期</p></blockquote><hr /><h2 id="date-fns-安装"><a href="#date-fns-安装" class="headerlink" title="date-fns 安装"></a>date-fns 安装</h2><blockquote><p>yarn add date-fns | npm install date-fns –save</p></blockquote><h2 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h2><p><img src="https://img-blog.csdnimg.cn/94d42deef40240d597de6ff322b68280.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>format(new Date(), “yyyy-MM-dd HH:mm:ss”) 的使用</p></blockquote><p><img src="https://img-blog.csdnimg.cn/8ded890bf7e849b8a96a0eddf331136c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>案例代码如下：</p></blockquote><pre><code class="js">const dateFns = require(&#39;date-fns&#39;)let year = dateFns.getYear(new Date()),    month = dateFns.getMonth(new Date()) + 1,    date = dateFns.getDate(new Date()),    week = dateFns.getDay(new Date()),    hour = dateFns.getHours(new Date()),    minute = dateFns.getMinutes(new Date()),    second = dateFns.getSeconds(new Date())console.log(&#39;当前年份：&#39; + year)console.log(&#39;当前月份：&#39; + month)console.log(&#39;当前日：&#39; + date)console.log(&#39;当前星期：&#39; + week)console.log(&#39;当前小时：&#39; + hour)console.log(&#39;当前分钟：&#39; + minute)console.log(&#39;当前秒：&#39; + second)console.log(`$&#123;year&#125;-$&#123;month&#125;-$&#123;date&#125; $&#123;hour&#125;:$&#123;minute&#125;:$&#123;second&#125; 星期$&#123;week&#125;`)</code></pre><p><img src="https://img-blog.csdnimg.cn/4626b838f5c04ff19d81b2df5da4ab20.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Parcel打包工具的使用</title>
-      <link href="/posts/56150.html"/>
-      <url>/posts/56150.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="Parcel-学习笔记"><a href="#Parcel-学习笔记" class="headerlink" title="Parcel 学习笔记"></a>Parcel 学习笔记</h1><blockquote><p>Parcel是一款零配置的打包工具; 打包速度快; 内部使用多线程打包; 可以快速构建前端应用程序;</p></blockquote><hr /><h2 id="Parcel-初始化"><a href="#Parcel-初始化" class="headerlink" title="Parcel 初始化"></a>Parcel 初始化</h2><blockquote><p>npm init</p></blockquote><hr /><h2 id="Parcel-安装"><a href="#Parcel-安装" class="headerlink" title="Parcel 安装"></a>Parcel 安装</h2><blockquote><p>npm i parcel-bundler -D</p></blockquote><hr /><h2 id="Parcel-入口文件"><a href="#Parcel-入口文件" class="headerlink" title="Parcel 入口文件"></a>Parcel 入口文件</h2><blockquote><p>HTML</p></blockquote><pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;zh-cn&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;Parcel&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;script src=&quot;./main.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><pre><code class="main.js">import &#123; add, age &#125; from &#39;./ESModule&#39;;import _ from &#39;lodash&#39;;import &quot;./style.css&quot;const common = require(&#39;./common&#39;);console.log(common); //打印common.js导出的模块console.log(add, age); //打印ESModule导出的模块let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];console.log(_.last(num)); //使用lodashif (module.hot) &#123; //判断是否支持热加载    console.log(&#39;module hot&#39;);    module.hot.accept(() =&gt; &#123;        console.log(&#39;add&#39;);    &#125;)&#125;</code></pre><h2 id="构建效果图："><a href="#构建效果图：" class="headerlink" title="构建效果图："></a>构建效果图：</h2><p><img src="https://img-blog.csdnimg.cn/9c7c3df36ebf4a5b9edb6da2b8dc8f44.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>Node.js学习笔记</title>
+    <url>/posts/49210.html</url>
+    <content><![CDATA[<h1 id="Node-js-学习笔记"><a href="#Node-js-学习笔记" class="headerlink" title="Node.js 学习笔记"></a>Node.js 学习笔记</h1><h2 id="zlib-模块的使用"><a href="#zlib-模块的使用" class="headerlink" title="zlib 模块的使用"></a>zlib 模块的使用</h2><blockquote>
+<p>实现文件压缩功能</p>
+</blockquote>
+<blockquote>
+<p>模块引入： <code>const zlib = require(“zlib”)</code></p>
+</blockquote>
+<blockquote>
+<p>压缩算法: 1. gzip  2. deflate</p>
+</blockquote>
+<blockquote>
+<p>案例代码如下：</p>
+</blockquote>
+<pre><code class="js">const fs = require(&#39;fs&#39;)
+const zlib = require(&#39;zlib&#39;)
+
+const gzip = zlib.createGzip()
+const deflate = zlib.createDeflate()
+
+var inputFile = fs.createReadStream(&#39;已经存在的文件的路径&#39;)
+var outputFile = fs.createWriteStream(&#39;自定义文件名称&#39;)
+
+inputFile.pipe(gzip).pipe(outputFile)
+inputFile.pipe(deflate).pipe(outputFile)
+</code></pre>
+]]></content>
       <categories>
-          
-          <category> 前端工具Parcel </category>
-          
+        <category>Node.js</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> JavaScript </tag>
-            
-            <tag> ES6 </tag>
-            
-            <tag> TypeScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Node.js学习笔记</title>
-      <link href="/posts/49210.html"/>
-      <url>/posts/49210.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="Node-js-学习笔记"><a href="#Node-js-学习笔记" class="headerlink" title="Node.js 学习笔记"></a>Node.js 学习笔记</h1><h2 id="zlib-模块的使用"><a href="#zlib-模块的使用" class="headerlink" title="zlib 模块的使用"></a>zlib 模块的使用</h2><blockquote><p>实现文件压缩功能</p></blockquote><blockquote><p>模块引入： <code>const zlib = require(“zlib”)</code></p></blockquote><blockquote><p>压缩算法: 1. gzip  2. deflate</p></blockquote><blockquote><p>案例代码如下：</p></blockquote><pre><code class="js">const fs = require(&#39;fs&#39;)const zlib = require(&#39;zlib&#39;)const gzip = zlib.createGzip()const deflate = zlib.createDeflate()var inputFile = fs.createReadStream(&#39;已经存在的文件的路径&#39;)var outputFile = fs.createWriteStream(&#39;自定义文件名称&#39;)inputFile.pipe(gzip).pipe(outputFile)inputFile.pipe(deflate).pipe(outputFile)</code></pre>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>《GitHub Actions 入门》</title>
-      <link href="/posts/34548.html"/>
-      <url>/posts/34548.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="GitHub-Actions-简介"><a href="#GitHub-Actions-简介" class="headerlink" title="GitHub Actions 简介"></a>GitHub Actions 简介</h1><blockquote><p>GitHub 的持续集成服务(2018年10月推出);</p></blockquote><blockquote><p>持续集成（Continuous integration，简称CI）</p></blockquote><blockquote><p><a href="">Travis CI</a></p></blockquote><blockquote><p>行为、操作 即 actions，一个独立脚本，可以存入远程代码仓库</p></blockquote><blockquote><p><a href="https://github.com/marketplace?type=actions">actions仓库</a> | <a href="https://github.com/actions">actions仓库</a></p></blockquote><blockquote><p><a href="https://github.com/sdras/awesome-actions">awesome-actions仓库</a></p></blockquote><hr /><h2 id="action-引用方式"><a href="#action-引用方式" class="headerlink" title="action 引用方式"></a>action 引用方式</h2><blockquote><ol><li>userName/repoName 就表示 github.com/userName/repoName</li></ol></blockquote><hr /><h2 id="workflow-（工作流程）"><a href="#workflow-（工作流程）" class="headerlink" title="workflow （工作流程）"></a>workflow （工作流程）</h2><blockquote><p>持续集成一次运行的过程; GitHub Actions 的配置文件; 一个代码仓库可以有多个配置文件</p></blockquote><blockquote><p>存放在代码仓库的  <code>.github/workflows</code> 目录; workflow 文件采用 YAML 格式; 代码仓库自动运行这些配置文件</p></blockquote><blockquote><p><a href="https://help.github.com/en/articles/workflow-syntax-for-github-actions">workflow 文件的配置字段</a></p></blockquote><hr /><h3 id="workflow-文件的配置字段"><a href="#workflow-文件的配置字段" class="headerlink" title="workflow 文件的配置字段"></a>workflow 文件的配置字段</h3><blockquote><p>name: workflow 的名称 —&gt; name: GitHub Actions Demo</p></blockquote><blockquote><p>on: 触发 workflow 的条件，通常是某些事件(代码库事件, 外部事件触发[, …]) —&gt; on: [push, pull_request] | on: push</p></blockquote><pre><code class="yml">on:  push:    branches:          - master</code></pre><blockquote><p>jobs: 每一项任务的job_id</p></blockquote><pre><code class="yml">jobs:# 每一项任务的job_id ~ my_first_job  my_first_job:  # name字段是任务的说明 ~ My first job    name: My first job  my_second_job:    name: My second job</code></pre><blockquote><p>needs: 指定当前任务的依赖关系</p></blockquote><pre><code class="yml">jobs:# 每一项任务的job_id ~ my_first_job  my_first_job:  # name字段是任务的说明 ~ My first job    name: My first job  my_second_job:    name: My second job    # 指定当前任务的依赖关系 needs: my_first_job | needs: [my_first_job, needs: my_second_job]    needs: my_first_job</code></pre><blockquote><p>runs-on: 指定运行所需要的虚拟机环境, 它是必填字段 runs-on: ubuntu-18.04</p></blockquote><pre><code class="yml"># 虚拟机环境ubuntu-latest，ubuntu-18.04或ubuntu-16.04windows-latest，windows-2019或windows-2016macOS-latest或macOS-10.14</code></pre><blockquote><p>steps: 指定每个 Job 的运行步骤，可以包含一个或多个步骤</p></blockquote><pre><code class="yml">name: Greeting from Monaon: pushjobs:  my-job:    name: My Job    runs-on: ubuntu-latest    steps:    # 步骤名称 name    - name: Print a greeting    # 环境变量 env      env:        MY_VAR: Hi there! My name is        FIRST_NAME: yk-ddm        # 运行的命令或者 action      run: |        echo $MY_VAR $FIRST_NAME.</code></pre><hr /><h2 id="job-（任务）"><a href="#job-（任务）" class="headerlink" title="job （任务）"></a>job （任务）</h2><blockquote><p>一个 workflow 由一个或多个 jobs 构成，含义是一次持续集成的运行，可以完成多个任务</p></blockquote><blockquote><p>github actions 配置文件的主体</p></blockquote><hr /><h2 id="step（步骤）"><a href="#step（步骤）" class="headerlink" title="step（步骤）"></a>step（步骤）</h2><blockquote><p>每个 job 由多个 step 构成，一步步完成</p></blockquote><hr /><h2 id="action-（动作）"><a href="#action-（动作）" class="headerlink" title="action （动作）"></a>action （动作）</h2><blockquote><p>每个 step 可以依次执行一个或多个命令（action）</p></blockquote><hr />]]></content>
-      
-      
+      <tags>
+        <tag>zlib</tag>
+        <tag>JavaScript</tag>
+        <tag>gzip</tag>
+        <tag>deflate</tag>
+        <tag>pipe</tag>
+        <tag>fs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Parcel打包工具的使用</title>
+    <url>/posts/56150.html</url>
+    <content><![CDATA[<h1 id="Parcel-学习笔记"><a href="#Parcel-学习笔记" class="headerlink" title="Parcel 学习笔记"></a>Parcel 学习笔记</h1><blockquote>
+<p>Parcel是一款零配置的打包工具; 打包速度快; 内部使用多线程打包; 可以快速构建前端应用程序;</p>
+</blockquote>
+<hr />
+
+<h2 id="Parcel-初始化"><a href="#Parcel-初始化" class="headerlink" title="Parcel 初始化"></a>Parcel 初始化</h2><blockquote>
+<p>npm init</p>
+</blockquote>
+<hr />
+
+<h2 id="Parcel-安装"><a href="#Parcel-安装" class="headerlink" title="Parcel 安装"></a>Parcel 安装</h2><blockquote>
+<p>npm i parcel-bundler -D</p>
+</blockquote>
+<hr />
+
+
+<h2 id="Parcel-入口文件"><a href="#Parcel-入口文件" class="headerlink" title="Parcel 入口文件"></a>Parcel 入口文件</h2><blockquote>
+<p>HTML</p>
+</blockquote>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-cn&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Parcel&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script src=&quot;./main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="main.js">import &#123; add, age &#125; from &#39;./ESModule&#39;;
+
+import _ from &#39;lodash&#39;;
+
+import &quot;./style.css&quot;
+
+const common = require(&#39;./common&#39;);
+
+console.log(common); //打印common.js导出的模块
+
+console.log(add, age); //打印ESModule导出的模块
+
+let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(_.last(num)); //使用lodash
+
+if (module.hot) &#123; //判断是否支持热加载
+
+    console.log(&#39;module hot&#39;);
+
+    module.hot.accept(() =&gt; &#123;
+        console.log(&#39;add&#39;);
+    &#125;)
+&#125;
+</code></pre>
+<h2 id="构建效果图："><a href="#构建效果图：" class="headerlink" title="构建效果图："></a>构建效果图：</h2><p><img src="https://img-blog.csdnimg.cn/9c7c3df36ebf4a5b9edb6da2b8dc8f44.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></p>
+]]></content>
       <categories>
-          
-          <category> 开发者手册 </category>
-          
+        <category>前端工具Parcel</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>《微信小程序学习笔记》</title>
-      <link href="/posts/20305.html"/>
-      <url>/posts/20305.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="微信小程序-—-学习笔记"><a href="#微信小程序-—-学习笔记" class="headerlink" title="微信小程序 —- 学习笔记"></a>微信小程序 —- 学习笔记</h1><hr /><h2 id="微信小程序简介"><a href="#微信小程序简介" class="headerlink" title="微信小程序简介"></a>微信小程序简介</h2><blockquote><p>一种不需要下载安装即可使用的应用</p></blockquote><blockquote><p>实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用</p></blockquote><blockquote><p>状态模式-单向数据流;</p></blockquote><blockquote><p><a href="https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=1701719263">微信小程序 官网</a></p></blockquote><blockquote><p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">微信小程序开发文档</a></p></blockquote><blockquote><p><a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1&token=&lang=zh_CN">账号注册地址</a></p></blockquote><hr /><h2 id="使用笔记"><a href="#使用笔记" class="headerlink" title="使用笔记"></a>使用笔记</h2><blockquote><p>查询 微信小程序账号 AppID </p></blockquote><p><img src="https://img-blog.csdnimg.cn/b867cd87bbdf49e9b11a4a65d09b86f5.png" alt="在这里插入图片描述"></p><blockquote><p><a href="https://mp.weixin.qq.com/wxamp/basicprofile/index?token=1701719263&lang=zh_CN">查看 地址</a></p></blockquote><p><img src="https://img-blog.csdnimg.cn/b79937bf069f4c10aa008a36bb72612e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><hr /><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="https://img-blog.csdnimg.cn/2113796ec7294ae9acd20d0a0f09f694.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><hr /><h3 id="实例demo"><a href="#实例demo" class="headerlink" title="实例demo"></a>实例demo</h3><blockquote><p>Hello World !</p></blockquote><blockquote><p>代码展示，如下：</p></blockquote><pre><code class="js">//index.js//获取应用实例const app = getApp()Page(&#123;  data: &#123;    str: &#39;Hello World !&#39;  &#125;,  onLoad: function () &#123;  &#125;&#125;)</code></pre><blockquote><p>页面结构代码，如下：</p></blockquote><pre><code class="wxml">&lt;!--index.wxml--&gt;&lt;view class=&quot;container&quot;&gt;    &lt;!-- 数据绑定  &#123;&#123;&#125;&#125;   绑定内容 -->    &#123;&#123; str &#125;&#125;&lt;/view&gt;</code></pre><blockquote><p>效果展示，如下：</p></blockquote><p><img src="https://img-blog.csdnimg.cn/1f5eecda6c7047e7a5192f2d062da195.png" alt="在这里插入图片描述"></p><blockquote><p>input 的 <code>bindinput</code> 事件触发对象 event 详情</p></blockquote><p><img src="https://img-blog.csdnimg.cn/9bb78a8b15834be39cef9f353adcec1f.png" alt="在这里插入图片描述"></p><blockquote><p>在微信小程序中实现数据双向绑定</p></blockquote><blockquote><p>页面结构代码，如下：</p></blockquote><pre><code class="wxml">&lt;!--index.wxml--&gt;&lt;view class=&quot;container&quot;&gt;    &lt;view class=&quot;form-item&quot;&gt;        &lt;input type=&quot;text&quot; value=&quot;&#123;&#123; myForm.username &#125;&#125;&quot; bindinput=&quot;changeUsername&quot; data-name=&quot;username&quot; placeholder=&quot;请输入您的姓名&quot; focus=&quot;&#123;&#123; true &#125;&#125;&quot;/&gt;    &lt;/view&gt;    模拟数据双向绑定 --- &#123;&#123; myForm.username &#125;&#125;&lt;/view&gt;</code></pre><blockquote><p>逻辑代码，js 如下：</p></blockquote><pre><code class="js">//index.js//获取应用实例const app = getApp()Page(&#123;    data: &#123;        myForm: &#123;            username: &#39;yk-ddm&#39;        &#125;    &#125;,    onLoad: function() &#123;&#125;,    changeUsername: function(e) &#123;      var that = this,          currentTarget = e.currentTarget,          dataset = currentTarget.dataset,          key = dataset.name,          value = e.detail.value,          myForm = &quot;myForm.&quot; + key            that.setData(&#123;        [myForm]: value      &#125;)    &#125;&#125;)</code></pre><blockquote><p>代码截图展示，如下：</p></blockquote><p><img src="https://img-blog.csdnimg.cn/b8c7d954d72e4478abdd6684e4070b47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><hr /><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><blockquote><p><code>Cannot delete property &#39;WeixinJSBridge&#39; of #&lt;Window&gt;</code></p></blockquote><p><img src="https://img-blog.csdnimg.cn/fb26a9d382d24a0e8ca2c78d3d63a300.png" alt="在这里插入图片描述"></p><blockquote><p>解决方法：尝试更换调试基础库</p></blockquote><p><img src="https://img-blog.csdnimg.cn/a38f07bd91e84a27bc24c9d274c43d47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>]]></content>
-      
-      
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>前端</tag>
+        <tag>ES6</tag>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《JavaScript 学习笔记 之 日常练习案例》</title>
+    <url>/posts/20068.html</url>
+    <content><![CDATA[<h1 id="JavaScript-学习笔记"><a href="#JavaScript-学习笔记" class="headerlink" title="JavaScript 学习笔记"></a>JavaScript 学习笔记</h1><hr />
+
+<h2 id="日常练习案例"><a href="#日常练习案例" class="headerlink" title="日常练习案例"></a>日常练习案例</h2><hr />
+
+<h3 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h3><pre><code class="js">// &#39;abcEFG&#39;  重新排序 ---&gt; 规则是 把大写字母放前面，小写字母放后面
+
+// realization
+/**
+    explain：
+
+    operationStr 操作字符串
+    应用了： String.split()  切割字符串返回数组、
+    Array.join() 将数组中的元素以某种操作符连接起来、
+    正则表达式的使用 
+*/
+function operationStr(str)
+&#123;
+    return str.split(/[a-z]/g).join(&#39;&#39;) + str.split(/[A-Z]/g).join(&#39;&#39;)
+&#125;
+
+// Test
+var str = &#39;abcEFG&#39;,  // expect output: &#39;EFGabc&#39;
+    result = operationStr(str)
+
+console.log(result)  // output: &#39;EFGabc&#39;
+</code></pre>
+<ul>
+<li><code>查看测试结果</code><br><img src="https://uploadfiles.nowcoder.com/files/20210816/838378582_1629111449561/f5833805ece3444d9df5cbc1587b78e7.png" alt="在这里插入图片描述"></li>
+</ul>
+<h3 id="Boolean-类型学习练习"><a href="#Boolean-类型学习练习" class="headerlink" title="Boolean 类型学习练习"></a>Boolean 类型学习练习</h3><pre><code class="js">/**
+    explain：
+
+    test 自定义变量名称
+        Boolean类型
+        new Boolean()  实例化，默认 返回 false
+    document 文档
+        document.write()  向页面打印信息，会覆盖页面原有的内容
+    document.write(&quot;&lt;br /&gt;&quot;)   向页面输出一个换行
+*/
+
+var test
+
+test = new Boolean()
+document.write(test)
+document.write(&quot;&lt;br /&gt;&quot;)  // output: false
+
+test = new Boolean(null)
+document.write(test)
+document.write(&quot;&lt;br /&gt;&quot;)  // output: false
+
+test = new Boolean(&#39;&#39;)   // &#39;&#39; 或 &quot;&quot;
+document.write(test)
+document.write(&quot;&lt;br /&gt;&quot;)  // output: false
+
+test = new Boolean(undefined)
+document.write(test)
+document.write(&quot;&lt;br /&gt;&quot;)  // output: false
+
+test = new Boolean(NaN)
+document.write(test)
+document.write(&quot;&lt;br /&gt;&quot;)  // output: false
+
+test = new Boolean(0)
+document.write(test)
+document.write(&quot;&lt;br /&gt;&quot;)  // output: false
+
+test = new Boolean(false)  
+document.write(test)
+document.write(&quot;&lt;br /&gt;&quot;)  // output: false
+
+test = new Boolean(true)  
+document.write(test)
+document.write(&quot;&lt;br /&gt;&quot;)  // output: true
+</code></pre>
+<ul>
+<li>查看测试结果</li>
+</ul>
+<p><img src="https://uploadfiles.nowcoder.com/images/20210817/838378582_1629200064609/468DD5DDE04AEED9D181C17F0FEED120" alt="图片说明" title="图片标题"> </p>
+]]></content>
       <categories>
-          
-          <category> 微信小程序 </category>
-          
+        <category>JavaScript</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-            <tag> 微信小程序 </tag>
-            
-            <tag> 小程序 </tag>
-            
-            <tag> wxml </tag>
-            
-            <tag> wxss </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>《Node.js 学习笔记之服务器静态资源托管服务》</title>
-      <link href="/posts/10535.html"/>
-      <url>/posts/10535.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="《Node-js-学习笔记之服务器静态资源托管服务》"><a href="#《Node-js-学习笔记之服务器静态资源托管服务》" class="headerlink" title="《Node.js 学习笔记之服务器静态资源托管服务》"></a>《Node.js 学习笔记之服务器静态资源托管服务》</h1><h2 id="引入-http-服务"><a href="#引入-http-服务" class="headerlink" title="引入 http 服务"></a>引入 http 服务</h2><blockquote><p>const http = require(‘http’)</p></blockquote><h2 id="开启服务器并指定端口"><a href="#开启服务器并指定端口" class="headerlink" title="开启服务器并指定端口"></a>开启服务器并指定端口</h2><pre><code class="Node.js">const server = http.createServer((req,res) =&gt; &#123;    // code &#125;).listen(3000,() =&gt; &#123;    console.log(&#39;服务开启成功, 请访问 http://localhost:3000/&#39;)&#125;)</code></pre><h2 id="express-中间件的使用"><a href="#express-中间件的使用" class="headerlink" title="express 中间件的使用"></a>express 中间件的使用</h2><blockquote><p>它是处理过程中的一个环节; 是一个函数</p></blockquote><blockquote><p>可以执行任何代码</p></blockquote><blockquote><p>可以修改请求和响应对象</p></blockquote><blockquote><p>可以终结请求-响应循环</p></blockquote><blockquote><p>可以调用堆栈中的下一个中间件</p></blockquote><h3 id="引入-express"><a href="#引入-express" class="headerlink" title="引入 express"></a>引入 express</h3><blockquote><p>const express = require(‘express’)</p></blockquote><h3 id="返回对象"><a href="#返回对象" class="headerlink" title="返回对象"></a>返回对象</h3><blockquote><p>const app = express()</p></blockquote><h3 id="托管静态资源"><a href="#托管静态资源" class="headerlink" title="托管静态资源"></a>托管静态资源</h3><blockquote><p>app.use(express.static(‘test’))</p></blockquote><blockquote><p>app.listen(3000, () =&gt; {<br>    console.log(‘Node 服务开启成功！’)<br>})</p></blockquote>]]></content>
-      
-      
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《CSS（层叠样式表） 学习笔记之 cursor》</title>
+    <url>/posts/2312.html</url>
+    <content><![CDATA[<h1 id="《CSS（层叠样式表）-学习笔记之-cursor》"><a href="#《CSS（层叠样式表）-学习笔记之-cursor》" class="headerlink" title="《CSS（层叠样式表） 学习笔记之 cursor》"></a>《CSS（层叠样式表） 学习笔记之 cursor》</h1><h2 id="cursor-简介"><a href="#cursor-简介" class="headerlink" title="cursor 简介"></a>cursor 简介</h2><blockquote>
+<p>cursor 是 CSS 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式</p>
+</blockquote>
+<pre><code class="css">cursor: help;
+
+cursor: wait;
+
+cursor: crosshair;
+
+cursor: not-allowed;
+
+cursor: zoom-in;
+
+cursor: grab;
+</code></pre>
+<blockquote>
+<p>cursor: help; 指示帮助 效果如下：</p>
+</blockquote>
+<img alt="cursor: help;" width=400 height=300 src="https://img-blog.csdnimg.cn/8157d993627349cf8f6dbf3cfec66a76.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_1,color_FFFFFF,t_70,g_se,x_16#pic_center" />
+
+<blockquote>
+<p>cursor: wait;  效果如下：</p>
+</blockquote>
+<img alt="cursor: wait;" width=400 height=300 src="https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210917145508.png" />
+
+<blockquote>
+<p>cursor: crosshair;  效果如下：</p>
+</blockquote>
+<img alt="cursor: crosshair;" width=400 height=300 src="https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210917151016.png" />
+
+<blockquote>
+<p>cursor: not-allowed;  效果如下：</p>
+</blockquote>
+<img alt="cursor: not-allowed;" width=400 height=300 src="https://img-blog.csdnimg.cn/4c76617b9a124d148ece43bdeba3d86f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" />
+
+<blockquote>
+<p>cursor: zoom-in;  效果如下：</p>
+</blockquote>
+<img alt="cursor: zoom-in;" width=400 height=300 src="https://img-blog.csdnimg.cn/3a7ed3679aa444d4802bae92d12b74d0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" />
+
+<blockquote>
+<p>cursor: grab;  效果如下：</p>
+</blockquote>
+<img alt="cursor: grab;" width=400 height=300 src="https://img-blog.csdnimg.cn/7fe0c4ade1da43fdb37d1ad307780c6f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" />
+
+
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><blockquote>
+<p>cursor属性为零个或多个<url>值，它们之间用逗号分隔，最后必填一个关键字值。每个<url>指向一个图像文件。浏览器将尝试加载指定的第一个图像，如果无法加载则返回下一个图像，如果无法加载图像或未指定图像，则使用关键字值代表的指针类型</p>
+</blockquote>
+<h3 id="关键字值"><a href="#关键字值" class="headerlink" title="关键字值"></a>关键字值</h3><blockquote>
+<p>cursor: pointer;</p>
+</blockquote>
+<img alt="cursor: grab;" width=400 height=300 src="https://img-blog.csdnimg.cn/85e30c4c784e4749b4a8e77afd232c1c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" />
+
+<blockquote>
+<p>cursor: auto;  浏览器根据当前内容决定指针样式</p>
+</blockquote>
+<blockquote>
+<p>cursor: progress; 程序后台繁忙，用户仍可交互 (与wait相反).</p>
+</blockquote>
+<h3 id="使用-URL，并提供一个关键字值作为备用"><a href="#使用-URL，并提供一个关键字值作为备用" class="headerlink" title="使用 URL，并提供一个关键字值作为备用"></a>使用 URL，并提供一个关键字值作为备用</h3><blockquote>
+<p>cursor: url(hand.cur), pointer;</p>
+</blockquote>
+<blockquote>
+<p>最后必须提供一个非 URL 后备值</p>
+</blockquote>
+<h3 id="URL-和-xy-的坐标偏移值，最后提供一个关键字值作为备用"><a href="#URL-和-xy-的坐标偏移值，最后提供一个关键字值作为备用" class="headerlink" title="URL 和 xy 的坐标偏移值，最后提供一个关键字值作为备用"></a>URL 和 xy 的坐标偏移值，最后提供一个关键字值作为备用</h3><blockquote>
+<p>每个<url>后面都可选跟一对空格分隔的数字<x><y>表示偏移。它们用来设置指针的热点(即自定义图标的实际点击位置)，位置相对于图标的左上角</p>
+</blockquote>
+<blockquote>
+<p>可选 x，y坐标, 两个小于 32 的无单位非负数</p>
+</blockquote>
+<blockquote>
+<p>cursor:  url(cursor1.png) 4 12, auto;</p>
+</blockquote>
+<blockquote>
+<p>cursor:  url(cursor2.png) 2 2, pointer;</p>
+</blockquote>
+<h3 id="全局属性"><a href="#全局属性" class="headerlink" title="全局属性"></a>全局属性</h3><blockquote>
+<p>cursor: inherit;</p>
+</blockquote>
+<blockquote>
+<p>cursor: initial;</p>
+</blockquote>
+<blockquote>
+<p>cursor: unset;</p>
+</blockquote>
+]]></content>
       <categories>
-          
-          <category> Node.js </category>
-          
+        <category>CSS</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-            <tag> Node.js </tag>
-            
-            <tag> express </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>《CSS（层叠样式表） 学习笔记之 cursor》</title>
-      <link href="/posts/2312.html"/>
-      <url>/posts/2312.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="《CSS（层叠样式表）-学习笔记之-cursor》"><a href="#《CSS（层叠样式表）-学习笔记之-cursor》" class="headerlink" title="《CSS（层叠样式表） 学习笔记之 cursor》"></a>《CSS（层叠样式表） 学习笔记之 cursor》</h1><h2 id="cursor-简介"><a href="#cursor-简介" class="headerlink" title="cursor 简介"></a>cursor 简介</h2><blockquote><p>cursor 是 CSS 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式</p></blockquote><pre><code class="css">cursor: help;cursor: wait;cursor: crosshair;cursor: not-allowed;cursor: zoom-in;cursor: grab;</code></pre><blockquote><p>cursor: help; 指示帮助 效果如下：</p></blockquote><img alt="cursor: help;" width=400 height=300 src="https://img-blog.csdnimg.cn/8157d993627349cf8f6dbf3cfec66a76.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_1,color_FFFFFF,t_70,g_se,x_16#pic_center" /><blockquote><p>cursor: wait;  效果如下：</p></blockquote><img alt="cursor: wait;" width=400 height=300 src="https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210917145508.png" /><blockquote><p>cursor: crosshair;  效果如下：</p></blockquote><img alt="cursor: crosshair;" width=400 height=300 src="https://gitee.com/yk-ddm/picx_drawing_bed/raw/master/images/20210917151016.png" /><blockquote><p>cursor: not-allowed;  效果如下：</p></blockquote><img alt="cursor: not-allowed;" width=400 height=300 src="https://img-blog.csdnimg.cn/4c76617b9a124d148ece43bdeba3d86f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" /><blockquote><p>cursor: zoom-in;  效果如下：</p></blockquote><img alt="cursor: zoom-in;" width=400 height=300 src="https://img-blog.csdnimg.cn/3a7ed3679aa444d4802bae92d12b74d0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" /><blockquote><p>cursor: grab;  效果如下：</p></blockquote><img alt="cursor: grab;" width=400 height=300 src="https://img-blog.csdnimg.cn/7fe0c4ade1da43fdb37d1ad307780c6f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" /><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><blockquote><p>cursor属性为零个或多个<url>值，它们之间用逗号分隔，最后必填一个关键字值。每个<url>指向一个图像文件。浏览器将尝试加载指定的第一个图像，如果无法加载则返回下一个图像，如果无法加载图像或未指定图像，则使用关键字值代表的指针类型</p></blockquote><h3 id="关键字值"><a href="#关键字值" class="headerlink" title="关键字值"></a>关键字值</h3><blockquote><p>cursor: pointer;</p></blockquote><img alt="cursor: grab;" width=400 height=300 src="https://img-blog.csdnimg.cn/85e30c4c784e4749b4a8e77afd232c1c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" /><blockquote><p>cursor: auto;  浏览器根据当前内容决定指针样式</p></blockquote><blockquote><p>cursor: progress; 程序后台繁忙，用户仍可交互 (与wait相反).</p></blockquote><h3 id="使用-URL，并提供一个关键字值作为备用"><a href="#使用-URL，并提供一个关键字值作为备用" class="headerlink" title="使用 URL，并提供一个关键字值作为备用"></a>使用 URL，并提供一个关键字值作为备用</h3><blockquote><p>cursor: url(hand.cur), pointer;</p></blockquote><blockquote><p>最后必须提供一个非 URL 后备值</p></blockquote><h3 id="URL-和-xy-的坐标偏移值，最后提供一个关键字值作为备用"><a href="#URL-和-xy-的坐标偏移值，最后提供一个关键字值作为备用" class="headerlink" title="URL 和 xy 的坐标偏移值，最后提供一个关键字值作为备用"></a>URL 和 xy 的坐标偏移值，最后提供一个关键字值作为备用</h3><blockquote><p>每个<url>后面都可选跟一对空格分隔的数字<x><y>表示偏移。它们用来设置指针的热点(即自定义图标的实际点击位置)，位置相对于图标的左上角</p></blockquote><blockquote><p>可选 x，y坐标, 两个小于 32 的无单位非负数</p></blockquote><blockquote><p>cursor:  url(cursor1.png) 4 12, auto;</p></blockquote><blockquote><p>cursor:  url(cursor2.png) 2 2, pointer;</p></blockquote><h3 id="全局属性"><a href="#全局属性" class="headerlink" title="全局属性"></a>全局属性</h3><blockquote><p>cursor: inherit;</p></blockquote><blockquote><p>cursor: initial;</p></blockquote><blockquote><p>cursor: unset;</p></blockquote>]]></content>
-      
-      
+      <tags>
+        <tag>CSS</tag>
+        <tag>Web 开发技术</tag>
+        <tag>cursor</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Node.js 学习笔记之服务器静态资源托管服务》</title>
+    <url>/posts/10535.html</url>
+    <content><![CDATA[<h1 id="《Node-js-学习笔记之服务器静态资源托管服务》"><a href="#《Node-js-学习笔记之服务器静态资源托管服务》" class="headerlink" title="《Node.js 学习笔记之服务器静态资源托管服务》"></a>《Node.js 学习笔记之服务器静态资源托管服务》</h1><h2 id="引入-http-服务"><a href="#引入-http-服务" class="headerlink" title="引入 http 服务"></a>引入 http 服务</h2><blockquote>
+<p>const http = require(‘http’)</p>
+</blockquote>
+<h2 id="开启服务器并指定端口"><a href="#开启服务器并指定端口" class="headerlink" title="开启服务器并指定端口"></a>开启服务器并指定端口</h2><pre><code class="Node.js">const server = http.createServer((req,res) =&gt; &#123;
+    // code 
+&#125;).listen(3000,() =&gt; &#123;
+    console.log(&#39;服务开启成功, 请访问 http://localhost:3000/&#39;)
+&#125;)
+</code></pre>
+<h2 id="express-中间件的使用"><a href="#express-中间件的使用" class="headerlink" title="express 中间件的使用"></a>express 中间件的使用</h2><blockquote>
+<p>它是处理过程中的一个环节; 是一个函数</p>
+</blockquote>
+<blockquote>
+<p>可以执行任何代码</p>
+</blockquote>
+<blockquote>
+<p>可以修改请求和响应对象</p>
+</blockquote>
+<blockquote>
+<p>可以终结请求-响应循环</p>
+</blockquote>
+<blockquote>
+<p>可以调用堆栈中的下一个中间件</p>
+</blockquote>
+<h3 id="引入-express"><a href="#引入-express" class="headerlink" title="引入 express"></a>引入 express</h3><blockquote>
+<p>const express = require(‘express’)</p>
+</blockquote>
+<h3 id="返回对象"><a href="#返回对象" class="headerlink" title="返回对象"></a>返回对象</h3><blockquote>
+<p>const app = express()</p>
+</blockquote>
+<h3 id="托管静态资源"><a href="#托管静态资源" class="headerlink" title="托管静态资源"></a>托管静态资源</h3><blockquote>
+<p>app.use(express.static(‘test’))</p>
+</blockquote>
+<blockquote>
+<p>app.listen(3000, () =&gt; {<br>    console.log(‘Node 服务开启成功！’)<br>})</p>
+</blockquote>
+]]></content>
       <categories>
-          
-          <category> CSS </category>
-          
+        <category>Node.js</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> CSS </tag>
-            
-            <tag> Web 开发技术 </tag>
-            
-            <tag> cursor </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>《JavaScript 学习笔记 之 日常练习案例》</title>
-      <link href="/posts/20068.html"/>
-      <url>/posts/20068.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="JavaScript-学习笔记"><a href="#JavaScript-学习笔记" class="headerlink" title="JavaScript 学习笔记"></a>JavaScript 学习笔记</h1><hr /><h2 id="日常练习案例"><a href="#日常练习案例" class="headerlink" title="日常练习案例"></a>日常练习案例</h2><hr /><h3 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h3><pre><code class="js">// &#39;abcEFG&#39;  重新排序 ---&gt; 规则是 把大写字母放前面，小写字母放后面// realization/**    explain：    operationStr 操作字符串    应用了： String.split()  切割字符串返回数组、    Array.join() 将数组中的元素以某种操作符连接起来、    正则表达式的使用 */function operationStr(str)&#123;    return str.split(/[a-z]/g).join(&#39;&#39;) + str.split(/[A-Z]/g).join(&#39;&#39;)&#125;// Testvar str = &#39;abcEFG&#39;,  // expect output: &#39;EFGabc&#39;    result = operationStr(str)console.log(result)  // output: &#39;EFGabc&#39;</code></pre><ul><li><code>查看测试结果</code><br><img src="https://uploadfiles.nowcoder.com/files/20210816/838378582_1629111449561/f5833805ece3444d9df5cbc1587b78e7.png" alt="在这里插入图片描述"></li></ul><h3 id="Boolean-类型学习练习"><a href="#Boolean-类型学习练习" class="headerlink" title="Boolean 类型学习练习"></a>Boolean 类型学习练习</h3><pre><code class="js">/**    explain：    test 自定义变量名称        Boolean类型        new Boolean()  实例化，默认 返回 false    document 文档        document.write()  向页面打印信息，会覆盖页面原有的内容    document.write(&quot;&lt;br /&gt;&quot;)   向页面输出一个换行*/var testtest = new Boolean()document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(null)document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(&#39;&#39;)   // &#39;&#39; 或 &quot;&quot;document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(undefined)document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(NaN)document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(0)document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(false)  document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: falsetest = new Boolean(true)  document.write(test)document.write(&quot;&lt;br /&gt;&quot;)  // output: true</code></pre><ul><li>查看测试结果</li></ul><p><img src="https://uploadfiles.nowcoder.com/images/20210817/838378582_1629200064609/468DD5DDE04AEED9D181C17F0FEED120" alt="图片说明" title="图片标题"> </p>]]></content>
-      
-      
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Node.js</tag>
+        <tag>express</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《GitHub Actions 入门》</title>
+    <url>/posts/34548.html</url>
+    <content><![CDATA[<h1 id="GitHub-Actions-简介"><a href="#GitHub-Actions-简介" class="headerlink" title="GitHub Actions 简介"></a>GitHub Actions 简介</h1><blockquote>
+<p>GitHub 的持续集成服务(2018年10月推出);</p>
+</blockquote>
+<blockquote>
+<p>持续集成（Continuous integration，简称CI）</p>
+</blockquote>
+<blockquote>
+<p><a href="">Travis CI</a></p>
+</blockquote>
+<blockquote>
+<p>行为、操作 即 actions，一个独立脚本，可以存入远程代码仓库</p>
+</blockquote>
+<blockquote>
+<p><a href="https://github.com/marketplace?type=actions">actions仓库</a> | <a href="https://github.com/actions">actions仓库</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://github.com/sdras/awesome-actions">awesome-actions仓库</a></p>
+</blockquote>
+<hr />
+
+<h2 id="action-引用方式"><a href="#action-引用方式" class="headerlink" title="action 引用方式"></a>action 引用方式</h2><blockquote>
+<ol>
+<li>userName/repoName 就表示 github.com/userName/repoName</li>
+</ol>
+</blockquote>
+<hr />
+
+<h2 id="workflow-（工作流程）"><a href="#workflow-（工作流程）" class="headerlink" title="workflow （工作流程）"></a>workflow （工作流程）</h2><blockquote>
+<p>持续集成一次运行的过程; GitHub Actions 的配置文件; 一个代码仓库可以有多个配置文件</p>
+</blockquote>
+<blockquote>
+<p>存放在代码仓库的  <code>.github/workflows</code> 目录; workflow 文件采用 YAML 格式; 代码仓库自动运行这些配置文件</p>
+</blockquote>
+<blockquote>
+<p><a href="https://help.github.com/en/articles/workflow-syntax-for-github-actions">workflow 文件的配置字段</a></p>
+</blockquote>
+<hr />
+
+<h3 id="workflow-文件的配置字段"><a href="#workflow-文件的配置字段" class="headerlink" title="workflow 文件的配置字段"></a>workflow 文件的配置字段</h3><blockquote>
+<p>name: workflow 的名称 —&gt; name: GitHub Actions Demo</p>
+</blockquote>
+<blockquote>
+<p>on: 触发 workflow 的条件，通常是某些事件(代码库事件, 外部事件触发[, …]) —&gt; on: [push, pull_request] | on: push</p>
+</blockquote>
+<pre><code class="yml">on:
+  push:
+    branches:    
+      - master
+</code></pre>
+<blockquote>
+<p>jobs: 每一项任务的job_id</p>
+</blockquote>
+<pre><code class="yml">jobs:
+# 每一项任务的job_id ~ my_first_job
+  my_first_job:
+  # name字段是任务的说明 ~ My first job
+    name: My first job
+  my_second_job:
+    name: My second job
+</code></pre>
+<blockquote>
+<p>needs: 指定当前任务的依赖关系</p>
+</blockquote>
+<pre><code class="yml">jobs:
+# 每一项任务的job_id ~ my_first_job
+  my_first_job:
+  # name字段是任务的说明 ~ My first job
+    name: My first job
+  my_second_job:
+    name: My second job
+    # 指定当前任务的依赖关系 needs: my_first_job | needs: [my_first_job, needs: my_second_job]
+    needs: my_first_job
+</code></pre>
+<blockquote>
+<p>runs-on: 指定运行所需要的虚拟机环境, 它是必填字段 runs-on: ubuntu-18.04</p>
+</blockquote>
+<pre><code class="yml"># 虚拟机环境
+ubuntu-latest，ubuntu-18.04或ubuntu-16.04
+windows-latest，windows-2019或windows-2016
+macOS-latest或macOS-10.14
+</code></pre>
+<blockquote>
+<p>steps: 指定每个 Job 的运行步骤，可以包含一个或多个步骤</p>
+</blockquote>
+<pre><code class="yml">name: Greeting from Mona
+on: push
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    # 步骤名称 name
+    - name: Print a greeting
+    # 环境变量 env
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: yk-ddm
+        # 运行的命令或者 action
+      run: |
+        echo $MY_VAR $FIRST_NAME.
+</code></pre>
+<hr />
+
+<h2 id="job-（任务）"><a href="#job-（任务）" class="headerlink" title="job （任务）"></a>job （任务）</h2><blockquote>
+<p>一个 workflow 由一个或多个 jobs 构成，含义是一次持续集成的运行，可以完成多个任务</p>
+</blockquote>
+<blockquote>
+<p>github actions 配置文件的主体</p>
+</blockquote>
+<hr />
+
+<h2 id="step（步骤）"><a href="#step（步骤）" class="headerlink" title="step（步骤）"></a>step（步骤）</h2><blockquote>
+<p>每个 job 由多个 step 构成，一步步完成</p>
+</blockquote>
+<hr />
+
+<h2 id="action-（动作）"><a href="#action-（动作）" class="headerlink" title="action （动作）"></a>action （动作）</h2><blockquote>
+<p>每个 step 可以依次执行一个或多个命令（action）</p>
+</blockquote>
+<hr />
+
+
+
+
+
+]]></content>
       <categories>
-          
-          <category> JavaScript </category>
-          
+        <category>开发者手册</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-            <tag> HTML </tag>
-            
-            <tag> CSS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>《一次推送本地项目同步至多个平台的远程仓库》</title>
-      <link href="/posts/42997.html"/>
-      <url>/posts/42997.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="开发者学习笔记"><a href="#开发者学习笔记" class="headerlink" title="开发者学习笔记"></a>开发者学习笔记</h1><hr /><h2 id="项目数据同步"><a href="#项目数据同步" class="headerlink" title="项目数据同步"></a>项目数据同步</h2><blockquote><p>平常我们写项目，写好后就分别提交到源代码管理仓库 <code>github</code> 和 <code>gitee</code><br>问题来了，一旦项目多了，我的需求来了，想要一次提交 ，实现 <code>github</code> 和 <code>gitee</code> 数据同步</p></blockquote><pre><code>step1: 创建 一个 文件夹 sync_github_giteestep2: 初始化一个空的git本地仓库, 即 git 文件夹（如果看不到，可能隐藏了）step3: 进入 git 文件夹，修改 config 内容step4: cd ..step5: 执行 git add .  将当前目录下的文件从工作区存入暂存区step6: 设置 提交的 message ---&gt;  git commit -m &quot;message&quot;step7: 提交 --&gt; git push  -u  origin master</code></pre><p><img src="https://img-blog.csdnimg.cn/7b36b361ff4d4e0993d0a69e50d84dae.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_39,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><pre><code class="config">[core]    repositoryformatversion = 0    filemode = false    bare = false    logallrefupdates = true    symlinks = false    ignorecase = true[remote &quot;origin&quot;]    url = https://gitee.com/yk-ddm/仓库名.git    url = https://github.com/yk-ddm/仓库名.git    fetch = +refs/heads/*:refs/remotes/origin/*[branch &quot;master&quot;]    remote = origin    merge = refs/heads/master</code></pre><p><img src="https://img-blog.csdnimg.cn/6d18a1677acf4172a884019b8b6a02a7.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_25,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><hr /><h3 id="学习遇到的问题"><a href="#学习遇到的问题" class="headerlink" title="学习遇到的问题"></a>学习遇到的问题</h3><pre><code>OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443push 提交的时候应该走ssh隧道的，但是因为设置了http代理，所以就走了http的代理</code></pre><p><img src="https://img-blog.csdnimg.cn/08cc44b161bb44c798fc018eec4476a1.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_51,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><ul><li>解决方法：<code>先暂时关闭代理，提交之后，开启即可加速 github 访问速度</code></li></ul>]]></content>
-      
-      
+      <tags>
+        <tag>CI</tag>
+        <tag>Actions</tag>
+        <tag>github</tag>
+        <tag>workflow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《一次推送本地项目同步至多个平台的远程仓库》</title>
+    <url>/posts/42997.html</url>
+    <content><![CDATA[<h1 id="开发者学习笔记"><a href="#开发者学习笔记" class="headerlink" title="开发者学习笔记"></a>开发者学习笔记</h1><hr />
+
+<h2 id="项目数据同步"><a href="#项目数据同步" class="headerlink" title="项目数据同步"></a>项目数据同步</h2><blockquote>
+<p>平常我们写项目，写好后就分别提交到源代码管理仓库 <code>github</code> 和 <code>gitee</code><br>问题来了，一旦项目多了，我的需求来了，想要一次提交 ，实现 <code>github</code> 和 <code>gitee</code> 数据同步</p>
+</blockquote>
+<pre><code>step1: 创建 一个 文件夹 sync_github_gitee
+step2: 初始化一个空的git本地仓库, 即 git 文件夹（如果看不到，可能隐藏了）
+step3: 进入 git 文件夹，修改 config 内容
+step4: cd ..
+step5: 执行 git add .  将当前目录下的文件从工作区存入暂存区
+step6: 设置 提交的 message ---&gt;  git commit -m &quot;message&quot;
+step7: 提交 --&gt; git push  -u  origin master
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/7b36b361ff4d4e0993d0a69e50d84dae.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_39,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<pre><code class="config">[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+[remote &quot;origin&quot;]
+    url = https://gitee.com/yk-ddm/仓库名.git
+    url = https://github.com/yk-ddm/仓库名.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;master&quot;]
+    remote = origin
+    merge = refs/heads/master
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/6d18a1677acf4172a884019b8b6a02a7.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_25,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h3 id="学习遇到的问题"><a href="#学习遇到的问题" class="headerlink" title="学习遇到的问题"></a>学习遇到的问题</h3><pre><code>OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
+
+push 提交的时候应该走ssh隧道的，但是因为设置了http代理，所以就走了http的代理
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/08cc44b161bb44c798fc018eec4476a1.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_51,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<ul>
+<li>解决方法：<code>先暂时关闭代理，提交之后，开启即可加速 github 访问速度</code></li>
+</ul>
+]]></content>
       <categories>
-          
-          <category> Git </category>
-          
+        <category>Git</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> gitee </tag>
-            
-            <tag> github </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>《博客框架学习笔记之hexo》</title>
-      <link href="/posts/52458.html"/>
-      <url>/posts/52458.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="博客框架"><a href="#博客框架" class="headerlink" title="博客框架"></a>博客框架</h1><ul><li>常见的<strong>博客框架</strong> ： <code>hexo</code> 、<code>WordPress</code>、<code>VuePress</code>、<code>Hugo</code>、<code>Solo</code>、<code>Halo</code> 、<code>Typecho</code>、…</li></ul><hr /><h2 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h2><ul><li>常见的 <strong>博客主题</strong> ：<code>jekyll</code> 、<code>Fluid</code> 、<code>Butterfly</code>、<code>Matery</code>、<code>Akina</code>、<code>Muse</code>、<code>Mist</code>、<code>Pisces</code>、<code>Gemini</code>、 <code>Mirages</code>、…</li></ul><blockquote><p>主题：<code>NexT</code> 、<code>Yilia</code>、<code>Melody</code>、<code>mellow</code>、、、、、、、</p></blockquote><blockquote><p><a href="https://hexo.io/themes/">hexo 主题查找</a> </p></blockquote><hr /><h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><ul><li><code>简介</code></li></ul><blockquote><p><code>Hexo</code> 是一个基于Node.js的快速、简洁且高效的静态博客框架。Hexo 支持 <code>Markdown</code> 解析文章，在几秒内，即可利用靓丽的主题生成静态网页</p></blockquote><blockquote><p><code>hexo 默认主题：</code> —&gt; <code>landscape</code></p></blockquote><p><img src="https://img-blog.csdnimg.cn/aeb500f40d4c4daebfbdf14dfd6c3348.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_44,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><ul><li><code>hexo 版本</code><br><img src="https://img-blog.csdnimg.cn/a9c285b20c494f4fa4c5ff9c8fa4b1c8.png" alt="在这里插入图片描述"></li></ul><blockquote><p><a href="https://hexo.io/">Hexo官网</a><br><a href="https://hexo.io/zh-cn/">Hexo中文网</a></p></blockquote><hr /><h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><ul><li><code>安装 hexo 的基础依赖</code>  —&gt; <code> git 和 nodejs 的安装</code><br><img src="https://img-blog.csdnimg.cn/487cf9937d0b49f9a3a87f3dfb869c78.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li></ul><ul><li>step1: <code>创建文件夹 personal_blog_yk-ddm</code>, 进入此文件夹<br><img src="https://img-blog.csdnimg.cn/a2a795321a654490801d5bde9533fed7.png" alt="在这里插入图片描述"></li><li>step2: <code>执行 npm 包管理命令 </code> —&gt;  <code>安装 hexo-cli ( hexo 命令行界面)</code>：<code>cnpm install hexo-cli</code><br><img src="https://img-blog.csdnimg.cn/0358132b3445401394f6a81d56b5d8de.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/67d43fecf84546c1b3d122c8c5bc8b26.png" alt="在这里插入图片描述"></li><li>step3: 查看 <code>hexo</code> 版本 ： <code>hexo -v</code><br><img src="https://img-blog.csdnimg.cn/9fd94c4e273b4f289486035851cd1d40.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li><li>step4: <code>初始化 hexo </code> : <code>hexo init myblog</code><br><img src="https://img-blog.csdnimg.cn/beea870a36f74443b5d9fcb323b2c41d.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/7c2826f3faff4e35b79680b1aeac2fc1.png" alt="在这里插入图片描述"></li><li>step5: <code>进入 myblog 文件夹中，开启服务</code>  —&gt;  <code>hexo server</code><br><img src="https://img-blog.csdnimg.cn/6c121254a49742aea1f269a19706e91b.png" alt="在这里插入图片描述"><blockquote><p><code>关闭服务</code> —&gt; Ctrl + C</p></blockquote></li></ul><p><img src="https://img-blog.csdnimg.cn/a96b1013fe504772a90cead62669ce40.png" alt="在这里插入图片描述"></p><hr /><h4 id="将-hexo-部署到-GitHub"><a href="#将-hexo-部署到-GitHub" class="headerlink" title="将 hexo 部署到 GitHub"></a>将 hexo 部署到 GitHub</h4><ul><li><code>修改配置文件 _config.yml </code><br><img src="https://img-blog.csdnimg.cn/9f8df84c4c2841119a55235521f3eaa3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li><li><code>安装deploy-git</code> : <code>npm install hexo-deployer-git --save</code><br><img src="https://img-blog.csdnimg.cn/4c628eeb738c42b8ae60aaac0b47c590.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><blockquote><p>执行 <code>hexo clean</code>    —-&gt;  清空<br>执行 <code>hexo generate</code>  —–&gt;   生成静态文章<br>执行 <code>hexo deploy</code>  ——&gt;  部署发布至 github</p></blockquote></li></ul><p><img src="https://img-blog.csdnimg.cn/e2a5bcab599f4624ae5243ef11a61c13.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><ul><li><code>查看效果</code><br><img src="https://img-blog.csdnimg.cn/1dacf0a6d12c494c82415a7cef464603.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/c9a7f888bebc473d9176615413c4cc69.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li></ul><hr /><h4 id="为-hexo-个人博客添加站内搜索"><a href="#为-hexo-个人博客添加站内搜索" class="headerlink" title="为 hexo 个人博客添加站内搜索"></a>为 hexo 个人博客添加站内搜索</h4><blockquote><p>先安装插件 cnpm install hexo-generator-search –save</p></blockquote><p><img src="https://img-blog.csdnimg.cn/7ed778c50cff48e0a80e14dcc0b681c0.png" alt="在这里插入图片描述"></p><blockquote><p>执行 cnpm install hexo-generator-searchdb –save</p></blockquote><p><img src="https://img-blog.csdnimg.cn/eaad2257cfc54dfebde4bbcd404e543f.png" alt="在这里插入图片描述"></p><blockquote><p>修改项目的配置文件 _config.yml</p></blockquote><pre><code class="config.yml"># 添加如下内容：search:  path: search.xml  field: post  format: html  limit: 10000</code></pre><p><img src="https://img-blog.csdnimg.cn/e92ce7504a2c4e21a89f1552799f0531.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>编辑主题文件夹的 _config.yml 配置文件，设置 Local search 的 enable 为 ture</p></blockquote><p><img src="https://img-blog.csdnimg.cn/45edb65a93454edabcb5607b1741d58b.png" alt="在这里插入图片描述"></p><hr /><h4 id="为-个人博客添加-GitHub-Corners"><a href="#为-个人博客添加-GitHub-Corners" class="headerlink" title="为  个人博客添加 GitHub Corners"></a>为  个人博客添加 GitHub Corners</h4><blockquote><p> <a href="https://tholman.com/github-corners/">GitHub Corners 地址</a></p></blockquote><p><img src="https://img-blog.csdnimg.cn/74ce3b3c391d439286547916d8e2b86c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>编辑代码如下</p></blockquote><p><img src="https://img-blog.csdnimg.cn/7d35e01c63b44ed192f9e080a25e6534.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/0fe5a0861a804788a382f0f90fd6041f.png" alt="在这里插入图片描述"></p><blockquote><p>效果展示</p></blockquote><p><img src="https://img-blog.csdnimg.cn/89931688a1bf4425b55b60dade7be793.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_13,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><hr /><h4 id="Butterfly-添加全局吸底Aplayer-音乐播放器"><a href="#Butterfly-添加全局吸底Aplayer-音乐播放器" class="headerlink" title="Butterfly 添加全局吸底Aplayer ( 音乐播放器 )"></a>Butterfly 添加全局吸底Aplayer ( 音乐播放器 )</h4><blockquote><p><a href="https://butterfly.js.org/posts/507c070f/">Butterfly添加全局吸底Aplayer教程</a></p></blockquote><blockquote><p><a href="https://aplayer.js.org/#/zh-Hans/">前往 aplayer 官网</a></p></blockquote><hr /><h4 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h4><blockquote><p><code>cnpm install hexo-abbrlink --save</code> : 博客链接永久化</p></blockquote><p><img src="https://img-blog.csdnimg.cn/a0eb1e6796dd4893ab64fbd032a1c250.png" alt="在这里插入图片描述"></p><blockquote><p>npm install hexo-generator-search –save  —-&gt;  搜索插件安装</p></blockquote><p><img src="https://img-blog.csdnimg.cn/c2ef2424c8884fb18a1daf9c477150c1.png" alt="在这里插入图片描述"></p><blockquote><p>npm i hexo-generator-feed —–&gt; 订阅插件 RSS 安装</p></blockquote><p><img src="https://img-blog.csdnimg.cn/278f30df6f9e4fa99cc65438afc812ef.png" alt="在这里插入图片描述"></p><hr /><h4 id="使用-iconfont-图标"><a href="#使用-iconfont-图标" class="headerlink" title="使用 iconfont 图标"></a>使用 iconfont 图标</h4><blockquote><p>step1: 从 <a href="https://www.iconfont.cn/">阿里图标 官网</a>  下载 <code>iconfont.css 文件</code></p></blockquote><blockquote><p>step2: 将 <code>iconfont.css</code> 文件复制到 hexo 主题theme/source/css/ 中</p></blockquote><p><img src="https://img-blog.csdnimg.cn/0344747ac9414f8b8bf90ad77a5f25f0.png" alt="在这里插入图片描述"></p><blockquote><p>在主题的配置文件中进行如下配置，引入刚刚存入的 <code>css</code> 文件</p></blockquote><p><img src="https://img-blog.csdnimg.cn/4a083167e62246099add6c9a3b8b2211.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>设置完毕，即可使用 <code>iconfont icon-csdn1: https://blog.csdn.net/yk_ddm || CSDN</code></p></blockquote><p><img src="https://img-blog.csdnimg.cn/40b08c4897954c32bead6e63a866abe4.png" alt="在这里插入图片描述"></p><blockquote><p>测试查看效果</p></blockquote><p><img src="https://img-blog.csdnimg.cn/0c1d02d7c69a4e4d94b30f692b703149.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><hr /><h4 id="设置-avatar-头像"><a href="#设置-avatar-头像" class="headerlink" title="设置 avatar 头像"></a>设置 avatar 头像</h4><ul><li><code>在 主题的 _config.yml 中配置</code><br><img src="https://img-blog.csdnimg.cn/9b004254c88d4841aa1b99b2edb1f2ef.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li></ul><hr /><h4 id="草稿-draft-的使用"><a href="#草稿-draft-的使用" class="headerlink" title="草稿 draft 的使用"></a>草稿 draft 的使用</h4><ul><li><code>hexo new draft draft-test01</code><br><img src="https://img-blog.csdnimg.cn/001b6c88355b49859c5f58c1e2dc9fb4.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li><li><code>将 草稿文章发布到 post 中</code> ：<code>hexo publish draft newspapername</code> , 系统会自动删除 _drafts 中对应的草稿文章<br><img src="https://img-blog.csdnimg.cn/38ec04c0a4ff485bb6827738a508bdfc.png" alt="在这里插入图片描述"></li></ul><hr /><h4 id="常见操作"><a href="#常见操作" class="headerlink" title="常见操作"></a>常见操作</h4><blockquote><p>语言修改; 配置文件 _config.yml;  默认语言是 en<br>主题支持三种语言: default(en)、zh-CN (简体中文)、zh-TW (繁体中文)</p></blockquote><blockquote><p>Front-matter 即 文章开头部分（—–）</p></blockquote><p><img src="https://img-blog.csdnimg.cn/c92cf9dfd8484dcc950109293a93d97b.png" alt="在这里插入图片描述"></p><blockquote><p><code>Butterfly</code> 主题的使用</p></blockquote><p><img src="https://img-blog.csdnimg.cn/d5cf86daffc240d38d096eb253973dc0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>书写文章：<code>hexo new newspapername</code>， 注意事项 —&gt;  文章名称不要包含空格，否则会出现文件名称不对应的情况, 此命令以最后一个空格之后的内容作为Markdown文件的名称（例如：我使用 hexo new post 《博客框架 学习笔记 之 hexo》最后得到的Markdown文件名称却为 hexo》）</p></blockquote><blockquote><p>hexo new [layout] <newspapername>  —-&gt;  layout 布局方式，默认 post 布局</p></blockquote><blockquote><p>layout 布局方式：<code>post</code> 、<code>page</code> 、<code>draft</code> </p></blockquote><p><img src="https://img-blog.csdnimg.cn/5badd2e0c54941ee8a12028e52e0cc45.png" alt="在这里插入图片描述"></p><blockquote><p><code>_config.yml</code> : 作为 <code>hexo框架</code> 的配置文件</p></blockquote><blockquote><p>配置文章的 永久链接 格式，方法如下：第一步，在 <code>_config.yml 配置文件中修改 permalink 的值</code>；第二步，在自定义文章开头书写 category 文章类别</p></blockquote><p><img src="https://img-blog.csdnimg.cn/9b8b6813d2af42eb984f45ce41465703.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/70f46065e864418d9ea2603346c23733.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><ul><li><code>查看效果</code><br><img src="https://img-blog.csdnimg.cn/24fdd362b5c34469940635be1dedc58e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li><li><code>layout 中 page 的使用</code><br><img src="https://img-blog.csdnimg.cn/bb215459b9274747926491555dde9132.png" alt="在这里插入图片描述"></li></ul><blockquote><p>取消 分类页、标签页等评论模块, 只需要注释此段代码</p></blockquote><pre><code class="pug">extends includes/layout.pugblock content  #page    case page.type      when &#39;tags&#39;        include includes/page/tags.pug      when &#39;link&#39;        include includes/page/flink.pug      when &#39;categories&#39;        include includes/page/categories.pug      default        include includes/page/default-page.pug    // 取消 分类页、标签页等评论模块, 只需要注释 以下代码    //- if page.comments !== false &amp;&amp; theme.comments &amp;&amp; theme.comments.use      - var commentsJsLoad = true      !=partial(&#39;includes/third-party/comments/index&#39;, &#123;&#125;, &#123;cache: true&#125;)</code></pre><hr /><h4 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h4><p><code>&#123; err: TypeError: line.matchAll is not a function</code><br><img src="https://img-blog.csdnimg.cn/d8a433976d8248cdacce7a3d302588fe.png" alt="在这里插入图片描述"></p><ul><li><p><code>分析原因：是 node 版本问题, node 12.0.0 以上就没有此问题 </code><br><img src="https://img-blog.csdnimg.cn/bd4c23fc96fe48b5baafaf3a1ecc6a81.png" alt="在这里插入图片描述"></p></li><li><p><code>解决：</code> 尝试 将 <code>_config.yml文件</code> 修改一下<br><img src="https://img-blog.csdnimg.cn/ec4f953175f841338cee80c875269d12.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/d6ef2131cc13424b89cd6af38eb3cc49.png" alt="在这里插入图片描述"></p></li><li><p><code>浏览器运行查看</code><br><img src="https://img-blog.csdnimg.cn/2a315e02b1ec49c5844fbf2aea032691.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p></li><li><p><code>problem Two</code>:<br><img src="https://img-blog.csdnimg.cn/a590b6f427b64fe2ae8fdc9e349e95cd.png" alt="在这里插入图片描述"></p></li><li><p><code>分析原因：</code> 是没有正确安装 <code>hexo-deployer-git</code><br><img src="https://img-blog.csdnimg.cn/b1a45516b26043da955e16ce778c0f41.png" alt="在这里插入图片描述"></p></li><li><p><code>problem Three</code><br><img src="https://img-blog.csdnimg.cn/36b720809ba34f3d9be547b1a160e64f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p></li><li><p><code>分析原因：</code> 权限问题，我之后采用 <code>ssh</code> 方式之后，解决问题<br><img src="https://img-blog.csdnimg.cn/6c4d40e6f2c44ac9ae8d777f397ef3ff.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2add0decd06745cd90ca88b7887711e8.png" alt="在这里插入图片描述"></p></li><li><p><code>problem fourth</code> : <code>TypeError: Cannot read property &#39;enable&#39; of undefined</code><br><img src="https://img-blog.csdnimg.cn/61d60ea73d9a4ab6b231acbac722fc8e.png" alt="在这里插入图片描述"></p></li><li><p><code>分析原因：</code> …</p></li><li><p><code>problem</code><br><img src="https://img-blog.csdnimg.cn/2f1de9628ca3423b90cf20ae82dfea90.png" alt="在这里插入图片描述"></p></li><li><p><code>分析原因：</code> 需要 <code>下载包 hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</code></p></li></ul><blockquote><p>执行 cnpm install –save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</p></blockquote><blockquote><p><code>theme: butterfly</code></p></blockquote><p><img src="https://img-blog.csdnimg.cn/09a9714a3ecb46bf8ce65e12a2d72f77.png" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/737976fbe6d84074ba627b06eae84f26.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>]]></content>
-      
-      
+      <tags>
+        <tag>github</tag>
+        <tag>gitee</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《博客框架学习笔记之hexo》</title>
+    <url>/posts/52458.html</url>
+    <content><![CDATA[<h1 id="博客框架"><a href="#博客框架" class="headerlink" title="博客框架"></a>博客框架</h1><ul>
+<li>常见的<strong>博客框架</strong> ： <code>hexo</code> 、<code>WordPress</code>、<code>VuePress</code>、<code>Hugo</code>、<code>Solo</code>、<code>Halo</code> 、<code>Typecho</code>、…</li>
+</ul>
+<hr />
+
+<h2 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h2><ul>
+<li>常见的 <strong>博客主题</strong> ：<code>jekyll</code> 、<code>Fluid</code> 、<code>Butterfly</code>、<code>Matery</code>、<code>Akina</code>、<code>Muse</code>、<code>Mist</code>、<code>Pisces</code>、<code>Gemini</code>、 <code>Mirages</code>、…</li>
+</ul>
+<blockquote>
+<p>主题：<code>NexT</code> 、<code>Yilia</code>、<code>Melody</code>、<code>mellow</code>、、、、、、、</p>
+</blockquote>
+<blockquote>
+<p><a href="https://hexo.io/themes/">hexo 主题查找</a> </p>
+</blockquote>
+<hr />
+
+<h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><ul>
+<li><code>简介</code></li>
+</ul>
+<blockquote>
+<p><code>Hexo</code> 是一个基于Node.js的快速、简洁且高效的静态博客框架。Hexo 支持 <code>Markdown</code> 解析文章，在几秒内，即可利用靓丽的主题生成静态网页</p>
+</blockquote>
+<blockquote>
+<p><code>hexo 默认主题：</code> —&gt; <code>landscape</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/aeb500f40d4c4daebfbdf14dfd6c3348.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBAeWstZGRt,size_44,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<ul>
+<li><code>hexo 版本</code><br><img src="https://img-blog.csdnimg.cn/a9c285b20c494f4fa4c5ff9c8fa4b1c8.png" alt="在这里插入图片描述"></li>
+</ul>
+<blockquote>
+<p><a href="https://hexo.io/">Hexo官网</a><br><a href="https://hexo.io/zh-cn/">Hexo中文网</a></p>
+</blockquote>
+<hr />
+
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><ul>
+<li><code>安装 hexo 的基础依赖</code>  —&gt; <code> git 和 nodejs 的安装</code><br><img src="https://img-blog.csdnimg.cn/487cf9937d0b49f9a3a87f3dfb869c78.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+</ul>
+<ul>
+<li>step1: <code>创建文件夹 personal_blog_yk-ddm</code>, 进入此文件夹<br><img src="https://img-blog.csdnimg.cn/a2a795321a654490801d5bde9533fed7.png" alt="在这里插入图片描述"></li>
+<li>step2: <code>执行 npm 包管理命令 </code> —&gt;  <code>安装 hexo-cli ( hexo 命令行界面)</code>：<code>cnpm install hexo-cli</code><br><img src="https://img-blog.csdnimg.cn/0358132b3445401394f6a81d56b5d8de.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/67d43fecf84546c1b3d122c8c5bc8b26.png" alt="在这里插入图片描述"></li>
+<li>step3: 查看 <code>hexo</code> 版本 ： <code>hexo -v</code><br><img src="https://img-blog.csdnimg.cn/9fd94c4e273b4f289486035851cd1d40.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+<li>step4: <code>初始化 hexo </code> : <code>hexo init myblog</code><br><img src="https://img-blog.csdnimg.cn/beea870a36f74443b5d9fcb323b2c41d.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/7c2826f3faff4e35b79680b1aeac2fc1.png" alt="在这里插入图片描述"></li>
+<li>step5: <code>进入 myblog 文件夹中，开启服务</code>  —&gt;  <code>hexo server</code><br><img src="https://img-blog.csdnimg.cn/6c121254a49742aea1f269a19706e91b.png" alt="在这里插入图片描述"><blockquote>
+<p><code>关闭服务</code> —&gt; Ctrl + C</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/a96b1013fe504772a90cead62669ce40.png" alt="在这里插入图片描述"></p>
+<hr />
+
+<h4 id="将-hexo-部署到-GitHub"><a href="#将-hexo-部署到-GitHub" class="headerlink" title="将 hexo 部署到 GitHub"></a>将 hexo 部署到 GitHub</h4><ul>
+<li><code>修改配置文件 _config.yml </code><br><img src="https://img-blog.csdnimg.cn/9f8df84c4c2841119a55235521f3eaa3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+<li><code>安装deploy-git</code> : <code>npm install hexo-deployer-git --save</code><br><img src="https://img-blog.csdnimg.cn/4c628eeb738c42b8ae60aaac0b47c590.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><blockquote>
+<p>执行 <code>hexo clean</code>    —-&gt;  清空<br>执行 <code>hexo generate</code>  —–&gt;   生成静态文章<br>执行 <code>hexo deploy</code>  ——&gt;  部署发布至 github</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/e2a5bcab599f4624ae5243ef11a61c13.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<ul>
+<li><code>查看效果</code><br><img src="https://img-blog.csdnimg.cn/1dacf0a6d12c494c82415a7cef464603.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/c9a7f888bebc473d9176615413c4cc69.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+</ul>
+<hr />
+
+<h4 id="为-hexo-个人博客添加站内搜索"><a href="#为-hexo-个人博客添加站内搜索" class="headerlink" title="为 hexo 个人博客添加站内搜索"></a>为 hexo 个人博客添加站内搜索</h4><blockquote>
+<p>先安装插件 cnpm install hexo-generator-search –save</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/7ed778c50cff48e0a80e14dcc0b681c0.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>执行 cnpm install hexo-generator-searchdb –save</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/eaad2257cfc54dfebde4bbcd404e543f.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>修改项目的配置文件 _config.yml</p>
+</blockquote>
+<pre><code class="config.yml"># 添加如下内容：
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/e92ce7504a2c4e21a89f1552799f0531.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>编辑主题文件夹的 _config.yml 配置文件，设置 Local search 的 enable 为 ture</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/45edb65a93454edabcb5607b1741d58b.png" alt="在这里插入图片描述"></p>
+<hr />
+
+<h4 id="为-个人博客添加-GitHub-Corners"><a href="#为-个人博客添加-GitHub-Corners" class="headerlink" title="为  个人博客添加 GitHub Corners"></a>为  个人博客添加 GitHub Corners</h4><blockquote>
+<p> <a href="https://tholman.com/github-corners/">GitHub Corners 地址</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/74ce3b3c391d439286547916d8e2b86c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>编辑代码如下</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/7d35e01c63b44ed192f9e080a25e6534.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/0fe5a0861a804788a382f0f90fd6041f.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>效果展示</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/89931688a1bf4425b55b60dade7be793.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_13,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h4 id="Butterfly-添加全局吸底Aplayer-音乐播放器"><a href="#Butterfly-添加全局吸底Aplayer-音乐播放器" class="headerlink" title="Butterfly 添加全局吸底Aplayer ( 音乐播放器 )"></a>Butterfly 添加全局吸底Aplayer ( 音乐播放器 )</h4><blockquote>
+<p><a href="https://butterfly.js.org/posts/507c070f/">Butterfly添加全局吸底Aplayer教程</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://aplayer.js.org/#/zh-Hans/">前往 aplayer 官网</a></p>
+</blockquote>
+<hr />
+
+<h4 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h4><blockquote>
+<p><code>cnpm install hexo-abbrlink --save</code> : 博客链接永久化</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/a0eb1e6796dd4893ab64fbd032a1c250.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>npm install hexo-generator-search –save  —-&gt;  搜索插件安装</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/c2ef2424c8884fb18a1daf9c477150c1.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>npm i hexo-generator-feed —–&gt; 订阅插件 RSS 安装</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/278f30df6f9e4fa99cc65438afc812ef.png" alt="在这里插入图片描述"></p>
+<hr />
+
+<h4 id="使用-iconfont-图标"><a href="#使用-iconfont-图标" class="headerlink" title="使用 iconfont 图标"></a>使用 iconfont 图标</h4><blockquote>
+<p>step1: 从 <a href="https://www.iconfont.cn/">阿里图标 官网</a>  下载 <code>iconfont.css 文件</code></p>
+</blockquote>
+<blockquote>
+<p>step2: 将 <code>iconfont.css</code> 文件复制到 hexo 主题theme/source/css/ 中</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/0344747ac9414f8b8bf90ad77a5f25f0.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>在主题的配置文件中进行如下配置，引入刚刚存入的 <code>css</code> 文件</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/4a083167e62246099add6c9a3b8b2211.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>设置完毕，即可使用 <code>iconfont icon-csdn1: https://blog.csdn.net/yk_ddm || CSDN</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/40b08c4897954c32bead6e63a866abe4.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>测试查看效果</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/0c1d02d7c69a4e4d94b30f692b703149.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h4 id="设置-avatar-头像"><a href="#设置-avatar-头像" class="headerlink" title="设置 avatar 头像"></a>设置 avatar 头像</h4><ul>
+<li><code>在 主题的 _config.yml 中配置</code><br><img src="https://img-blog.csdnimg.cn/9b004254c88d4841aa1b99b2edb1f2ef.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+</ul>
+<hr />
+
+<h4 id="草稿-draft-的使用"><a href="#草稿-draft-的使用" class="headerlink" title="草稿 draft 的使用"></a>草稿 draft 的使用</h4><ul>
+<li><code>hexo new draft draft-test01</code><br><img src="https://img-blog.csdnimg.cn/001b6c88355b49859c5f58c1e2dc9fb4.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+<li><code>将 草稿文章发布到 post 中</code> ：<code>hexo publish draft newspapername</code> , 系统会自动删除 _drafts 中对应的草稿文章<br><img src="https://img-blog.csdnimg.cn/38ec04c0a4ff485bb6827738a508bdfc.png" alt="在这里插入图片描述"></li>
+</ul>
+<hr />
+
+<h4 id="常见操作"><a href="#常见操作" class="headerlink" title="常见操作"></a>常见操作</h4><blockquote>
+<p>语言修改; 配置文件 _config.yml;  默认语言是 en<br>主题支持三种语言: default(en)、zh-CN (简体中文)、zh-TW (繁体中文)</p>
+</blockquote>
+<blockquote>
+<p>Front-matter 即 文章开头部分（—–）</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/c92cf9dfd8484dcc950109293a93d97b.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><code>Butterfly</code> 主题的使用</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/d5cf86daffc240d38d096eb253973dc0.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>书写文章：<code>hexo new newspapername</code>， 注意事项 —&gt;  文章名称不要包含空格，否则会出现文件名称不对应的情况, 此命令以最后一个空格之后的内容作为Markdown文件的名称（例如：我使用 hexo new post 《博客框架 学习笔记 之 hexo》最后得到的Markdown文件名称却为 hexo》）</p>
+</blockquote>
+<blockquote>
+<p>hexo new [layout] <newspapername>  —-&gt;  layout 布局方式，默认 post 布局</p>
+</blockquote>
+<blockquote>
+<p>layout 布局方式：<code>post</code> 、<code>page</code> 、<code>draft</code> </p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/5badd2e0c54941ee8a12028e52e0cc45.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><code>_config.yml</code> : 作为 <code>hexo框架</code> 的配置文件</p>
+</blockquote>
+<blockquote>
+<p>配置文章的 永久链接 格式，方法如下：第一步，在 <code>_config.yml 配置文件中修改 permalink 的值</code>；第二步，在自定义文章开头书写 category 文章类别</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/9b8b6813d2af42eb984f45ce41465703.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/70f46065e864418d9ea2603346c23733.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<ul>
+<li><code>查看效果</code><br><img src="https://img-blog.csdnimg.cn/24fdd362b5c34469940635be1dedc58e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li>
+<li><code>layout 中 page 的使用</code><br><img src="https://img-blog.csdnimg.cn/bb215459b9274747926491555dde9132.png" alt="在这里插入图片描述"></li>
+</ul>
+<blockquote>
+<p>取消 分类页、标签页等评论模块, 只需要注释此段代码</p>
+</blockquote>
+<pre><code class="pug">extends includes/layout.pug
+
+block content
+  #page
+    case page.type
+      when &#39;tags&#39;
+        include includes/page/tags.pug
+      when &#39;link&#39;
+        include includes/page/flink.pug
+      when &#39;categories&#39;
+        include includes/page/categories.pug
+      default
+        include includes/page/default-page.pug
+
+    // 取消 分类页、标签页等评论模块, 只需要注释 以下代码
+    //- if page.comments !== false &amp;&amp; theme.comments &amp;&amp; theme.comments.use
+      - var commentsJsLoad = true
+      !=partial(&#39;includes/third-party/comments/index&#39;, &#123;&#125;, &#123;cache: true&#125;)
+</code></pre>
+<hr />
+
+<h4 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h4><p><code>&#123; err: TypeError: line.matchAll is not a function</code><br><img src="https://img-blog.csdnimg.cn/d8a433976d8248cdacce7a3d302588fe.png" alt="在这里插入图片描述"></p>
+<ul>
+<li><p><code>分析原因：是 node 版本问题, node 12.0.0 以上就没有此问题 </code><br><img src="https://img-blog.csdnimg.cn/bd4c23fc96fe48b5baafaf3a1ecc6a81.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>解决：</code> 尝试 将 <code>_config.yml文件</code> 修改一下<br><img src="https://img-blog.csdnimg.cn/ec4f953175f841338cee80c875269d12.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/d6ef2131cc13424b89cd6af38eb3cc49.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>浏览器运行查看</code><br><img src="https://img-blog.csdnimg.cn/2a315e02b1ec49c5844fbf2aea032691.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>problem Two</code>:<br><img src="https://img-blog.csdnimg.cn/a590b6f427b64fe2ae8fdc9e349e95cd.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>分析原因：</code> 是没有正确安装 <code>hexo-deployer-git</code><br><img src="https://img-blog.csdnimg.cn/b1a45516b26043da955e16ce778c0f41.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>problem Three</code><br><img src="https://img-blog.csdnimg.cn/36b720809ba34f3d9be547b1a160e64f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>分析原因：</code> 权限问题，我之后采用 <code>ssh</code> 方式之后，解决问题<br><img src="https://img-blog.csdnimg.cn/6c4d40e6f2c44ac9ae8d777f397ef3ff.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2add0decd06745cd90ca88b7887711e8.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>problem fourth</code> : <code>TypeError: Cannot read property &#39;enable&#39; of undefined</code><br><img src="https://img-blog.csdnimg.cn/61d60ea73d9a4ab6b231acbac722fc8e.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>分析原因：</code> …</p>
+</li>
+<li><p><code>problem</code><br><img src="https://img-blog.csdnimg.cn/2f1de9628ca3423b90cf20ae82dfea90.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><code>分析原因：</code> 需要 <code>下载包 hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</code></p>
+</li>
+</ul>
+<blockquote>
+<p>执行 cnpm install –save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</p>
+</blockquote>
+<blockquote>
+<p><code>theme: butterfly</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/09a9714a3ecb46bf8ce65e12a2d72f77.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/737976fbe6d84074ba627b06eae84f26.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+]]></content>
       <categories>
-          
-          <category> 前端 </category>
-          
+        <category>前端</category>
       </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>node.js</tag>
+        <tag>Butterfly</tag>
+        <tag>blog</tag>
+        <tag>iconfont</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>时间格式化工具</title>
+    <url>/posts/22041.html</url>
+    <content><![CDATA[<h1 id="时间格式化工具学习笔记"><a href="#时间格式化工具学习笔记" class="headerlink" title="时间格式化工具学习笔记"></a>时间格式化工具学习笔记</h1><blockquote>
+<p>常用的时间格式化工具：moment、date-fns</p>
+</blockquote>
+<blockquote>
+<p>一个现代的 JavaScript 日期工具类库; 全面、简单，在浏览器和 Node.js 中操作 JavaScript 日期</p>
+</blockquote>
+<hr />
+
+<h2 id="date-fns-安装"><a href="#date-fns-安装" class="headerlink" title="date-fns 安装"></a>date-fns 安装</h2><blockquote>
+<p>yarn add date-fns | npm install date-fns –save</p>
+</blockquote>
+<h2 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h2><p><img src="https://img-blog.csdnimg.cn/94d42deef40240d597de6ff322b68280.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>format(new Date(), “yyyy-MM-dd HH:mm:ss”) 的使用</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/8ded890bf7e849b8a96a0eddf331136c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>案例代码如下：</p>
+</blockquote>
+<pre><code class="js">const dateFns = require(&#39;date-fns&#39;)
+
+let year = dateFns.getYear(new Date()),
+    month = dateFns.getMonth(new Date()) + 1,
+    date = dateFns.getDate(new Date()),
+    week = dateFns.getDay(new Date()),
+    hour = dateFns.getHours(new Date()),
+    minute = dateFns.getMinutes(new Date()),
+    second = dateFns.getSeconds(new Date())
+console.log(&#39;当前年份：&#39; + year)
+console.log(&#39;当前月份：&#39; + month)
+console.log(&#39;当前日：&#39; + date)
+console.log(&#39;当前星期：&#39; + week)
+console.log(&#39;当前小时：&#39; + hour)
+console.log(&#39;当前分钟：&#39; + minute)
+console.log(&#39;当前秒：&#39; + second)
+
+console.log(`$&#123;year&#125;-$&#123;month&#125;-$&#123;date&#125; $&#123;hour&#125;:$&#123;minute&#125;:$&#123;second&#125; 星期$&#123;week&#125;`)
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/4626b838f5c04ff19d81b2df5da4ab20.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>时间格式化工具</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>前端</tag>
+        <tag>ES6</tag>
+        <tag>Node.js</tag>
+        <tag>date-fns</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《微信小程序学习笔记》</title>
+    <url>/posts/20305.html</url>
+    <content><![CDATA[<h1 id="微信小程序-—-学习笔记"><a href="#微信小程序-—-学习笔记" class="headerlink" title="微信小程序 —- 学习笔记"></a>微信小程序 —- 学习笔记</h1><hr />
+
+<h2 id="微信小程序简介"><a href="#微信小程序简介" class="headerlink" title="微信小程序简介"></a>微信小程序简介</h2><blockquote>
+<p>一种不需要下载安装即可使用的应用</p>
+</blockquote>
+<blockquote>
+<p>实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用</p>
+</blockquote>
+<blockquote>
+<p>状态模式-单向数据流;</p>
+</blockquote>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=1701719263">微信小程序 官网</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">微信小程序开发文档</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1&token=&lang=zh_CN">账号注册地址</a></p>
+</blockquote>
+<hr />
+
+<h2 id="使用笔记"><a href="#使用笔记" class="headerlink" title="使用笔记"></a>使用笔记</h2><blockquote>
+<p>查询 微信小程序账号 AppID </p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b867cd87bbdf49e9b11a4a65d09b86f5.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/wxamp/basicprofile/index?token=1701719263&lang=zh_CN">查看 地址</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b79937bf069f4c10aa008a36bb72612e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="https://img-blog.csdnimg.cn/2113796ec7294ae9acd20d0a0f09f694.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h3 id="实例demo"><a href="#实例demo" class="headerlink" title="实例demo"></a>实例demo</h3><blockquote>
+<p>Hello World !</p>
+</blockquote>
+<blockquote>
+<p>代码展示，如下：</p>
+</blockquote>
+<pre><code class="js">//index.js
+//获取应用实例
+const app = getApp()
+
+Page(&#123;
+  data: &#123;
+    str: &#39;Hello World !&#39;
+  &#125;,
+  onLoad: function () &#123;
+  &#125;
+&#125;)
+</code></pre>
+<blockquote>
+<p>页面结构代码，如下：</p>
+</blockquote>
+<pre><code class="wxml">&lt;!--index.wxml--&gt;
+&lt;view class=&quot;container&quot;&gt;
+    &lt;!-- 数据绑定  &#123;&#123;&#125;&#125;   绑定内容 -->
+    &#123;&#123; str &#125;&#125;
+&lt;/view&gt;
+</code></pre>
+<blockquote>
+<p>效果展示，如下：</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/1f5eecda6c7047e7a5192f2d062da195.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>input 的 <code>bindinput</code> 事件触发对象 event 详情</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/9bb78a8b15834be39cef9f353adcec1f.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>在微信小程序中实现数据双向绑定</p>
+</blockquote>
+<blockquote>
+<p>页面结构代码，如下：</p>
+</blockquote>
+<pre><code class="wxml">&lt;!--index.wxml--&gt;
+&lt;view class=&quot;container&quot;&gt;
+    &lt;view class=&quot;form-item&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;&#123;&#123; myForm.username &#125;&#125;&quot; bindinput=&quot;changeUsername&quot; data-name=&quot;username&quot; placeholder=&quot;请输入您的姓名&quot; focus=&quot;&#123;&#123; true &#125;&#125;&quot;/&gt;
+    &lt;/view&gt;
+    模拟数据双向绑定 --- &#123;&#123; myForm.username &#125;&#125;
+&lt;/view&gt;
+</code></pre>
+<blockquote>
+<p>逻辑代码，js 如下：</p>
+</blockquote>
+<pre><code class="js">//index.js
+//获取应用实例
+const app = getApp()
+
+Page(&#123;
+    data: &#123;
+        myForm: &#123;
+            username: &#39;yk-ddm&#39;
+        &#125;
+    &#125;,
+    onLoad: function() &#123;&#125;,
+    changeUsername: function(e) &#123;
+      var that = this,
+          currentTarget = e.currentTarget,
+          dataset = currentTarget.dataset,
+          key = dataset.name,
+          value = e.detail.value,
+          myForm = &quot;myForm.&quot; + key
       
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-            <tag> node.js </tag>
-            
-            <tag> Butterfly </tag>
-            
-            <tag> blog </tag>
-            
-            <tag> iconfont </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      that.setData(&#123;
+        [myForm]: value
+      &#125;)
+    &#125;
+&#125;)
+</code></pre>
+<blockquote>
+<p>代码截图展示，如下：</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b8c7d954d72e4478abdd6684e4070b47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<hr />
+
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><blockquote>
+<p><code>Cannot delete property &#39;WeixinJSBridge&#39; of #&lt;Window&gt;</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/fb26a9d382d24a0e8ca2c78d3d63a300.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>解决方法：尝试更换调试基础库</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/a38f07bd91e84a27bc24c9d274c43d47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>微信小程序</tag>
+        <tag>小程序</tag>
+        <tag>wxml</tag>
+        <tag>wxss</tag>
+      </tags>
+  </entry>
 </search>

@@ -2,14 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yk-ddm.github.io/posts/22041.html</loc>
-    
-    <lastmod>2021-09-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yk-ddm.github.io/posts/56150.html</loc>
+    <loc>https://yk-ddm.github.io/posts/34548.html</loc>
     
     <lastmod>2021-09-24</lastmod>
     
@@ -23,7 +16,14 @@
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/posts/34548.html</loc>
+    <loc>https://yk-ddm.github.io/posts/22041.html</loc>
+    
+    <lastmod>2021-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/posts/56150.html</loc>
     
     <lastmod>2021-09-24</lastmod>
     
@@ -109,7 +109,7 @@
 
   
   <url>
-    <loc>https://yk-ddm.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://yk-ddm.github.io/tags/zlib/</loc>
     <lastmod>2021-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -117,6 +117,41 @@
   
   <url>
     <loc>https://yk-ddm.github.io/tags/JavaScript/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/gzip/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/deflate/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/pipe/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/fs/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -179,7 +214,14 @@
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/tags/gitee/</loc>
+    <loc>https://yk-ddm.github.io/tags/CI/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/Actions/</loc>
     <lastmod>2021-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -187,6 +229,20 @@
   
   <url>
     <loc>https://yk-ddm.github.io/tags/github/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/workflow/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/gitee/</loc>
     <lastmod>2021-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -228,6 +284,13 @@
   </url>
   
   <url>
+    <loc>https://yk-ddm.github.io/tags/date-fns/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yk-ddm.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2021-09-24</lastmod>
     <changefreq>daily</changefreq>
@@ -258,6 +321,13 @@
 
   
   <url>
+    <loc>https://yk-ddm.github.io/categories/Node-js/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yk-ddm.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7Parcel/</loc>
     <lastmod>2021-09-24</lastmod>
     <changefreq>daily</changefreq>
@@ -279,13 +349,6 @@
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/categories/Node-js/</loc>
-    <lastmod>2021-09-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yk-ddm.github.io/categories/%E5%BC%80%E5%8F%91%E8%80%85%E6%89%8B%E5%86%8C/</loc>
     <lastmod>2021-09-24</lastmod>
     <changefreq>daily</changefreq>
@@ -301,6 +364,13 @@
   
   <url>
     <loc>https://yk-ddm.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/categories/%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
