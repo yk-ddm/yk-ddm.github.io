@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Node.js学习笔记</title>
-    <url>/posts/49210.html</url>
-    <content><![CDATA[<h1 id="Node-js-学习笔记"><a href="#Node-js-学习笔记" class="headerlink" title="Node.js 学习笔记"></a>Node.js 学习笔记</h1><h2 id="zlib-模块的使用"><a href="#zlib-模块的使用" class="headerlink" title="zlib 模块的使用"></a>zlib 模块的使用</h2><blockquote>
-<p>实现文件压缩功能</p>
-</blockquote>
-<blockquote>
-<p>模块引入： <code>const zlib = require(“zlib”)</code></p>
-</blockquote>
-<blockquote>
-<p>压缩算法: 1. gzip  2. deflate</p>
-</blockquote>
-<blockquote>
-<p>案例代码如下：</p>
-</blockquote>
-<pre><code class="js">const fs = require(&#39;fs&#39;)
-const zlib = require(&#39;zlib&#39;)
-
-const gzip = zlib.createGzip()
-const deflate = zlib.createDeflate()
-
-var inputFile = fs.createReadStream(&#39;已经存在的文件的路径&#39;)
-var outputFile = fs.createWriteStream(&#39;自定义文件名称&#39;)
-
-inputFile.pipe(gzip).pipe(outputFile)
-inputFile.pipe(deflate).pipe(outputFile)
-</code></pre>
-]]></content>
-      <categories>
-        <category>Node.js</category>
-      </categories>
-      <tags>
-        <tag>zlib</tag>
-        <tag>JavaScript</tag>
-        <tag>gzip</tag>
-        <tag>deflate</tag>
-        <tag>pipe</tag>
-        <tag>fs</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Parcel打包工具的使用</title>
     <url>/posts/56150.html</url>
     <content><![CDATA[<h1 id="Parcel-学习笔记"><a href="#Parcel-学习笔记" class="headerlink" title="Parcel 学习笔记"></a>Parcel 学习笔记</h1><blockquote>
@@ -105,10 +65,50 @@ if (module.hot) &#123; //判断是否支持热加载
         <category>前端工具Parcel</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
         <tag>前端</tag>
+        <tag>JavaScript</tag>
         <tag>ES6</tag>
         <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Node.js学习笔记</title>
+    <url>/posts/49210.html</url>
+    <content><![CDATA[<h1 id="Node-js-学习笔记"><a href="#Node-js-学习笔记" class="headerlink" title="Node.js 学习笔记"></a>Node.js 学习笔记</h1><h2 id="zlib-模块的使用"><a href="#zlib-模块的使用" class="headerlink" title="zlib 模块的使用"></a>zlib 模块的使用</h2><blockquote>
+<p>实现文件压缩功能</p>
+</blockquote>
+<blockquote>
+<p>模块引入： <code>const zlib = require(“zlib”)</code></p>
+</blockquote>
+<blockquote>
+<p>压缩算法: 1. gzip  2. deflate</p>
+</blockquote>
+<blockquote>
+<p>案例代码如下：</p>
+</blockquote>
+<pre><code class="js">const fs = require(&#39;fs&#39;)
+const zlib = require(&#39;zlib&#39;)
+
+const gzip = zlib.createGzip()
+const deflate = zlib.createDeflate()
+
+var inputFile = fs.createReadStream(&#39;已经存在的文件的路径&#39;)
+var outputFile = fs.createWriteStream(&#39;自定义文件名称&#39;)
+
+inputFile.pipe(gzip).pipe(outputFile)
+inputFile.pipe(deflate).pipe(outputFile)
+</code></pre>
+]]></content>
+      <categories>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>zlib</tag>
+        <tag>gzip</tag>
+        <tag>deflate</tag>
+        <tag>pipe</tag>
+        <tag>fs</tag>
       </tags>
   </entry>
   <entry>
@@ -804,60 +804,6 @@ block content
       </tags>
   </entry>
   <entry>
-    <title>时间格式化工具</title>
-    <url>/posts/22041.html</url>
-    <content><![CDATA[<h1 id="时间格式化工具学习笔记"><a href="#时间格式化工具学习笔记" class="headerlink" title="时间格式化工具学习笔记"></a>时间格式化工具学习笔记</h1><blockquote>
-<p>常用的时间格式化工具：moment、date-fns</p>
-</blockquote>
-<blockquote>
-<p>一个现代的 JavaScript 日期工具类库; 全面、简单，在浏览器和 Node.js 中操作 JavaScript 日期</p>
-</blockquote>
-<hr />
-
-<h2 id="date-fns-安装"><a href="#date-fns-安装" class="headerlink" title="date-fns 安装"></a>date-fns 安装</h2><blockquote>
-<p>yarn add date-fns | npm install date-fns –save</p>
-</blockquote>
-<h2 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h2><p><img src="https://img-blog.csdnimg.cn/94d42deef40240d597de6ff322b68280.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>format(new Date(), “yyyy-MM-dd HH:mm:ss”) 的使用</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/8ded890bf7e849b8a96a0eddf331136c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>案例代码如下：</p>
-</blockquote>
-<pre><code class="js">const dateFns = require(&#39;date-fns&#39;)
-
-let year = dateFns.getYear(new Date()),
-    month = dateFns.getMonth(new Date()) + 1,
-    date = dateFns.getDate(new Date()),
-    week = dateFns.getDay(new Date()),
-    hour = dateFns.getHours(new Date()),
-    minute = dateFns.getMinutes(new Date()),
-    second = dateFns.getSeconds(new Date())
-console.log(&#39;当前年份：&#39; + year)
-console.log(&#39;当前月份：&#39; + month)
-console.log(&#39;当前日：&#39; + date)
-console.log(&#39;当前星期：&#39; + week)
-console.log(&#39;当前小时：&#39; + hour)
-console.log(&#39;当前分钟：&#39; + minute)
-console.log(&#39;当前秒：&#39; + second)
-
-console.log(`$&#123;year&#125;-$&#123;month&#125;-$&#123;date&#125; $&#123;hour&#125;:$&#123;minute&#125;:$&#123;second&#125; 星期$&#123;week&#125;`)
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/4626b838f5c04ff19d81b2df5da4ab20.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>时间格式化工具</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>前端</tag>
-        <tag>ES6</tag>
-        <tag>Node.js</tag>
-        <tag>date-fns</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《微信小程序学习笔记》</title>
     <url>/posts/20305.html</url>
     <content><![CDATA[<h1 id="微信小程序-—-学习笔记"><a href="#微信小程序-—-学习笔记" class="headerlink" title="微信小程序 —- 学习笔记"></a>微信小程序 —- 学习笔记</h1><hr />
@@ -996,6 +942,60 @@ Page(&#123;
         <tag>小程序</tag>
         <tag>wxml</tag>
         <tag>wxss</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>时间格式化工具</title>
+    <url>/posts/22041.html</url>
+    <content><![CDATA[<h1 id="时间格式化工具学习笔记"><a href="#时间格式化工具学习笔记" class="headerlink" title="时间格式化工具学习笔记"></a>时间格式化工具学习笔记</h1><blockquote>
+<p>常用的时间格式化工具：moment、date-fns</p>
+</blockquote>
+<blockquote>
+<p>一个现代的 JavaScript 日期工具类库; 全面、简单，在浏览器和 Node.js 中操作 JavaScript 日期</p>
+</blockquote>
+<hr />
+
+<h2 id="date-fns-安装"><a href="#date-fns-安装" class="headerlink" title="date-fns 安装"></a>date-fns 安装</h2><blockquote>
+<p>yarn add date-fns | npm install date-fns –save</p>
+</blockquote>
+<h2 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h2><p><img src="https://img-blog.csdnimg.cn/94d42deef40240d597de6ff322b68280.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>format(new Date(), “yyyy-MM-dd HH:mm:ss”) 的使用</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/8ded890bf7e849b8a96a0eddf331136c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>案例代码如下：</p>
+</blockquote>
+<pre><code class="js">const dateFns = require(&#39;date-fns&#39;)
+
+let year = dateFns.getYear(new Date()),
+    month = dateFns.getMonth(new Date()) + 1,
+    date = dateFns.getDate(new Date()),
+    week = dateFns.getDay(new Date()),
+    hour = dateFns.getHours(new Date()),
+    minute = dateFns.getMinutes(new Date()),
+    second = dateFns.getSeconds(new Date())
+console.log(&#39;当前年份：&#39; + year)
+console.log(&#39;当前月份：&#39; + month)
+console.log(&#39;当前日：&#39; + date)
+console.log(&#39;当前星期：&#39; + week)
+console.log(&#39;当前小时：&#39; + hour)
+console.log(&#39;当前分钟：&#39; + minute)
+console.log(&#39;当前秒：&#39; + second)
+
+console.log(`$&#123;year&#125;-$&#123;month&#125;-$&#123;date&#125; $&#123;hour&#125;:$&#123;minute&#125;:$&#123;second&#125; 星期$&#123;week&#125;`)
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/4626b838f5c04ff19d81b2df5da4ab20.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>时间格式化工具</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>JavaScript</tag>
+        <tag>ES6</tag>
+        <tag>Node.js</tag>
+        <tag>date-fns</tag>
       </tags>
   </entry>
 </search>

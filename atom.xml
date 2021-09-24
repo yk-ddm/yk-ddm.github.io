@@ -6,7 +6,7 @@
   <link href="https://yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://yk-ddm.github.io/"/>
-  <updated>2021-09-24T10:47:26.469Z</updated>
+  <updated>2021-09-24T10:57:33.328Z</updated>
   <id>https://yk-ddm.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yk-ddm.github.io/posts/22041.html"/>
     <id>https://yk-ddm.github.io/posts/22041.html</id>
     <published>2021-09-24T08:50:25.000Z</published>
-    <updated>2021-09-24T10:47:26.469Z</updated>
+    <updated>2021-09-24T10:57:33.328Z</updated>
     
     <content type="html"><![CDATA[<h1 id="时间格式化工具学习笔记"><a href="#时间格式化工具学习笔记" class="headerlink" title="时间格式化工具学习笔记"></a>时间格式化工具学习笔记</h1><blockquote><p>常用的时间格式化工具：moment、date-fns</p></blockquote><blockquote><p>一个现代的 JavaScript 日期工具类库; 全面、简单，在浏览器和 Node.js 中操作 JavaScript 日期</p></blockquote><hr /><h2 id="date-fns-安装"><a href="#date-fns-安装" class="headerlink" title="date-fns 安装"></a>date-fns 安装</h2><blockquote><p>yarn add date-fns | npm install date-fns –save</p></blockquote><h2 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h2><p><img src="https://img-blog.csdnimg.cn/94d42deef40240d597de6ff322b68280.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>format(new Date(), “yyyy-MM-dd HH:mm:ss”) 的使用</p></blockquote><p><img src="https://img-blog.csdnimg.cn/8ded890bf7e849b8a96a0eddf331136c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>案例代码如下：</p></blockquote><pre><code class="js">const dateFns = require(&#39;date-fns&#39;)let year = dateFns.getYear(new Date()),    month = dateFns.getMonth(new Date()) + 1,    date = dateFns.getDate(new Date()),    week = dateFns.getDay(new Date()),    hour = dateFns.getHours(new Date()),    minute = dateFns.getMinutes(new Date()),    second = dateFns.getSeconds(new Date())console.log(&#39;当前年份：&#39; + year)console.log(&#39;当前月份：&#39; + month)console.log(&#39;当前日：&#39; + date)console.log(&#39;当前星期：&#39; + week)console.log(&#39;当前小时：&#39; + hour)console.log(&#39;当前分钟：&#39; + minute)console.log(&#39;当前秒：&#39; + second)console.log(`$&#123;year&#125;-$&#123;month&#125;-$&#123;date&#125; $&#123;hour&#125;:$&#123;minute&#125;:$&#123;second&#125; 星期$&#123;week&#125;`)</code></pre><p><img src="https://img-blog.csdnimg.cn/4626b838f5c04ff19d81b2df5da4ab20.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>]]></content>
     
@@ -37,9 +37,9 @@
     <category term="时间格式化工具" scheme="https://yk-ddm.github.io/categories/%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
-    
     <category term="前端" scheme="https://yk-ddm.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
     
     <category term="ES6" scheme="https://yk-ddm.github.io/tags/ES6/"/>
     
@@ -54,7 +54,7 @@
     <link href="https://yk-ddm.github.io/posts/56150.html"/>
     <id>https://yk-ddm.github.io/posts/56150.html</id>
     <published>2021-09-24T05:49:35.000Z</published>
-    <updated>2021-09-24T06:56:25.740Z</updated>
+    <updated>2021-09-24T11:00:01.611Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Parcel-学习笔记"><a href="#Parcel-学习笔记" class="headerlink" title="Parcel 学习笔记"></a>Parcel 学习笔记</h1><blockquote><p>Parcel是一款零配置的打包工具; 打包速度快; 内部使用多线程打包; 可以快速构建前端应用程序;</p></blockquote><hr /><h2 id="Parcel-初始化"><a href="#Parcel-初始化" class="headerlink" title="Parcel 初始化"></a>Parcel 初始化</h2><blockquote><p>npm init</p></blockquote><hr /><h2 id="Parcel-安装"><a href="#Parcel-安装" class="headerlink" title="Parcel 安装"></a>Parcel 安装</h2><blockquote><p>npm i parcel-bundler -D</p></blockquote><hr /><h2 id="Parcel-入口文件"><a href="#Parcel-入口文件" class="headerlink" title="Parcel 入口文件"></a>Parcel 入口文件</h2><blockquote><p>HTML</p></blockquote><pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;zh-cn&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;Parcel&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;script src=&quot;./main.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><pre><code class="main.js">import &#123; add, age &#125; from &#39;./ESModule&#39;;import _ from &#39;lodash&#39;;import &quot;./style.css&quot;const common = require(&#39;./common&#39;);console.log(common); //打印common.js导出的模块console.log(add, age); //打印ESModule导出的模块let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];console.log(_.last(num)); //使用lodashif (module.hot) &#123; //判断是否支持热加载    console.log(&#39;module hot&#39;);    module.hot.accept(() =&gt; &#123;        console.log(&#39;add&#39;);    &#125;)&#125;</code></pre><h2 id="构建效果图："><a href="#构建效果图：" class="headerlink" title="构建效果图："></a>构建效果图：</h2><p><img src="https://img-blog.csdnimg.cn/9c7c3df36ebf4a5b9edb6da2b8dc8f44.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></p>]]></content>
     
@@ -70,9 +70,9 @@
     <category term="前端工具Parcel" scheme="https://yk-ddm.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7Parcel/"/>
     
     
-    <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
-    
     <category term="前端" scheme="https://yk-ddm.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
     
     <category term="ES6" scheme="https://yk-ddm.github.io/tags/ES6/"/>
     
@@ -85,7 +85,7 @@
     <link href="https://yk-ddm.github.io/posts/49210.html"/>
     <id>https://yk-ddm.github.io/posts/49210.html</id>
     <published>2021-09-23T01:54:52.000Z</published>
-    <updated>2021-09-24T10:48:57.151Z</updated>
+    <updated>2021-09-24T10:58:30.641Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Node-js-学习笔记"><a href="#Node-js-学习笔记" class="headerlink" title="Node.js 学习笔记"></a>Node.js 学习笔记</h1><h2 id="zlib-模块的使用"><a href="#zlib-模块的使用" class="headerlink" title="zlib 模块的使用"></a>zlib 模块的使用</h2><blockquote><p>实现文件压缩功能</p></blockquote><blockquote><p>模块引入： <code>const zlib = require(“zlib”)</code></p></blockquote><blockquote><p>压缩算法: 1. gzip  2. deflate</p></blockquote><blockquote><p>案例代码如下：</p></blockquote><pre><code class="js">const fs = require(&#39;fs&#39;)const zlib = require(&#39;zlib&#39;)const gzip = zlib.createGzip()const deflate = zlib.createDeflate()var inputFile = fs.createReadStream(&#39;已经存在的文件的路径&#39;)var outputFile = fs.createWriteStream(&#39;自定义文件名称&#39;)inputFile.pipe(gzip).pipe(outputFile)inputFile.pipe(deflate).pipe(outputFile)</code></pre>]]></content>
     
@@ -100,9 +100,9 @@
     <category term="Node.js" scheme="https://yk-ddm.github.io/categories/Node-js/"/>
     
     
-    <category term="zlib" scheme="https://yk-ddm.github.io/tags/zlib/"/>
-    
     <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
+    
+    <category term="zlib" scheme="https://yk-ddm.github.io/tags/zlib/"/>
     
     <category term="gzip" scheme="https://yk-ddm.github.io/tags/gzip/"/>
     
@@ -119,7 +119,7 @@
     <link href="https://yk-ddm.github.io/posts/34548.html"/>
     <id>https://yk-ddm.github.io/posts/34548.html</id>
     <published>2021-09-22T12:44:13.000Z</published>
-    <updated>2021-09-24T10:50:26.590Z</updated>
+    <updated>2021-09-24T11:43:08.699Z</updated>
     
     <content type="html"><![CDATA[<h1 id="GitHub-Actions-简介"><a href="#GitHub-Actions-简介" class="headerlink" title="GitHub Actions 简介"></a>GitHub Actions 简介</h1><blockquote><p>GitHub 的持续集成服务(2018年10月推出);</p></blockquote><blockquote><p>持续集成（Continuous integration，简称CI）</p></blockquote><blockquote><p><a href="">Travis CI</a></p></blockquote><blockquote><p>行为、操作 即 actions，一个独立脚本，可以存入远程代码仓库</p></blockquote><blockquote><p><a href="https://github.com/marketplace?type=actions">actions仓库</a> | <a href="https://github.com/actions">actions仓库</a></p></blockquote><blockquote><p><a href="https://github.com/sdras/awesome-actions">awesome-actions仓库</a></p></blockquote><hr /><h2 id="action-引用方式"><a href="#action-引用方式" class="headerlink" title="action 引用方式"></a>action 引用方式</h2><blockquote><ol><li>userName/repoName 就表示 github.com/userName/repoName</li></ol></blockquote><hr /><h2 id="workflow-（工作流程）"><a href="#workflow-（工作流程）" class="headerlink" title="workflow （工作流程）"></a>workflow （工作流程）</h2><blockquote><p>持续集成一次运行的过程; GitHub Actions 的配置文件; 一个代码仓库可以有多个配置文件</p></blockquote><blockquote><p>存放在代码仓库的  <code>.github/workflows</code> 目录; workflow 文件采用 YAML 格式; 代码仓库自动运行这些配置文件</p></blockquote><blockquote><p><a href="https://help.github.com/en/articles/workflow-syntax-for-github-actions">workflow 文件的配置字段</a></p></blockquote><hr /><h3 id="workflow-文件的配置字段"><a href="#workflow-文件的配置字段" class="headerlink" title="workflow 文件的配置字段"></a>workflow 文件的配置字段</h3><blockquote><p>name: workflow 的名称 —&gt; name: GitHub Actions Demo</p></blockquote><blockquote><p>on: 触发 workflow 的条件，通常是某些事件(代码库事件, 外部事件触发[, …]) —&gt; on: [push, pull_request] | on: push</p></blockquote><pre><code class="yml">on:  push:    branches:          - master</code></pre><blockquote><p>jobs: 每一项任务的job_id</p></blockquote><pre><code class="yml">jobs:# 每一项任务的job_id ~ my_first_job  my_first_job:  # name字段是任务的说明 ~ My first job    name: My first job  my_second_job:    name: My second job</code></pre><blockquote><p>needs: 指定当前任务的依赖关系</p></blockquote><pre><code class="yml">jobs:# 每一项任务的job_id ~ my_first_job  my_first_job:  # name字段是任务的说明 ~ My first job    name: My first job  my_second_job:    name: My second job    # 指定当前任务的依赖关系 needs: my_first_job | needs: [my_first_job, needs: my_second_job]    needs: my_first_job</code></pre><blockquote><p>runs-on: 指定运行所需要的虚拟机环境, 它是必填字段 runs-on: ubuntu-18.04</p></blockquote><pre><code class="yml"># 虚拟机环境ubuntu-latest，ubuntu-18.04或ubuntu-16.04windows-latest，windows-2019或windows-2016macOS-latest或macOS-10.14</code></pre><blockquote><p>steps: 指定每个 Job 的运行步骤，可以包含一个或多个步骤</p></blockquote><pre><code class="yml">name: Greeting from Monaon: pushjobs:  my-job:    name: My Job    runs-on: ubuntu-latest    steps:    # 步骤名称 name    - name: Print a greeting    # 环境变量 env      env:        MY_VAR: Hi there! My name is        FIRST_NAME: yk-ddm        # 运行的命令或者 action      run: |        echo $MY_VAR $FIRST_NAME.</code></pre><hr /><h2 id="job-（任务）"><a href="#job-（任务）" class="headerlink" title="job （任务）"></a>job （任务）</h2><blockquote><p>一个 workflow 由一个或多个 jobs 构成，含义是一次持续集成的运行，可以完成多个任务</p></blockquote><blockquote><p>github actions 配置文件的主体</p></blockquote><hr /><h2 id="step（步骤）"><a href="#step（步骤）" class="headerlink" title="step（步骤）"></a>step（步骤）</h2><blockquote><p>每个 job 由多个 step 构成，一步步完成</p></blockquote><hr /><h2 id="action-（动作）"><a href="#action-（动作）" class="headerlink" title="action （动作）"></a>action （动作）</h2><blockquote><p>每个 step 可以依次执行一个或多个命令（action）</p></blockquote><hr />]]></content>
     
