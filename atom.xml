@@ -6,7 +6,7 @@
   <link href="https://yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://yk-ddm.github.io/"/>
-  <updated>2021-09-24T06:51:19.493Z</updated>
+  <updated>2021-09-24T10:40:14.119Z</updated>
   <id>https://yk-ddm.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>时间格式化工具</title>
+    <link href="https://yk-ddm.github.io/posts/22041.html"/>
+    <id>https://yk-ddm.github.io/posts/22041.html</id>
+    <published>2021-09-24T08:50:25.000Z</published>
+    <updated>2021-09-24T10:40:14.119Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="时间格式化工具学习笔记"><a href="#时间格式化工具学习笔记" class="headerlink" title="时间格式化工具学习笔记"></a>时间格式化工具学习笔记</h1><blockquote><p>常用的时间格式化工具：moment、date-fns</p></blockquote><blockquote><p>一个现代的 JavaScript 日期工具类库; 全面、简单，在浏览器和 Node.js 中操作 JavaScript 日期</p></blockquote><hr /><h2 id="date-fns-安装"><a href="#date-fns-安装" class="headerlink" title="date-fns 安装"></a>date-fns 安装</h2><blockquote><p>yarn add date-fns | npm install date-fns –save</p></blockquote><h2 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h2><p><img src="https://img-blog.csdnimg.cn/94d42deef40240d597de6ff322b68280.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>format(new Date(), “yyyy-MM-dd HH:mm:ss”) 的使用</p></blockquote><p><img src="https://img-blog.csdnimg.cn/8ded890bf7e849b8a96a0eddf331136c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>案例代码如下：</p></blockquote><pre><code class="js">const dateFns = require(&#39;date-fns&#39;)let year = dateFns.getYear(new Date()),    month = dateFns.getMonth(new Date()) + 1,    date = dateFns.getDate(new Date()),    week = dateFns.getDay(new Date()),    hour = dateFns.getHours(new Date()),    minute = dateFns.getMinutes(new Date()),    second = dateFns.getSeconds(new Date())console.log(&#39;当前年份：&#39; + year)console.log(&#39;当前月份：&#39; + month)console.log(&#39;当前日：&#39; + date)console.log(&#39;当前星期：&#39; + week)console.log(&#39;当前小时：&#39; + hour)console.log(&#39;当前分钟：&#39; + minute)console.log(&#39;当前秒：&#39; + second)console.log(`$&#123;year&#125;-$&#123;month&#125;-$&#123;date&#125; $&#123;hour&#125;:$&#123;minute&#125;:$&#123;second&#125; 星期$&#123;week&#125;`)</code></pre><p><img src="https://img-blog.csdnimg.cn/4626b838f5c04ff19d81b2df5da4ab20.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;时间格式化工具学习笔记&quot;&gt;&lt;a href=&quot;#时间格式化工具学习笔记&quot; class=&quot;headerlink&quot; title=&quot;时间格式化工具学习笔记&quot;&gt;&lt;/a&gt;时间格式化工具学习笔记&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;常用的时间格式化工具：moment、dat</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Parcel打包工具的使用</title>
     <link href="https://yk-ddm.github.io/posts/56150.html"/>
     <id>https://yk-ddm.github.io/posts/56150.html</id>
     <published>2021-09-24T05:49:35.000Z</published>
-    <updated>2021-09-24T06:51:19.493Z</updated>
+    <updated>2021-09-24T06:56:25.740Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Parcel-学习笔记"><a href="#Parcel-学习笔记" class="headerlink" title="Parcel 学习笔记"></a>Parcel 学习笔记</h1><blockquote><p>Parcel是一款零配置的打包工具; 打包速度快; 内部使用多线程打包; 可以快速构建前端应用程序;</p></blockquote><hr /><h2 id="Parcel-初始化"><a href="#Parcel-初始化" class="headerlink" title="Parcel 初始化"></a>Parcel 初始化</h2><blockquote><p>npm init</p></blockquote><hr /><h2 id="Parcel-安装"><a href="#Parcel-安装" class="headerlink" title="Parcel 安装"></a>Parcel 安装</h2><blockquote><p>npm i parcel-bundler -D</p></blockquote><hr /><h2 id="Parcel-入口文件"><a href="#Parcel-入口文件" class="headerlink" title="Parcel 入口文件"></a>Parcel 入口文件</h2><blockquote><p>HTML</p></blockquote><pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;zh-cn&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;Parcel&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;script src=&quot;./main.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><pre><code class="main.js">import &#123; add, age &#125; from &#39;./ESModule&#39;;import _ from &#39;lodash&#39;;import &quot;./style.css&quot;const common = require(&#39;./common&#39;);console.log(common); //打印common.js导出的模块console.log(add, age); //打印ESModule导出的模块let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];console.log(_.last(num)); //使用lodashif (module.hot) &#123; //判断是否支持热加载    console.log(&#39;module hot&#39;);    module.hot.accept(() =&gt; &#123;        console.log(&#39;add&#39;);    &#125;)&#125;</code></pre><h2 id="构建效果图："><a href="#构建效果图：" class="headerlink" title="构建效果图："></a>构建效果图：</h2><p><img src="https://img-blog.csdnimg.cn/9c7c3df36ebf4a5b9edb6da2b8dc8f44.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></p>]]></content>
     
