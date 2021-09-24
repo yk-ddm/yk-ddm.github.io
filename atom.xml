@@ -6,7 +6,7 @@
   <link href="https://yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://yk-ddm.github.io/"/>
-  <updated>2021-09-23T02:00:50.717Z</updated>
+  <updated>2021-09-24T06:51:19.493Z</updated>
   <id>https://yk-ddm.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Parcel打包工具的使用</title>
+    <link href="https://yk-ddm.github.io/posts/56150.html"/>
+    <id>https://yk-ddm.github.io/posts/56150.html</id>
+    <published>2021-09-24T05:49:35.000Z</published>
+    <updated>2021-09-24T06:51:19.493Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Parcel-学习笔记"><a href="#Parcel-学习笔记" class="headerlink" title="Parcel 学习笔记"></a>Parcel 学习笔记</h1><blockquote><p>Parcel是一款零配置的打包工具; 打包速度快; 内部使用多线程打包; 可以快速构建前端应用程序;</p></blockquote><hr /><h2 id="Parcel-初始化"><a href="#Parcel-初始化" class="headerlink" title="Parcel 初始化"></a>Parcel 初始化</h2><blockquote><p>npm init</p></blockquote><hr /><h2 id="Parcel-安装"><a href="#Parcel-安装" class="headerlink" title="Parcel 安装"></a>Parcel 安装</h2><blockquote><p>npm i parcel-bundler -D</p></blockquote><hr /><h2 id="Parcel-入口文件"><a href="#Parcel-入口文件" class="headerlink" title="Parcel 入口文件"></a>Parcel 入口文件</h2><blockquote><p>HTML</p></blockquote><pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;zh-cn&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;Parcel&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;script src=&quot;./main.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><pre><code class="main.js">import &#123; add, age &#125; from &#39;./ESModule&#39;;import _ from &#39;lodash&#39;;import &quot;./style.css&quot;const common = require(&#39;./common&#39;);console.log(common); //打印common.js导出的模块console.log(add, age); //打印ESModule导出的模块let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];console.log(_.last(num)); //使用lodashif (module.hot) &#123; //判断是否支持热加载    console.log(&#39;module hot&#39;);    module.hot.accept(() =&gt; &#123;        console.log(&#39;add&#39;);    &#125;)&#125;</code></pre><h2 id="构建效果图："><a href="#构建效果图：" class="headerlink" title="构建效果图："></a>构建效果图：</h2><p><img src="https://img-blog.csdnimg.cn/9c7c3df36ebf4a5b9edb6da2b8dc8f44.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAeWstZGRt,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Parcel-学习笔记&quot;&gt;&lt;a href=&quot;#Parcel-学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Parcel 学习笔记&quot;&gt;&lt;/a&gt;Parcel 学习笔记&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Parcel是一款零配置的打包工具; 打包</summary>
+      
+    
+    
+    
+    <category term="前端工具Parcel" scheme="https://yk-ddm.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7Parcel/"/>
+    
+    
+    <category term="前端" scheme="https://yk-ddm.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
+    
+    <category term="ES6" scheme="https://yk-ddm.github.io/tags/ES6/"/>
+    
+    <category term="TypeScript" scheme="https://yk-ddm.github.io/tags/TypeScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Node.js学习笔记</title>
     <link href="https://yk-ddm.github.io/posts/49210.html"/>
     <id>https://yk-ddm.github.io/posts/49210.html</id>
     <published>2021-09-23T01:54:52.000Z</published>
-    <updated>2021-09-23T02:00:50.717Z</updated>
+    <updated>2021-09-24T02:58:29.661Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Node-js-学习笔记"><a href="#Node-js-学习笔记" class="headerlink" title="Node.js 学习笔记"></a>Node.js 学习笔记</h1><h2 id="zlib-模块的使用"><a href="#zlib-模块的使用" class="headerlink" title="zlib 模块的使用"></a>zlib 模块的使用</h2><blockquote><p>实现文件压缩功能</p></blockquote><blockquote><p>模块引入： <code>const zlib = require(“zlib”)</code></p></blockquote><blockquote><p>压缩算法: 1. gzip  2. deflate</p></blockquote><blockquote><p>案例代码如下：</p></blockquote><pre><code class="js">const fs = require(&#39;fs&#39;)const zlib = require(&#39;zlib&#39;)const gzip = zlib.createGzip()const deflate = zlib.createDeflate()var inputFile = fs.createReadStream(&#39;已经存在的文件的路径&#39;)var outputFile = fs.createWriteStream(&#39;自定义文件名称&#39;)inputFile.pipe(gzip).pipe(outputFile)inputFile.pipe(deflate).pipe(outputFile)</code></pre>]]></content>
     
@@ -158,11 +189,11 @@
     <category term="JavaScript" scheme="https://yk-ddm.github.io/categories/JavaScript/"/>
     
     
+    <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
+    
     <category term="HTML" scheme="https://yk-ddm.github.io/tags/HTML/"/>
     
     <category term="CSS" scheme="https://yk-ddm.github.io/tags/CSS/"/>
-    
-    <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
     
   </entry>
   
