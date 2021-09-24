@@ -6,7 +6,7 @@
   <link href="https://yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://yk-ddm.github.io/"/>
-  <updated>2021-09-22T12:49:59.140Z</updated>
+  <updated>2021-09-23T02:00:50.717Z</updated>
   <id>https://yk-ddm.github.io/</id>
   
   <author>
@@ -17,14 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>《github actions 自动构建》</title>
+    <title>Node.js学习笔记</title>
+    <link href="https://yk-ddm.github.io/posts/49210.html"/>
+    <id>https://yk-ddm.github.io/posts/49210.html</id>
+    <published>2021-09-23T01:54:52.000Z</published>
+    <updated>2021-09-23T02:00:50.717Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Node-js-学习笔记"><a href="#Node-js-学习笔记" class="headerlink" title="Node.js 学习笔记"></a>Node.js 学习笔记</h1><h2 id="zlib-模块的使用"><a href="#zlib-模块的使用" class="headerlink" title="zlib 模块的使用"></a>zlib 模块的使用</h2><blockquote><p>实现文件压缩功能</p></blockquote><blockquote><p>模块引入： <code>const zlib = require(“zlib”)</code></p></blockquote><blockquote><p>压缩算法: 1. gzip  2. deflate</p></blockquote><blockquote><p>案例代码如下：</p></blockquote><pre><code class="js">const fs = require(&#39;fs&#39;)const zlib = require(&#39;zlib&#39;)const gzip = zlib.createGzip()const deflate = zlib.createDeflate()var inputFile = fs.createReadStream(&#39;已经存在的文件的路径&#39;)var outputFile = fs.createWriteStream(&#39;自定义文件名称&#39;)inputFile.pipe(gzip).pipe(outputFile)inputFile.pipe(deflate).pipe(outputFile)</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Node-js-学习笔记&quot;&gt;&lt;a href=&quot;#Node-js-学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Node.js 学习笔记&quot;&gt;&lt;/a&gt;Node.js 学习笔记&lt;/h1&gt;&lt;h2 id=&quot;zlib-模块的使用&quot;&gt;&lt;a href=&quot;#zli</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《GitHub Actions 入门》</title>
     <link href="https://yk-ddm.github.io/posts/34548.html"/>
     <id>https://yk-ddm.github.io/posts/34548.html</id>
     <published>2021-09-22T12:44:13.000Z</published>
-    <updated>2021-09-22T12:49:59.140Z</updated>
+    <updated>2021-09-24T02:50:07.504Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="GitHub-Actions-简介"><a href="#GitHub-Actions-简介" class="headerlink" title="GitHub Actions 简介"></a>GitHub Actions 简介</h1><blockquote><p>GitHub 的持续集成服务(2018年10月推出);</p></blockquote><blockquote><p>持续集成（Continuous integration，简称CI）</p></blockquote><blockquote><p><a href="">Travis CI</a></p></blockquote><blockquote><p>行为、操作 即 actions，一个独立脚本，可以存入远程代码仓库</p></blockquote><blockquote><p><a href="https://github.com/marketplace?type=actions">actions仓库</a> | <a href="https://github.com/actions">actions仓库</a></p></blockquote><blockquote><p><a href="https://github.com/sdras/awesome-actions">awesome-actions仓库</a></p></blockquote><hr /><h2 id="action-引用方式"><a href="#action-引用方式" class="headerlink" title="action 引用方式"></a>action 引用方式</h2><blockquote><ol><li>userName/repoName 就表示 github.com/userName/repoName</li></ol></blockquote><hr /><h2 id="workflow-（工作流程）"><a href="#workflow-（工作流程）" class="headerlink" title="workflow （工作流程）"></a>workflow （工作流程）</h2><blockquote><p>持续集成一次运行的过程; GitHub Actions 的配置文件; 一个代码仓库可以有多个配置文件</p></blockquote><blockquote><p>存放在代码仓库的  <code>.github/workflows</code> 目录; workflow 文件采用 YAML 格式; 代码仓库自动运行这些配置文件</p></blockquote><blockquote><p><a href="https://help.github.com/en/articles/workflow-syntax-for-github-actions">workflow 文件的配置字段</a></p></blockquote><hr /><h3 id="workflow-文件的配置字段"><a href="#workflow-文件的配置字段" class="headerlink" title="workflow 文件的配置字段"></a>workflow 文件的配置字段</h3><blockquote><p>name: workflow 的名称 —&gt; name: GitHub Actions Demo</p></blockquote><blockquote><p>on: 触发 workflow 的条件，通常是某些事件(代码库事件, 外部事件触发[, …]) —&gt; on: [push, pull_request] | on: push</p></blockquote><pre><code class="yml">on:  push:    branches:          - master</code></pre><blockquote><p>jobs: 每一项任务的job_id</p></blockquote><pre><code class="yml">jobs:# 每一项任务的job_id ~ my_first_job  my_first_job:  # name字段是任务的说明 ~ My first job    name: My first job  my_second_job:    name: My second job</code></pre><blockquote><p>needs: 指定当前任务的依赖关系</p></blockquote><pre><code class="yml">jobs:# 每一项任务的job_id ~ my_first_job  my_first_job:  # name字段是任务的说明 ~ My first job    name: My first job  my_second_job:    name: My second job    # 指定当前任务的依赖关系 needs: my_first_job | needs: [my_first_job, needs: my_second_job]    needs: my_first_job</code></pre><blockquote><p>runs-on: 指定运行所需要的虚拟机环境, 它是必填字段 runs-on: ubuntu-18.04</p></blockquote><pre><code class="yml"># 虚拟机环境ubuntu-latest，ubuntu-18.04或ubuntu-16.04windows-latest，windows-2019或windows-2016macOS-latest或macOS-10.14</code></pre><blockquote><p>steps: 指定每个 Job 的运行步骤，可以包含一个或多个步骤</p></blockquote><pre><code class="yml">name: Greeting from Monaon: pushjobs:  my-job:    name: My Job    runs-on: ubuntu-latest    steps:    # 步骤名称 name    - name: Print a greeting    # 环境变量 env      env:        MY_VAR: Hi there! My name is        FIRST_NAME: yk-ddm        # 运行的命令或者 action      run: |        echo $MY_VAR $FIRST_NAME.</code></pre><hr /><h2 id="job-（任务）"><a href="#job-（任务）" class="headerlink" title="job （任务）"></a>job （任务）</h2><blockquote><p>一个 workflow 由一个或多个 jobs 构成，含义是一次持续集成的运行，可以完成多个任务</p></blockquote><blockquote><p>github actions 配置文件的主体</p></blockquote><hr /><h2 id="step（步骤）"><a href="#step（步骤）" class="headerlink" title="step（步骤）"></a>step（步骤）</h2><blockquote><p>每个 job 由多个 step 构成，一步步完成</p></blockquote><hr /><h2 id="action-（动作）"><a href="#action-（动作）" class="headerlink" title="action （动作）"></a>action （动作）</h2><blockquote><p>每个 step 可以依次执行一个或多个命令（action）</p></blockquote><hr />]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;GitHub-Actions-简介&quot;&gt;&lt;a href=&quot;#GitHub-Actions-简介&quot; class=&quot;headerlink&quot; title=&quot;GitHub Actions 简介&quot;&gt;&lt;/a&gt;GitHub Actions 简介&lt;/h1&gt;&lt;blockquote&gt;
+</summary>
+      
     
     
     
+    <category term="开发者手册" scheme="https://yk-ddm.github.io/categories/%E5%BC%80%E5%8F%91%E8%80%85%E6%89%8B%E5%86%8C/"/>
     
     
   </entry>
