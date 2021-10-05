@@ -6,7 +6,7 @@
   <link href="https://yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://yk-ddm.github.io/"/>
-  <updated>2021-09-24T10:57:33.328Z</updated>
+  <updated>2021-10-05T13:45:35.894Z</updated>
   <id>https://yk-ddm.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TypeScript</title>
+    <link href="https://yk-ddm.github.io/posts/52313.html"/>
+    <id>https://yk-ddm.github.io/posts/52313.html</id>
+    <published>2021-10-05T13:19:28.000Z</published>
+    <updated>2021-10-05T13:45:35.894Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h1><hr /><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote><p>JavaScript 的超集（JavaScript 只是 TypeScript 的一部分）</p></blockquote><blockquote><p>添加了 <code>类型系统</code> ，变量类型有明确的指定</p></blockquote><blockquote><p>添加了 <code>接口</code> 、<code>枚举</code> 、…</p></blockquote><blockquote><p>微软开发</p></blockquote><pre><code class="TypeScript">let age: number = 18</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;TypeScript&quot;&gt;&lt;a href=&quot;#TypeScript&quot; class=&quot;headerlink&quot; title=&quot;TypeScript&quot;&gt;&lt;/a&gt;TypeScript&lt;/h1&gt;&lt;hr /&gt;
+
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;</summary>
+      
+    
+    
+    
+    <category term="TypeScript" scheme="https://yk-ddm.github.io/categories/TypeScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
+    
+    <category term="TypeScript" scheme="https://yk-ddm.github.io/tags/TypeScript/"/>
+    
+  </entry>
   
   <entry>
     <title>时间格式化工具</title>
@@ -37,9 +65,9 @@
     <category term="时间格式化工具" scheme="https://yk-ddm.github.io/categories/%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="前端" scheme="https://yk-ddm.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
+    
+    <category term="前端" scheme="https://yk-ddm.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="ES6" scheme="https://yk-ddm.github.io/tags/ES6/"/>
     
@@ -70,9 +98,9 @@
     <category term="前端工具Parcel" scheme="https://yk-ddm.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7Parcel/"/>
     
     
-    <category term="前端" scheme="https://yk-ddm.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
+    
+    <category term="前端" scheme="https://yk-ddm.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="ES6" scheme="https://yk-ddm.github.io/tags/ES6/"/>
     
@@ -100,9 +128,9 @@
     <category term="Node.js" scheme="https://yk-ddm.github.io/categories/Node-js/"/>
     
     
-    <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
-    
     <category term="zlib" scheme="https://yk-ddm.github.io/tags/zlib/"/>
+    
+    <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
     
     <category term="gzip" scheme="https://yk-ddm.github.io/tags/gzip/"/>
     
@@ -135,11 +163,11 @@
     <category term="开发者手册" scheme="https://yk-ddm.github.io/categories/%E5%BC%80%E5%8F%91%E8%80%85%E6%89%8B%E5%86%8C/"/>
     
     
+    <category term="github" scheme="https://yk-ddm.github.io/tags/github/"/>
+    
     <category term="CI" scheme="https://yk-ddm.github.io/tags/CI/"/>
     
     <category term="Actions" scheme="https://yk-ddm.github.io/tags/Actions/"/>
-    
-    <category term="github" scheme="https://yk-ddm.github.io/tags/github/"/>
     
     <category term="workflow" scheme="https://yk-ddm.github.io/tags/workflow/"/>
     
@@ -219,9 +247,9 @@
     <category term="CSS" scheme="https://yk-ddm.github.io/categories/CSS/"/>
     
     
-    <category term="CSS" scheme="https://yk-ddm.github.io/tags/CSS/"/>
-    
     <category term="Web 开发技术" scheme="https://yk-ddm.github.io/tags/Web-%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="CSS" scheme="https://yk-ddm.github.io/tags/CSS/"/>
     
     <category term="cursor" scheme="https://yk-ddm.github.io/tags/cursor/"/>
     
@@ -246,9 +274,9 @@
     
     <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
     
-    <category term="HTML" scheme="https://yk-ddm.github.io/tags/HTML/"/>
-    
     <category term="CSS" scheme="https://yk-ddm.github.io/tags/CSS/"/>
+    
+    <category term="HTML" scheme="https://yk-ddm.github.io/tags/HTML/"/>
     
   </entry>
   
@@ -269,9 +297,9 @@
     <category term="Git" scheme="https://yk-ddm.github.io/categories/Git/"/>
     
     
-    <category term="github" scheme="https://yk-ddm.github.io/tags/github/"/>
-    
     <category term="gitee" scheme="https://yk-ddm.github.io/tags/gitee/"/>
+    
+    <category term="github" scheme="https://yk-ddm.github.io/tags/github/"/>
     
   </entry>
   
