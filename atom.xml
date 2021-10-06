@@ -6,7 +6,7 @@
   <link href="https://yk-ddm.github.io/atom.xml" rel="self"/>
   
   <link href="https://yk-ddm.github.io/"/>
-  <updated>2021-10-06T01:56:01.388Z</updated>
+  <updated>2021-10-06T12:25:55.309Z</updated>
   <id>https://yk-ddm.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://yk-ddm.github.io/posts/52313.html"/>
     <id>https://yk-ddm.github.io/posts/52313.html</id>
     <published>2021-10-05T13:19:28.000Z</published>
-    <updated>2021-10-06T01:56:01.388Z</updated>
+    <updated>2021-10-06T12:25:55.309Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h1><hr /><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote><p>JavaScript 的超集（JavaScript 只是 TypeScript 的一部分）</p></blockquote><blockquote><p>添加了 <code>类型系统</code> ，变量类型有明确的指定</p></blockquote><blockquote><p>添加了 <code>接口</code> 、<code>枚举</code> 、…</p></blockquote><blockquote><p>由微软开发；用于开发大型应用</p></blockquote><pre><code class="TypeScript">let age: number = 18</code></pre><blockquote><p>应用场景：Vue3 使用了 TS、Angular、React</p></blockquote><hr /><h2 id="TS解析成JS"><a href="#TS解析成JS" class="headerlink" title="TS解析成JS"></a>TS解析成JS</h2><p><img src="https://img-blog.csdnimg.cn/bda39a636be840c6a8facf9f27bb2317.png" alt="在这里插入图片描述"></p><blockquote><p>安装 typescript ：<code>npm i -g typescript</code>  </p></blockquote><p><img src="https://img-blog.csdnimg.cn/beb0beddd09543e1b67b979406e017b4.png" alt="在这里插入图片描述"></p><blockquote><p>使用 typescript 的 tsc 命令实现 TS 解析成 JS</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h1><hr /><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote><p>JavaScript 的超集（JavaScript 只是 TypeScript 的一部分）</p></blockquote><blockquote><p>添加了 <code>类型系统</code> ，变量类型有明确的指定</p></blockquote><blockquote><p>添加了 <code>接口</code> 、<code>枚举</code> 、…</p></blockquote><blockquote><p>由微软开发；用于开发大型应用</p></blockquote><pre><code class="TypeScript">let age: number = 18</code></pre><blockquote><p>应用场景：Vue3 使用了 TS、Angular、React</p></blockquote><hr /><h2 id="TS解析成JS"><a href="#TS解析成JS" class="headerlink" title="TS解析成JS"></a>TS解析成JS</h2><p><img src="https://img-blog.csdnimg.cn/bda39a636be840c6a8facf9f27bb2317.png" alt="在这里插入图片描述"></p><blockquote><p>安装 typescript ：<code>npm i -g typescript</code>  </p></blockquote><p><img src="https://img-blog.csdnimg.cn/beb0beddd09543e1b67b979406e017b4.png" alt="在这里插入图片描述"></p><blockquote><p>使用 typescript 的 tsc 命令实现 TS 解析成 JS:  tsc ts文件</p></blockquote><hr /><h2 id="hello-world-TS"><a href="#hello-world-TS" class="headerlink" title="hello world TS"></a>hello world TS</h2><blockquote><p>tsc hello.ts</p></blockquote><p><img src="https://img-blog.csdnimg.cn/181253b9d13a42b283e49ca7818ad1bf.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/ba25bf29545a40c9a171a98454bd80a8.png" alt="在这里插入图片描述"></p><blockquote><p>node js文件，输出结果如下：</p></blockquote><p><img src="https://img-blog.csdnimg.cn/1147ddb71bd24780a1adbca99e45778b.png" alt="在这里插入图片描述"></p><hr />]]></content>
     
     
       
@@ -163,11 +163,11 @@
     <category term="开发者手册" scheme="https://yk-ddm.github.io/categories/%E5%BC%80%E5%8F%91%E8%80%85%E6%89%8B%E5%86%8C/"/>
     
     
-    <category term="github" scheme="https://yk-ddm.github.io/tags/github/"/>
-    
     <category term="CI" scheme="https://yk-ddm.github.io/tags/CI/"/>
     
     <category term="Actions" scheme="https://yk-ddm.github.io/tags/Actions/"/>
+    
+    <category term="github" scheme="https://yk-ddm.github.io/tags/github/"/>
     
     <category term="workflow" scheme="https://yk-ddm.github.io/tags/workflow/"/>
     
@@ -247,9 +247,9 @@
     <category term="CSS" scheme="https://yk-ddm.github.io/categories/CSS/"/>
     
     
-    <category term="Web 开发技术" scheme="https://yk-ddm.github.io/tags/Web-%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/"/>
-    
     <category term="CSS" scheme="https://yk-ddm.github.io/tags/CSS/"/>
+    
+    <category term="Web 开发技术" scheme="https://yk-ddm.github.io/tags/Web-%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/"/>
     
     <category term="cursor" scheme="https://yk-ddm.github.io/tags/cursor/"/>
     
@@ -274,9 +274,9 @@
     
     <category term="JavaScript" scheme="https://yk-ddm.github.io/tags/JavaScript/"/>
     
-    <category term="CSS" scheme="https://yk-ddm.github.io/tags/CSS/"/>
-    
     <category term="HTML" scheme="https://yk-ddm.github.io/tags/HTML/"/>
+    
+    <category term="CSS" scheme="https://yk-ddm.github.io/tags/CSS/"/>
     
   </entry>
   
@@ -297,9 +297,9 @@
     <category term="Git" scheme="https://yk-ddm.github.io/categories/Git/"/>
     
     
-    <category term="gitee" scheme="https://yk-ddm.github.io/tags/gitee/"/>
-    
     <category term="github" scheme="https://yk-ddm.github.io/tags/github/"/>
+    
+    <category term="gitee" scheme="https://yk-ddm.github.io/tags/gitee/"/>
     
   </entry>
   

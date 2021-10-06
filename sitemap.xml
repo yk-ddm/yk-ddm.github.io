@@ -179,7 +179,7 @@
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/tags/Web-%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://yk-ddm.github.io/tags/HTML/</loc>
     <lastmod>2021-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -193,6 +193,13 @@
   </url>
   
   <url>
+    <loc>https://yk-ddm.github.io/tags/Web-%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-10-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yk-ddm.github.io/tags/cursor/</loc>
     <lastmod>2021-10-06</lastmod>
     <changefreq>daily</changefreq>
@@ -200,7 +207,28 @@
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/tags/HTML/</loc>
+    <loc>https://yk-ddm.github.io/tags/CI/</loc>
+    <lastmod>2021-10-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/Actions/</loc>
+    <lastmod>2021-10-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/github/</loc>
+    <lastmod>2021-10-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/tags/workflow/</loc>
     <lastmod>2021-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -222,34 +250,6 @@
   
   <url>
     <loc>https://yk-ddm.github.io/tags/gitee/</loc>
-    <lastmod>2021-10-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yk-ddm.github.io/tags/github/</loc>
-    <lastmod>2021-10-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yk-ddm.github.io/tags/CI/</loc>
-    <lastmod>2021-10-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yk-ddm.github.io/tags/Actions/</loc>
-    <lastmod>2021-10-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yk-ddm.github.io/tags/workflow/</loc>
     <lastmod>2021-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -335,13 +335,6 @@
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/categories/Node-js/</loc>
-    <lastmod>2021-10-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yk-ddm.github.io/categories/TypeScript/</loc>
     <lastmod>2021-10-06</lastmod>
     <changefreq>daily</changefreq>
@@ -349,7 +342,7 @@
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/categories/CSS/</loc>
+    <loc>https://yk-ddm.github.io/categories/Node-js/</loc>
     <lastmod>2021-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -363,7 +356,7 @@
   </url>
   
   <url>
-    <loc>https://yk-ddm.github.io/categories/Git/</loc>
+    <loc>https://yk-ddm.github.io/categories/CSS/</loc>
     <lastmod>2021-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -371,6 +364,13 @@
   
   <url>
     <loc>https://yk-ddm.github.io/categories/%E5%BC%80%E5%8F%91%E8%80%85%E6%89%8B%E5%86%8C/</loc>
+    <lastmod>2021-10-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yk-ddm.github.io/categories/Git/</loc>
     <lastmod>2021-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
